@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT_ID</field>
+    </columns>
+    <columns>
+        <field>ACTIVITY_ID</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Account.MMI_Account_Manager__c</field>
+    </columns>
+    <columns>
+        <field>Account.MMI_Staff__c</field>
+    </columns>
+    <columns>
+        <field>Account.Assigned_To__c</field>
+    </columns>
+    <columns>
+        <field>Account.Industry_Category__c</field>
+    </columns>
+    <description>MMI print date on lead sheets</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <operator>equals</operator>
+            <value>MMI Organization Lead Sheet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TASK_TYPE</column>
+            <operator>equals</operator>
+            <value>MMI Lead Sheet Printed</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>MMI Lead Sheet Print Date</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <endDate>2011-01-29</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2010-12-01</startDate>
+    </timeFrameFilter>
+</Report>

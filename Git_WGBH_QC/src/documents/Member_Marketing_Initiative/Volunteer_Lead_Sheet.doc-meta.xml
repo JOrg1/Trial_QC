@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Lead sheet for volunteers - creates an automatic activity when it is pulled by volunteer.</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>MMI Lead Sheet</keywords>
+    <name>Volunteer Lead Sheet</name>
+    <public>true</public>
+</Document>

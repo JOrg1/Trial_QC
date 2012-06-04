@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Recurring Donations and Pledges</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Recurring_Donations_Pledges</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Benefit_Exists__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The checked box means that there is a benefit associated to this recurring pledge.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>There is a benefit on this recurring pledge opportunity.</inlineHelpText>
+        <label>Benefit Exists</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Type</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>R00N80000002bOmREAU</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Date_Established__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <description>Date revenue will be recognized</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date you expect the first payment to be received</inlineHelpText>
+        <label>Booked Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Donor_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(
+  LEN(Contact__c)&gt;0,
+  Contact__r.FirstName  &amp; &quot; &quot; &amp; Contact__r.LastName,
+   Organization__r.Name
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Donor Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Household__c</fullName>
+        <externalId>false</externalId>
+        <label>Household</label>
+        <referenceTo>Household__c</referenceTo>
+        <relationshipName>Recurring_Donations_Pledges</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Installment_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( text(Schedule_Type__c)=$Label.RecurringDonationMultiplyValue , Amount__c , IF(Installments__c&gt;0,Amount__c / Installments__c,0))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Installment Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Installment_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Installment Period</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annually</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Irregular Installment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Semi-Annually</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bi-Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Installments__c</fullName>
+        <externalId>false</externalId>
+        <label># of Installments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>pledge_amount__c -  paid_amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Organization__c</fullName>
+        <externalId>false</externalId>
+        <label>Organization</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>RecurringDonations</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pledge__c</fullName>
+        <description>Pledge # will be a string that will show the payment identifier associated to the installment if applicable.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pledge # from the TA payment record</inlineHelpText>
+        <label>Pledge #</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring_Donation_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipName>Recurring_Donations_Pledges</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Schedule_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Schedule Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Multiply By</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Divide By</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Staff__c</fullName>
+        <externalId>false</externalId>
+        <label>Staff</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TA_Campaign_Source_Code__c</fullName>
+        <description>Source Code from the campaign it may be related to</description>
+        <externalId>false</externalId>
+        <label>TA Campaign Source Code</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaTransactions_Id_Short__c</fullName>
+        <externalId>false</externalId>
+        <label>TaTransactions_Id_Short</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaTransactions_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>TA Transactions external Id</description>
+        <externalId>true</externalId>
+        <label>TA Transactions Id</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+ Schedule_Type__c ,
+&quot;Multiply By&quot;, Installments__c * Amount__c ,
+&quot;Divide By&quot;,Amount__c
+,0
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>activity_type__c</fullName>
+        <description>Activity Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Activity Type</inlineHelpText>
+        <label>Activity Type</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>activity_type_value__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Type Value</label>
+        <length>3</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>adj_gift_seq__c</fullName>
+        <description>Adj Gift Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adj Gift Seq</inlineHelpText>
+        <label>Adj Gift Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>adjustment_seq__c</fullName>
+        <description>Adjustment Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adjustment Seq</inlineHelpText>
+        <label>Adjustment Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>alt_transaction_id__c</fullName>
+        <description>Alt Transaction Id</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Alt Transaction Id</inlineHelpText>
+        <label>Alt Transaction Id</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>anonymous_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Anonymous Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Do not list this gift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do not list participation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>anonymous_code_value__c</fullName>
+        <description>Anonymous Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Anonymous Code</inlineHelpText>
+        <label>Anonymous Code Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>batch_number__c</fullName>
+        <description>Batch Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Batch Number</inlineHelpText>
+        <label>Batch Number</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>batch_process_count__c</fullName>
+        <description>This field is used for Apex batch processing for post processing ETL information</description>
+        <externalId>false</externalId>
+        <label>Batch Process Count</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bulk_load__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ETL migration process</description>
+        <externalId>false</externalId>
+        <label>bulk_load</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>caller__c</fullName>
+        <externalId>false</externalId>
+        <label>Caller</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>campaign__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>check_name__c</fullName>
+        <description>Check Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check Name</inlineHelpText>
+        <label>Check Name</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>commitment_date__c</fullName>
+        <description>Commitment Date - This is used with Stock</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Commitment Date</inlineHelpText>
+        <label>Commitment Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>current_activity__c</fullName>
+        <description>Current Activity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Activity</inlineHelpText>
+        <label>Current Activity</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>current_giving_level_amt__c</fullName>
+        <description>Current Giving Level Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Giving Level Amt</inlineHelpText>
+        <label>Current Giving Level Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>date_updated__c</fullName>
+        <description>Date Updated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date Updated</inlineHelpText>
+        <label>Date Updated</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>effort__c</fullName>
+        <externalId>false</externalId>
+        <label>Effort</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fund__c</fullName>
+        <externalId>false</externalId>
+        <label>Fund</label>
+        <length>16</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fund_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Fund Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Restricted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Endowment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unrestricted, Non-Annual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>fund_type_value__c</fullName>
+        <description>Fund Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fund Type</inlineHelpText>
+        <label>Fund Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gift_date__c</fullName>
+        <description>Gift Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Date</inlineHelpText>
+        <label>Gift Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>gift_description__c</fullName>
+        <description>Gift Description - This is used with Stock</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Description</inlineHelpText>
+        <label>Gift Description</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gift_kind__c</fullName>
+        <externalId>false</externalId>
+        <label>Gift Kind</label>
+        <picklist>
+            <picklistValues>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sustaining Gift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sustaining Pledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>gift_kind_value__c</fullName>
+        <description>Gift Kind</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Kind</inlineHelpText>
+        <label>Gift Kind Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gift_seq__c</fullName>
+        <description>Gift Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Seq</inlineHelpText>
+        <label>Gift Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gift_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Gift Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Additional Gift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejoin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Donation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Matching Gift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade/Reset</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade Giving Level</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade Activity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reset Renewal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Summary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gift Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Third Party Pledge Payment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade Sustainer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade Sustainer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Sustainer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade to Major Donor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade to Mid-level (AI)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>gift_type_value__c</fullName>
+        <description>Gift Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Type</inlineHelpText>
+        <label>Gift Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gift_value__c</fullName>
+        <description>Gift Value - This is used with Stock</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Value</inlineHelpText>
+        <label>Gift Value</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>group_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Group Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Mid-level</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business/Bidders/Building</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Membership (Basic)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Service/MDSi</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Foundations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Local Corporate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Underwriting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Matching Gifts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Planned Giving/PBSd</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Donation/Venture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On-Air</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leadership Members</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sustainers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sweeps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web Pledges</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test 06/24/02</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CRB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-Kind Giving</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>group_type_value__c</fullName>
+        <description>Group Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Group Type</inlineHelpText>
+        <label>Group Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>initiative__c</fullName>
+        <externalId>false</externalId>
+        <label>Initiative</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>installment_period_value__c</fullName>
+        <description>payment_frequence code</description>
+        <externalId>false</externalId>
+        <label>Installment Period Value</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_payment_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Payment Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>list__c</fullName>
+        <externalId>false</externalId>
+        <label>List</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>package__c</fullName>
+        <externalId>false</externalId>
+        <label>Package</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>paid_amount__c</fullName>
+        <description>Paid Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Paid Amount</inlineHelpText>
+        <label>Paid Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payment_amount__c</fullName>
+        <description>Payment Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment Amount</inlineHelpText>
+        <label>Payment Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payment_frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Frequency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Week Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annually</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bi-Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Semi-Annually</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installment Schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bi-Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tri-weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>payment_frequency_value__c</fullName>
+        <description>Payment Frequency</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment Frequency</inlineHelpText>
+        <label>Payment Frequency Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payment_method__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Method</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payment_method_value__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Method Value</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payments_in_schedule__c</fullName>
+        <description>Payments In Schedule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payments In Schedule</inlineHelpText>
+        <label>Payments In Schedule</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pledge_amount__c</fullName>
+        <description>Pledge Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pledge Amount</inlineHelpText>
+        <label>Pledge Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pledge_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Pledge Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pledge_status__c</fullName>
+        <description>Pledge Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pledge Status</inlineHelpText>
+        <label>Pledge Status</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pledge_status_value__c</fullName>
+        <description>Pledge Status Valu</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pledge Status Valu</inlineHelpText>
+        <label>Pledge Status Value</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>prior_activity__c</fullName>
+        <description>Prior Activity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prior Activity</inlineHelpText>
+        <label>Prior Activity</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>prior_giving_level_amt__c</fullName>
+        <description>Prior Giving Level Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prior Giving Level Amt</inlineHelpText>
+        <label>Prior Giving Level Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>program__c</fullName>
+        <externalId>false</externalId>
+        <label>Program</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>project__c</fullName>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Purpose</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>recognition_date__c</fullName>
+        <description>Recognition Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Recognition Date - This is used with Stock</inlineHelpText>
+        <label>Recognition Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>recognized_gift_amount__c</fullName>
+        <description>Recognized Gift Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Recognized Gift Amount</inlineHelpText>
+        <label>Recognized Gift Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>reg_id__c</fullName>
+        <description>Reg Id - May hijack this field to tlk to TA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reg Id</inlineHelpText>
+        <label>Reg Id</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sale_date__c</fullName>
+        <description>Sale Date - This is used with Stock</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sale Date</inlineHelpText>
+        <label>Sale Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>sale_value__c</fullName>
+        <description>Sale Value - This is used with Stock</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sale Value</inlineHelpText>
+        <label>Sale Value</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>schedule_start_date__c</fullName>
+        <description>Schedule Start Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Schedule Start Date</inlineHelpText>
+        <label>Schedule Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>soft_credit_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Soft Credit Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Generic Soft Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Benefits Received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gift Matched</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gift from Related Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outside Giving</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Third Party Pledge Payment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distribution from BFA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distribution from Foundation/Trust</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gift Through Foundation (ZTRUST)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Benefits received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>soft_credit_type_value__c</fullName>
+        <description>Soft Credit Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Soft Credit Type</inlineHelpText>
+        <label>Soft Credit Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>solicitor__c</fullName>
+        <externalId>false</externalId>
+        <label>Solicitor</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <length>14</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>station_support__c</fullName>
+        <description>Station Support</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Station Support</inlineHelpText>
+        <label>Station Support</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>stock_gift_id__c</fullName>
+        <description>Stock Gift Id</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stock Gift Id</inlineHelpText>
+        <label>Stock Gift Id</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_recurring_donation_id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>TA Recurring Donation ID</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>technique__c</fullName>
+        <externalId>false</externalId>
+        <label>Technique</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Call to account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fax from account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fax to account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet from account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet to account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Letter from account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>900 #</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Letter to account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting with account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mass Mailing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Note from account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call from account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Note to account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Air</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invitation sent to account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unsolicited Call for Info</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gift Processing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Technique to update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY technique to convert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal Strategy Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Response Line</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E-Mail from account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E-Mail to Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Member Profile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System fix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prospect Name Acquired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Research Pull</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Handled by Customer Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Letter from Bank (gift processing)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Returned mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>White mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>800#</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reply Card</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Board Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Premium Notification by Vendor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auto-Renew process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Returned e-mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Next Steps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tour with account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>technique_value__c</fullName>
+        <externalId>false</externalId>
+        <label>Technique Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>transaction_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pledge Payment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>transaction_type_value__c</fullName>
+        <description>Transaction Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction Type</inlineHelpText>
+        <label>Transaction Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Recurring Gift</label>
+    <nameField>
+        <label>Recurring Pledge Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Recurring Gifts</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Organization__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date_Established__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Installment_Period__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Installments__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Date_Established__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Installment_Period__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Installments__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Organization__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Date_Established__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Installment_Period__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Installments__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Total__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Amount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Installment_Period__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Installments__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Schedule_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date_Established__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>New_Recurring_Acct_Donation</searchResultsCustomButtons>
+        <searchResultsCustomButtons>New_Recurring_Donation_Pledge_Account</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>New_Recurring_Acct_Donation</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>New Recurring Acct Donation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR($Action.Recurring_Donation__c.New, null, [Name=Account.Name,retURL=&quot;/&quot;&amp;Account.Id])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Recurring_Donation_Pledge_Account</fullName>
+        <availability>online</availability>
+        <description>Replaces the standard button with one that prefills the Organization Name</description>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>New Recurring Contact Donation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR($Action.Recurring_Donation__c.New, null,  [Name  =  Contact.FirstName &amp; &quot; &quot;&amp; Contact.LastName&amp;&quot; Donation - &quot;&amp;   TEXT( TODAY()),retURL=&quot;/&quot;&amp;Contact.Id])}</url>
+    </webLinks>
+</CustomObject>

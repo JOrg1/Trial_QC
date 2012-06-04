@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scontrol xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contentSource>HTML</contentSource>
+    <description>Background information on this app.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>About Bug Tracking &amp; QA</name>
+    <supportsCaching>true</supportsCaching>
+</Scontrol>

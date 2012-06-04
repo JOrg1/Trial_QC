@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#BBBBBB</backgroundEndColor>
+    <backgroundFadeDirection>LeftToRight</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>MyTeamUser</dashboardType>
+    <description>A dashboard with components tracking individual AMS representative performance</description>
+    <leftSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Current Fiscal Year</footer>
+            <header>My Cases</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AMS_Team_Reports/My_Cases</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <footer>Number of cases currently assigned and open</footer>
+            <header>Current workload</header>
+            <indicatorBreakpoint1>15.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>30.0</indicatorBreakpoint2>
+            <indicatorHighColor>#C25454</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AMS_Team_Reports/Total_AMS_Open_Cases</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Open Cases by Rep</title>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <footer>Number of solutions created by Rep during the fiscal year</footer>
+            <header>Solutions Added</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AMS_Manager_Reports/Solutions_Added</report>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Open Solutions by Rep YTD</title>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Shows how many cases by each channel are being completed each month</footer>
+            <header>Cases Closed by Rep by Channel this Month</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AMS_Manager_Reports/AMS_Rep_Closed_Cases_Rep_Channel_MTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <dashboardTableColumn>
+                <column>OWNER</column>
+                <sortBy>RowLabelAscending</sortBy>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Average</aggregateType>
+                <column>DURATION</column>
+                <showTotal>true</showTotal>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <footer>Average handle time of all cases per rep for the current month</footer>
+            <header>Average Handle Time this Month</header>
+            <indicatorBreakpoint1>4.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>6.0</indicatorBreakpoint2>
+            <indicatorHighColor>#C25454</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AMS_Manager_Reports/AMS_Rep_Average_Duration_per_Rep</report>
+            <title>Per Rep in Days</title>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>true</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Current Month</footer>
+            <header>Total Cases Created by Topic</header>
+            <legendPosition>Bottom</legendPosition>
+            <maxValuesDisplayed>10</maxValuesDisplayed>
+            <report>AMS_Team_Reports/Total_Cases_by_Topic</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Top 10 Topics this Month</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Funnel</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>true</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Current Month</footer>
+            <header>Total Cases Created by Type</header>
+            <legendPosition>OnChart</legendPosition>
+            <report>AMS_Team_Reports/Total_Cases_by_Type</report>
+            <showPercentage>true</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>This Month</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>true</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Average length of time each case is in a particular status for the current month.</footer>
+            <header>Average Duration per Stage</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AMS_Manager_Reports/AMS_Average_Duration_per_Stage</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowValueAscending</sortBy>
+            <title>In Days</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </rightSection>
+    <runningUser>marianne_redmond@wgbh.org.qc</runningUser>
+    <textColor>#000000</textColor>
+    <title>AMS Team My Dashboard</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

@@ -1,0 +1,8 @@
+Dear {!Contact.FirstName}, 
+
+
+reminder of event.
+
+
+thanks for your time,
+{!Contact.OwnerFullName}

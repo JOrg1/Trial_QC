@@ -1,0 +1,32 @@
+<!--    
+1. Use this as example page, only copy paste the code and change the standardController property to your standard or custom object API name. You'll need to create a custom 
+2. Detail Page Button on the object with following details and put the button into the page layout:
+a) Without Passing Parameters:
+        - Display Type: Detail Page Button
+        - Content Source: Visualforce Page
+        - Visualforce Page: <Your page's name>
+        - Behavior: Display in existing window with sidebar
+b) Passing Parameters:
+You can pass parameters for parent as well as child records with the URL to modify specific fields like record type or status fields of the cloned record. For this option you'll need an URL or JavaScript Button:
+- Display Type: Detail Page Button
+- Content Source: URL
+- URL: /apex/<Your page's name>?id={!Id}&field1=value1&field2=value2&...
+  The first parameter must be the record id of the parent record passed as merge field. And following all fields you want to modify:
+  -- For parent object fields just pass the field name. You might need to include field namespaces of managed packages
+  -- For child objects fields you need to pass a combination of object name and field name separated by period like Account.Name=Cloned+Changed
+     You may choose standard as well as custom fields. Also you may choose fields that are not on page layout. For objects of managed packages you'll need to
+     pass the namespace for the object and field name.
+- Behavior: Display in existing window with sidebar
+3. Define all relevant child objects to be cloned in the custom object Clone_Child__c
+ -->
+<apex:page standardController="Account" extensions="ITBclone.ExtClone" >
+    <apex:form >        
+        <apex:pageBlock >
+            <apex:pageMessages />
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!cloneParent}" value="Confirm"/>
+                <apex:commandButton action="{!goBack}" value="Back"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

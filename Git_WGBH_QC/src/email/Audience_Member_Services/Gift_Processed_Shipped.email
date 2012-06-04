@@ -1,0 +1,103 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+
+
+
+
+
+<p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">Dear {!Contact.Name},</font></p>
+
+<p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">&nbsp;</font></p>
+
+<p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">Thank you for reaching out to us regarding the delivery
+status of your <span style="font-weight: bold;">[insert gift name here]</span> thank you gift that was placed in <span style="font-weight: bold;">[insert
+month here]</span>. Please know that since December we have been working on upgrading
+our systems; unfortunately, due to this process, we have fallen behind in the
+delivery of these items. We deeply apologize for any inconvenience this may
+have caused and we appreciate your patience while we work to get everything in
+order. </font></p>
+
+<p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">&nbsp;</font></p>
+
+<p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">I checked with the warehouse and I have wonderful news to
+share with you! Your thank you gift shipped on <span style="font-weight: bold;">[insert date here]</span> by <span style="font-weight: bold;">[method of
+shipment]</span> and should arrive in approximately <span style="font-weight: bold;">[insert expected delivery date
+here]</span> days.</font></p>
+
+<p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">&nbsp;</font></p>
+
+<p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">We apologize for any inconvenience this issue may have
+caused, but we truly appreciate your patience. It’s a highly competitive world
+out there for philanthropic support; our goal is to earn your trust and support
+every day. Thank you for your time and understanding, and for your support of
+WGBH.</font></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><br></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">Sincerely,</font></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><br></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3"><br></font></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">{!Case.OwnerFullName}</font></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">WGBH Audience &amp; Member Services</font></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3">617-300-3300 (M-F, 9-5)</font></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><br></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><br></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3"><font size="1">{!Case.CaseNumber}</font><br></font></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><br></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><br></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3"><br></font></p><p style="font-family: Arial,Sans-Serif;" class="MsoNormal"><font size="3"><br></font></p>]]></td>
+</tr>
+</table>

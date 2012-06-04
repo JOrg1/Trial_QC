@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Form for capturing WGBH Employee Transaction Memo data for Human Resources.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Account_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>A1000</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Accounting_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Accounting Unit</label>
+        <referenceTo>WGBH_Accounting_Unit__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms</relationshipLabel>
+        <relationshipName>WGBH_ETM_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity</label>
+        <referenceTo>WGBH_AUAC__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms</relationshipLabel>
+        <relationshipName>WGBH_ETM_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Address_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Address: City</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Address: State</label>
+        <referenceTo>State__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms</relationshipLabel>
+        <relationshipName>WGBH_ETM_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Address_Street_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Address: Street 1</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Address: Zip Code</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Addresss_Street_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Addresss: Street 2</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Base_Salary__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Base Salary</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Building_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Building/Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>10 GUEST</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 GUEST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAPE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CT-AMX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GIA-RI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GIA-SC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GREENFIELD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LACC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NOVA NY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NYCC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NYPR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA-AMX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CheckSort_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>CheckSort Contact</label>
+        <referenceTo>WGBH_CheckSort_Contact__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms</relationshipLabel>
+        <relationshipName>WGBH_ETM_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Birth__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Birth</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <externalId>false</externalId>
+        <label>Department</label>
+        <referenceTo>Department__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms</relationshipLabel>
+        <relationshipName>WGBH_ETM_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Emergency_Contact_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Emergency Contact First Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emergency_Contact_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Emergency Contact Last Name</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emergency_Contact_Main_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Emergency Contact Main Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Emergency_Contact_Other_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Emergency Contact Other Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Employee_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee First Name</label>
+        <length>40</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Last Name</label>
+        <length>60</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Middle_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Middle Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_SSN__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee SSN</label>
+        <length>11</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>ssn</maskType>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>Employment_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Employment Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Staff</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Contract</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Temporary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Freelance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Employment_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Full Time = minimum of 40 hours/week
+Part Time = less than 40 hours/week</inlineHelpText>
+        <label>Employment Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Full Time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Part Time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ethnic_Origin__c</fullName>
+        <externalId>false</externalId>
+        <label>Ethnic Origin</label>
+        <picklist>
+            <picklistValues>
+                <fullName>White</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Latino</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>African</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>etc...</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Gender__c</fullName>
+        <externalId>false</externalId>
+        <label>Gender</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>HR_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>HR Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Hours_per_Week__c</fullName>
+        <externalId>false</externalId>
+        <label>Hours per Week</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>In_House_Affiliation__c</fullName>
+        <externalId>false</externalId>
+        <label>In-House Affiliation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>AEEF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confidential</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NABET</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Marital_Tax_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Marital/Tax Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Head of Household</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualifying Widow(er)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Married Filing Jointly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Married Filing Separately</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Paperwork_Contact_Extension__c</fullName>
+        <externalId>false</externalId>
+        <label>Paperwork Contact Extension</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Paperwork_Contact_Job_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Paperwork Contact Job Title</label>
+        <referenceTo>WGBH_Job_Titles__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms (Paperwork Contact Job Title)</relationshipLabel>
+        <relationshipName>WGBH_ETM_FormsPaperworkTitle</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Paperwork_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Paperwork Contact</label>
+        <referenceTo>WGBH_Paperwork_Contact__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms</relationshipLabel>
+        <relationshipName>WGBH_ETM_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Process_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Process Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Process_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Process Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CCLA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCNY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>New Memo = New ETM not submitted
+Pending Approval = Submitted to first level of Approval in HR
+HR Approved = Approved by HR Recruiter
+HR Director Approved = Approved by HR Director
+Closed - Not Approved = Declined for reasons stated in comments</inlineHelpText>
+        <label>ETM Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Memo</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR Director Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed - Not Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Supervisor_Employee_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Supervisor_Name__r.Employee_ID__c</formula>
+        <label>Supervisor Employee ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supervisor_Extension__c</fullName>
+        <externalId>false</externalId>
+        <label>Supervisor Extension</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supervisor_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Supervisor Name</label>
+        <referenceTo>WGBH_Supervisor__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms</relationshipLabel>
+        <relationshipName>WGBH_ETM_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Telephone__c</fullName>
+        <externalId>false</externalId>
+        <label>Telephone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <referenceTo>WGBH_Job_Titles__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms</relationshipLabel>
+        <relationshipName>WGBH_ETM_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Requested__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Requested</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Hire</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rehire</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Promotion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Position Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Status Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Veteran__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Veteran</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Vice_President__c</fullName>
+        <externalId>false</externalId>
+        <label>Vice President</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Alexis Fife Rapo</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Benjamin Godley</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brigid W. Sullivan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>David Bernstein</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jamie Parker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jeanne M. Hopkins</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jonathan C. Abbott</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Joseph M. Igoe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lance W. Ozier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Margaret Drain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marita Rivero</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Russell J. Peotter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Susan L. Kantrowitz</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suzanne Zellner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vinay Mehra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Winifred Lenihan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WGBH_Employee_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>WGBH Employee ID #</label>
+        <length>5</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WGBH_Job_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Supervisor Job Title</label>
+        <referenceTo>WGBH_Job_Titles__c</referenceTo>
+        <relationshipLabel>WGBH ETM Forms (Supervisor Job Title)</relationshipLabel>
+        <relationshipName>WGBH_ETM_FormsSupervisorTitle</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>WGBH ETM Form</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Employee_Last_Name__c</columns>
+        <columns>Employee_First_Name__c</columns>
+        <columns>WGBH_Employee_ID__c</columns>
+        <columns>Title__c</columns>
+        <columns>Transaction_Requested__c</columns>
+        <columns>Supervisor_Name__c</columns>
+        <columns>Accounting_Unit__c</columns>
+        <columns>Activity__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ETM-{00000000}</displayFormat>
+        <label>ETM Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>WGBH ETM Forms</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Emergency_Contact_Last_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Emergency_Contact_First_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>WGBH_Employee_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Title__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Employee_Last_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Employee_First_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>WGBH_Employee_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Title__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Department__c</searchFilterFields>
+        <searchFilterFields>Employment_Status__c</searchFilterFields>
+        <searchFilterFields>Employment_Type__c</searchFilterFields>
+        <searchFilterFields>In_House_Affiliation__c</searchFilterFields>
+        <searchFilterFields>Accounting_Unit__c</searchFilterFields>
+        <searchResultsAdditionalFields>Employee_Last_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Employee_First_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>WGBH_Employee_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Title__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Employee_Status_Validaiton</fullName>
+        <active>true</active>
+        <description>Validates that an end date is chosen for non Staff Employee Status</description>
+        <errorConditionFormula>OR(ISPICKVAL(Employment_Status__c, &quot;Project Contract&quot;), ISPICKVAL(Employment_Status__c, &quot;Temporary&quot;), ISPICKVAL(Employment_Status__c, &quot;Freelance&quot;))</errorConditionFormula>
+        <errorDisplayField>End_Date__c</errorDisplayField>
+        <errorMessage>You must select an End Date for non-Staff positions</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HoursPerWeek_Validaiton</fullName>
+        <active>true</active>
+        <description>Validates that hoursweek is &gt; or &lt; 40 depending on the Employment type selected</description>
+        <errorConditionFormula>OR(AND(ISPICKVAL( Employment_Type__c , &quot;Full Time&quot;),  Hours_per_Week__c &lt; 40), AND(ISPICKVAL(Employment_Type__c, &quot;Part Time&quot;),  Hours_per_Week__c &gt; 39))</errorConditionFormula>
+        <errorDisplayField>Hours_per_Week__c</errorDisplayField>
+        <errorMessage>Hours per week must be &gt;= 40 for Full Time and &lt; 40 for Part time.</errorMessage>
+    </validationRules>
+</CustomObject>

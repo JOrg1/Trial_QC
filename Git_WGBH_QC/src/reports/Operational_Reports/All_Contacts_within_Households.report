@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Household__c.Contacts__r$Name</field>
+    </columns>
+    <description>All contacts within Households by OWNER (OWNER, usu WGBH)</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Household__c$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Contacts within Households</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Households_with_without_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Household__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

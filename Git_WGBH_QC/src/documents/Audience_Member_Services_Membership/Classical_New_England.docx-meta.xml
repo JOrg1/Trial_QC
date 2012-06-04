@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Classical New England Program Descriptions</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>Classical New England, Radio, Schedule, Program</keywords>
+    <name>Classical New England Program Descriptions</name>
+    <public>true</public>
+</Document>

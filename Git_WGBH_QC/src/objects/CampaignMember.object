@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Account_For_Reports__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.Account.Staff__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Manager</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( &apos;/&apos; + Contact.AccountId  , Contact.Account.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ask_Amount_1__c</fullName>
+        <description>First ask amount associated with the solicitation of this donor/campaign.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the first ask amount associated with the solicitation of this donor to this campaign.</inlineHelpText>
+        <label>Ask Amount 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Ask_Amount_2__c</fullName>
+        <description>First ask amount associated with the solicitation of this donor/campaign.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the secondary ask amount associated with the solicitation of this donor to this campaign.</inlineHelpText>
+        <label>Ask Amount 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Ask_Amount_3__c</fullName>
+        <description>Third Ask amount associated with the solicitation of this donor/campaign.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the third ask amount associated with the solicitation of this donor to this campaign.</inlineHelpText>
+        <label>Ask Amount 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Ask_Readiness__c</fullName>
+        <externalId>false</externalId>
+        <label>Ask Readiness</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Member_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Member Report</label>
+        <referenceTo>Campaign_Member_Report__c</referenceTo>
+        <relationshipLabel>Campaign Members</relationshipLabel>
+        <relationshipName>Campaign_Members</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Expected_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>External_Rating__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+ Contact.Account.External_Rating__c,
+ &quot;A&quot;, &quot;A&quot;,
+&quot;B&quot;,&quot;B&quot;,
+&quot;C&quot;,&quot;C&quot;,
+&quot;D&quot;,&quot;D&quot;,
+&quot;E&quot;,&quot;E&quot;,
+&quot;F&quot;,&quot;F&quot;,
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>External Rating</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Genre__c</fullName>
+        <externalId>false</externalId>
+        <label>Genre</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Children&apos;s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Childrens Programming</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Gift_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Giving__r.Giving_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gift Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Giving__c</fullName>
+        <externalId>false</externalId>
+        <label>Giving</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Campaign Members</relationshipLabel>
+        <relationshipName>Campaign_Members</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Household_Campaign_Members__c</fullName>
+        <description>Households give along with contacts</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Households are added to a campaign for tracking the effectiveness of the campaign giving.</inlineHelpText>
+        <label>Household Campaign Members</label>
+        <referenceTo>Household__c</referenceTo>
+        <relationshipLabel>Campaign Members</relationshipLabel>
+        <relationshipName>Campaign_Members</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Rating__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+  Contact.Internal_Rating__c ,
+ &quot;1&quot;, &quot;1&quot;,
+&quot;2&quot;,&quot;2&quot;,
+&quot;3&quot;,&quot;3&quot;,
+&quot;4&quot;,&quot;4&quot;,
+&quot;5&quot;,&quot;5&quot;,
+&quot;6&quot;,&quot;6&quot;,
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Internal Rating</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brigid Sullivan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Community Advisors Board</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Inbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Outbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executive Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Henry Becton</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jamie Parker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jeanne Hopkins</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Joe Igoe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jon Abbott</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lance Ozier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Letter Inbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Letter Outbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Margaret Drain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Most Recent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Inbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Outbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Susan Dwyer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vinay Mehra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBH Web Site</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Win Lenihan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Word of Mouth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Moves_Management_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Moves Management Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Identification</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Research</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Strategy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solicitation/Proposal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pledged</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Go Back</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Committed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dropped</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Intention</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Preferred_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( &apos;/&apos; + Contact.Account.Preferred_Address__r.Id  ,  Contact.Account.Preferred_Address__r.Name  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Preferred Address</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Solicitor__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Solicitor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaign_Members</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Program_Show__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>TV/Radio Program Show</inlineHelpText>
+        <label>TV/Radio Program/Show</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Campaign Members</relationshipLabel>
+        <relationshipName>Campaign_Members</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Purpose</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Closed Captioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discriptive Video Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Program Curriculm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Promotion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Screening</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fund Production</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salutation</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Admiral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brother</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cantor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Captain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Colonel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commander</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deacon</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dr.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Father</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lieutenant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lt Colonel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Master</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mayor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Miss</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mr.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mrs.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ms.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prof.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Professor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rabbi</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Representative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reverend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Senator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sergeant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sister</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The Honorable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lady</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sir</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Add</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Held</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inserted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invitation Opened</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invitation Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Panel Member</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Participant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Registered</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Removed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Responded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RSVP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Speaker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wait List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Stretch_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Stretch Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <recordTypes>
+        <fullName>Standard</fullName>
+        <active>true</active>
+        <description>Standard page layout used by all groups except for Major Donors</description>
+        <label>Standard</label>
+        <picklistValues>
+            <picklist>Ask_Readiness__c</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Genre__c</picklist>
+            <values>
+                <fullName>Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Childrens Programming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Moves_Management_Stage__c</picklist>
+            <values>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Go Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Identification</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Intention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pledged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitation%2FProposal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>Closed Captioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discriptive Video Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fund Production</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Curriculm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promotion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Screening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <webLinks>
+        <fullName>Create_Giving</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Giving</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/CreateGivingOverride?retURL={!CampaignMember.Id}&amp;conid={!CampaignMember.ContactId}&amp;cmpid={!CampaignMember.CampaignId}&amp;cmid={!CampaignMember.Id}&amp;movemanagestage={!CampaignMember.Moves_Management_Stage__c}&amp;expectamount={!CampaignMember.Expected_Amount__c}&amp;stretchamount={!CampaignMember.Stretch_Amount__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_PRR</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Prospect Research Report</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/CreatePRR?retURL={!CampaignMember.Id}&amp;conid={!CampaignMember.ContactId}&amp;accid={!CampaignMember.Account_For_Reports__c}&amp;CampaignId={!CampaignMember.CampaignId}&amp;memberId={!CampaignMember.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Manage_Members</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Manage Members</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>var pageURL = &quot;/apex/ManageMember?id={!Campaign.Id}&quot;;
+var title = &quot;Manage Members&quot;;
+var retVal;
+//retVal = window.showModalDialog(pageURL,title,&apos;dialogWidth:350px; dialogHeight:250px; center:yes; resizable:no&apos;);
+
+window.location = pageURL;
+
+if(retVal != null){
+    if(retVal == &quot;Add Members - Import File&quot;){
+          var URL = &quot;setup/wiz/wizard.jsp?wizardUrl=/camp/campaignimport.jsp?id={!Campaign.Id}&amp;&quot; ;    
+             URL += &quot;wizardPageTitle=ImportWizardTitle&quot;;
+          openPage(URL);
+    }
+     if(retVal == &quot;Update and Add Members - Import File&quot;){
+          var URL = &quot;setup/wiz/wizard.jsp?wizardUrl=/camp/campaignimport.jsp?id={!Campaign.Id}&amp;&quot;;
+          URL += &quot;wizardPageTitle=ImportWizardTitle&quot;;
+         openPage(URL);
+    }
+    if(retVal == &quot;Add Members - Search&quot;){
+        var URL = &quot;CampaignMember?id={!Campaign.Id}&amp;mode=add&quot;;
+        redirectPage(URL);
+    }
+    if(retVal == &quot;Edit Members - Search&quot;){
+        var URL = &quot;CampaignMember?id={!Campaign.Id}&amp;mode=edit&quot;;
+        redirectPage(URL);
+    }
+}
+
+
+    function redirectPage(TargetPage)
+    {
+
+        var sURL = String(window.location);
+        var substr = sURL.substring(sURL.lastIndexOf(&quot;/&quot;),sURL.length);
+        sURL = sURL.replace(&quot;/apex&quot;,&quot;&quot;);
+        sURL = sURL.replace(substr,&quot;/&quot; + &quot;apex/&quot; + TargetPage);
+        window.location = sURL;
+    }
+
+    function openPage(TargetPage)
+    {
+
+        var sURL = String(window.location);
+        var substr = sURL.substring(sURL.lastIndexOf(&quot;/&quot;),sURL.length);
+        sURL = sURL.replace(substr,&quot;/&quot; + TargetPage).replace(&quot;/apex&quot;,&quot;&quot;);
+        window.showModalDialog(sURL,&quot;&quot;,&apos;dialogWidth:900px; dialogHeight:650px; center:yes; resizable:no&apos;);
+    }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sf4twitter__Send_Twitter_Message</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Message To Members</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var records = {!GETRECORDIDS( $ObjectType.CampaignMember)}; 
+
+function dataNav(showDataBrowser) {
+	dataBrowser = &apos;&apos;;
+	for(var i in navigator) {
+		dataBrowser += &quot;navigator.&quot; + i + &quot;\t\t=\t&quot; + eval(&quot;navigator.&quot; + i)+ &quot;\n&quot;;
+	}
+	return (showDataBrowser) ? dataBrowser : {&apos;name&apos; : navigator.appName, &apos;version&apos; : navigator.appVersion, &apos;userAgent&apos; : 	navigator.userAgent};
+}
+
+function openPopup(records) {
+    var popupHeight = 386;
+    var popupWidth = 500;
+    
+	var popupLeft = ( screen.width - popupWidth  ) / 2;
+	var popupTop = ( screen.height - popupHeight ) / 2;
+
+    var popupSpecs =
+        &apos;width=&apos;+ popupWidth + &apos;,&apos; +
+        &apos;height=&apos; + popupHeight + &apos;,&apos; +
+        &apos;left=&apos; + popupLeft + &apos;,&apos; +
+        &apos;top=&apos; + popupTop+ &apos;,&apos; +
+        &apos;toolbar=no,&apos; +
+        &apos;titlebar=no,&apos; +
+        &apos;location=no,&apos; +
+        &apos;directories=no,&apos; +
+        &apos;status=no,&apos; +
+        &apos;menubar=no,&apos; +
+        &apos;scrollbars=yes,&apos; +
+        &apos;copyhistory=yes,&apos; +
+        &apos;resizable=yes&apos;;
+    window.open(
+        &apos;/apex/sf4twitter__TwitterMessage?id={!Campaign.Id}&amp;records=&apos; + records +  &apos;&amp;retURL=&apos;+encodeURIComponent(window.location),
+        &apos;_blank&apos;,
+       popupSpecs);
+}
+
+if(dataNav()[&apos;name&apos;] == &apos;Microsoft Internet Explorer&apos;){
+	if(records.length &gt; 50){
+		alert(&apos;Your browser does not support that many records, please select up to 50 records.&apos;);
+	}
+	else {
+		if (records[0] == null ) { 
+			alert(&quot;Please select at least one record.&quot;) ;
+		} 
+		else {  
+			if (records.length &gt; 10) { 
+				alert(&quot;Please select no more than ten records.&quot;) ;
+			} 
+			else {  
+				openPopup(records);
+			}
+		}
+	}
+}
+else {
+	if (records[0] == null) { 
+		alert(&quot;Please select at least one record.&quot;) ;
+	} 
+	else {  
+		if (records.length &gt; 10) { 
+			alert(&quot;Please select no more than ten records.&quot;) ;
+		}
+		else {  
+			 openPopup(records);
+		}
+	}
+}</url>
+    </webLinks>
+</CustomObject>

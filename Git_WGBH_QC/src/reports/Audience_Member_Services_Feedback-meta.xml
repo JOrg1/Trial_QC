@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>AMS Program Feedback Reports</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <roles>CEO, CTO, CFO, EVP, VP</roles>
+        <roles>Director Audience Member Services</roles>
+        <roles>Manager Audience Member Services</roles>
+    </sharedTo>
+</ReportFolder>

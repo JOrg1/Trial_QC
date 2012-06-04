@@ -1,0 +1,45 @@
+<apex:page standardController="Classification__c" extensions="ClassificationController" >
+	<apex:Sectionheader title="Classification Edit Page" subtitle="Edit" />
+	<script type="text/javascript">
+		function setFocus() {
+			document.getElementById('$Component.hiddenElement').focus();
+		}
+		window.onload = setFocus;
+	</script>	
+	<apex:form >
+	
+		<apex:pageBlock title="Classification Edit" mode="edit">
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!save}" value="Save" />
+				<apex:commandButton action="{!cancel}" value="Cancel" />
+			</apex:pageBlockButtons>
+			<input id="hiddenElement" type="hidden" />
+			<font color="red"><apex:messages styleClass="error"/> </font>
+			<apex:pageBlockSection title="Classification" columns="1">
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="Classification Code" value="Code" />				
+					<apex:outputField value="{!Classification__c.Classification_Code_Value__r.code_description__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="Classification Value" value="Value"/>				
+    					<apex:outputField value="{!Classification__c.Classification_Code_Value__r.value_description__c}" />
+                	<!-- apex:selectList size="1" value="{!newValue}" >
+                    	<apex:selectOptions value="{!classificationValuesPicklist}"/>
+                    </apex:selectList-->  				
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="StartDate" value="Start Date" />
+					<apex:outputField value="{!Classification__c.start_date__c}" />
+				</apex:pageBlockSectionItem>					
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="EndDate" value="End Date"/>
+					<apex:inputField value="{!Classification__c.end_date__c}"  />
+				</apex:pageBlockSectionItem>							
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="Comments" value="Comments"/>
+					<apex:inputField value="{!Classification__c.comments__c}"  />
+				</apex:pageBlockSectionItem>							
+			</apex:pageBlockSection>
+		</apex:pageBlock>		
+	</apex:form>
+	</apex:page>

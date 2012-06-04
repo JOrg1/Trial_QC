@@ -1,0 +1,3767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a custom area to identify the giving over multiple years by type i.e. Capital Campaign giving for all cumulative years; Major Gift giving for all cumulative years; membership giving, in kind, underwriting and sales.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>ASK1__c</fullName>
+        <description>Calculated data field for Outbound Vendor files</description>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(Station__c) != &apos;WGBH&apos;, 0,
+IF(LEFT(RecordTypeId, 15) != &apos;012Q00000000NJg&apos;, 0,
+IF(current_mem_yr_renew_amt__c &lt;= 39.99, 50, 
+IF(current_mem_yr_renew_amt__c &lt;= 49.99, 60, 
+IF(current_mem_yr_renew_amt__c &lt;= 50.99, 75, 
+IF(current_mem_yr_renew_amt__c &lt;= 99.99, 100, 
+IF(current_mem_yr_renew_amt__c &lt;= 149.99, 150, 
+IF(current_mem_yr_renew_amt__c &lt;= 179.99, 200, 
+IF(current_mem_yr_renew_amt__c &lt;= 249.99, 250, 
+IF(current_mem_yr_renew_amt__c &lt;= 299.99, 300, 
+IF(current_mem_yr_renew_amt__c &lt;= 364.99, 365, 
+IF(current_mem_yr_renew_amt__c &lt;= 499.99, 500, 
+ROUND((current_mem_yr_renew_amt__c * 1.25)/5, 2) )))))))))))) * 5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ASK1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ASK2__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(Station__c) != &apos;WGBH&apos;, 0,
+IF(LEFT(RecordTypeId, 15) != &apos;012Q00000000NJg&apos;, 0,
+IF(current_mem_yr_renew_amt__c &lt;= 39.99, current_mem_yr_renew_amt__c , 
+IF(current_mem_yr_renew_amt__c &lt;= 49.99, 50, 
+IF(current_mem_yr_renew_amt__c &lt;= 50.99, 60, 
+IF(current_mem_yr_renew_amt__c &gt; 50.99, current_mem_yr_renew_amt__c, 
+ROUND((current_mem_yr_renew_amt__c * 1.25)/5, 2) )))))) * 5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ASK2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ASK3__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(Station__c) != &apos;WGBH&apos;, 0, 
+IF(LEFT(RecordTypeId, 15) != &apos;012Q00000000NJg&apos;, 0, 
+IF(current_mem_yr_renew_amt__c &lt;= 39.99, NULL, 
+IF(current_mem_yr_renew_amt__c &lt;= 49.99, current_mem_yr_renew_amt__c, 
+IF(current_mem_yr_renew_amt__c &lt;= 50.99, 50, 
+IF(current_mem_yr_renew_amt__c &gt; 50.99, current_mem_yr_renew_amt__c, 
+ROUND((current_mem_yr_renew_amt__c * 1.25)/5, 2) )))))) * 5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ASK3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Household or Organization tied to the Giving Summary.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Household or Organization tied to the Giving Summary.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Giving Summaries (Account)</relationshipLabel>
+        <relationshipName>Account_Activities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Addgift_Count__c</fullName>
+        <description>The number of Addgifts on this account for this giving summary.</description>
+        <externalId>false</externalId>
+        <label>Total Addgift Count</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Archived_Giving_Amount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Tracks Giving Amount for Giving records not loaded into roundCause</inlineHelpText>
+        <label>Archived Giving Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Archived_Payment_Amount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Tracks Payment Amount for Giving records not loaded into roundCause</inlineHelpText>
+        <label>Archived Payment Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BaseGivingDate__c</fullName>
+        <externalId>false</externalId>
+        <label>BaseGivingDate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BaseTotalGivingAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>BaseTotalGivingAmount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BaseTotalPaidAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>BaseTotalPaidAmount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Base_Addgift_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Addgift Count</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Base_First_Gift_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Base First Gift Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Base_First_Gift_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Base First Gift Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Base_First_Gift_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Base First Gift Source</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Base_Renewal_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Renewal Count</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FiscalYears__c</fullName>
+        <externalId>false</externalId>
+        <label>FiscalYears</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Select</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Fiscal_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Fiscal Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gift_Type__c</fullName>
+        <description>Contains latest gift type.</description>
+        <externalId>false</externalId>
+        <label>Gift Type</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GivingIds__c</fullName>
+        <description>Contains Opportunity ids for which summary is created.</description>
+        <externalId>false</externalId>
+        <label>GivingIds</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Giving_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Giving Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Grace_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>History_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>History Date Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>History__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>History</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsGrace__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsGrace</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Imported__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Imported</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lapsed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lapsed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lapsed_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Lapsed Period</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Largest_Giving_Source__c</fullName>
+        <description>TA: largest_source</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Campaign Name of the largest donation to this Giving Summary.</inlineHelpText>
+        <label>Largest Giving Source</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Member_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Member Year</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Member_Yr_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Member Yr Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Months_to_Expire__c</fullName>
+        <description>A numerical representation of where the giving summary is in regards to there expiration date.  For instance, if it is November and the donor expires in December, the value would be 1.  If the donor expires in January, the value would be -1.</description>
+        <externalId>false</externalId>
+        <formula>(year(expiration_date__c)*12 +month(expiration_date__c)) - (year(today())*12 +month(today()))</formula>
+        <inlineHelpText>A numerical representation of where the giving summary is in regards to there expiration date.  For instance, if it is November and the donor expires in December, the value would be 1.  If the donor expires in January, the value would be -1.</inlineHelpText>
+        <label>Months to Expire</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Most_Recent_Giving_Amount__c</fullName>
+        <description>TA: last_amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The most recent pledge amount for this Giving Summary.</inlineHelpText>
+        <label>Most Recent Giving Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Most_Recent_Giving_Date__c</fullName>
+        <description>TA: last_date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The most recent pledge date for this Giving Summary.</inlineHelpText>
+        <label>Most Recent Giving Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Most_Recent_Giving_Source__c</fullName>
+        <description>TA: last_source</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The most recent Campaign Name on pledge for this Giving Summary.</inlineHelpText>
+        <label>Most Recent Giving Source</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Most_Recent_Payment_Date__c</fullName>
+        <description>TA: last_pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date of the most recent payment on a gift to this Giving Summary.</inlineHelpText>
+        <label>Most Recent Payment Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Count__c</fullName>
+        <description>The number of renewals on this account for the giving summary</description>
+        <externalId>false</externalId>
+        <label>Renewal Count</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shopper_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Shopper count indicating the number of additional gifts to On-air or Web sources with premiums.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Count indicating the number of additional gifts to On-air or Web sources with premiums.  Once this is &gt;= 3, the shopper flag will be checked for that member year on that Giving Summary.</inlineHelpText>
+        <label>Shopper Count</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shopper__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Shopper flag indicating more than 3 additional gifts to On-air or Web sources with premiums.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag indicating a donor gives more than 3 additional gifts to Annual On-air or Web sources with premiums.</inlineHelpText>
+        <label>Shopper</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Solicitation_Cycle1__c</fullName>
+        <externalId>false</externalId>
+        <label>Solicitation Cycle</label>
+        <picklist>
+            <picklistValues>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Station__c</fullName>
+        <description>Drived from the TA activity_type.  H = WGBH, Y = WGBY, I = WCAI and M = Academy of Music.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The station of the Giving Summaries displayed.</inlineHelpText>
+        <label>Station</label>
+        <picklist>
+            <picklistValues>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Summary_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Summary Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaAccount_Activities_Id__c</fullName>
+        <description>TA Account_Activities external Id</description>
+        <externalId>false</externalId>
+        <label>TA Account_Activities Id</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Member_Yr_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>current_mem_yr_renew_amt__c + current_mem_yr_add_amt__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Member Yr Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Years_Since_First_Gift__c</fullName>
+        <description>Number of years since first gift to Station/Giving Summary.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of years since donor&apos;s first gift to Station/Giving Summary.</inlineHelpText>
+        <label>Years Since First Gift</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Years_Since_Previous_Gift__c</fullName>
+        <description>Current year giving summary start date year - previous year giving summary start date, in years</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of years between current renewal and previous renewal donation by donor to this Giving Summary.</inlineHelpText>
+        <label>Years Since Previous Gift</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>account_manager__c</fullName>
+        <description>Account Manager</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Manager</inlineHelpText>
+        <label>Account Manager</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>acquired_date__c</fullName>
+        <description>Acquired Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the prospect, new donor was added to Salesforce</inlineHelpText>
+        <label>Acquired Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>batch_process_count__c</fullName>
+        <description>This field is used for Apex batch processing for post processing ETL information</description>
+        <externalId>false</externalId>
+        <label>Batch Process Count</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bulk_load__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>bulk_load</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>current_activity__c</fullName>
+        <description>convert HAD to RLS, HAQ to Leadership, HAI to Mid Level, HAM to Membership</description>
+        <externalId>false</externalId>
+        <label>Giving Level</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>current_fis_yr_amt__c</fullName>
+        <description>TA: current_fis_yr_amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Current Fiscal Year Pledge Amount for this Giving Summary.</inlineHelpText>
+        <label>Current FY Giving Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>current_fis_yr_pd__c</fullName>
+        <description>TA: current_fis_yr_pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Current Fiscal Year Paid Amount for this Giving Summary.</inlineHelpText>
+        <label>Current FY Paid Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>current_mem_yr_add_amt__c</fullName>
+        <description>TA: current_mem_yr_add_amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total addgift amount in the donor&apos;s member year for this Giving Summary.</inlineHelpText>
+        <label>Member Yr Addgift Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>current_mem_yr_amt__c</fullName>
+        <description>Current Mem Yr Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Mem Yr Amt</inlineHelpText>
+        <label>Current Member Year Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>current_mem_yr_pd__c</fullName>
+        <description>Current Mem Yr Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Mem Yr Pd</inlineHelpText>
+        <label>Current Mem Yr Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>current_mem_yr_renew_amt__c</fullName>
+        <description>TA: current_mem_yr_renew_amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The renewal amount in the donor&apos;s member year for this Giving Summary.</inlineHelpText>
+        <label>Member Yr Renew Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>current_mem_yr_renew_date__c</fullName>
+        <description>TA: current_mem_yr_renew_date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The donor&apos;s member year renewal date for this Giving Summary.</inlineHelpText>
+        <label>Member Yr Renew Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>current_mem_yr_renew_source__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Mem Yr Renew Source</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>current_period_amt__c</fullName>
+        <description>Current Period Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Period Amt</inlineHelpText>
+        <label>Current Period Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>expiration_date__c</fullName>
+        <description>Expiration Date: TA expiration_date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expiration Date of Membership Year for this Giving Summary.  The field can be edited to change a donor&apos;s expiration date for that Giving Summary.  The format should be MM/01/YYYY and is good through the end of that month.</inlineHelpText>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>first_amt__c</fullName>
+        <description>First Pledge Amount: TA first_amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First donation amount to this Giving Summary.</inlineHelpText>
+        <label>First Gift Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>first_date__c</fullName>
+        <description>TA: first_date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of first donation to this Giving Summary</inlineHelpText>
+        <label>First Gift Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>first_pd__c</fullName>
+        <description>First Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First Pd</inlineHelpText>
+        <label>First Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>first_source__c</fullName>
+        <description>TA: first_source</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source of first donation to this Giving Summary</inlineHelpText>
+        <label>First Gift Source</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>giving_level_amt__c</fullName>
+        <description>Giving Level Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Giving Level Amount means Membership Year Total Giving</inlineHelpText>
+        <label>Giving Level Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>largest_date__c</fullName>
+        <description>TA: largest_date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date of the largest donation to this Giving Summary.</inlineHelpText>
+        <label>Largest Giving Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>largest_pd__c</fullName>
+        <description>Largest Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Largest Pd</inlineHelpText>
+        <label>Largest Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>largest_recent_amt__c</fullName>
+        <description>TA: largest_amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The largest amount pledged to this Giving Summary.</inlineHelpText>
+        <label>Largest Giving Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>largest_recent_pd__c</fullName>
+        <description>Largest Recent Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Largest Recent Pd</inlineHelpText>
+        <label>Largest Recent Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_add_amt__c</fullName>
+        <description>Last Add Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Add Amt</inlineHelpText>
+        <label>Last Add Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_amt__c</fullName>
+        <description>Last Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Amt</inlineHelpText>
+        <label>Last Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_date__c</fullName>
+        <description>Last Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Date</inlineHelpText>
+        <label>Last Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>last_fis_yr_amt__c</fullName>
+        <description>TA: last_fis_yr_amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Previous Fiscal Year Pledge Amount for this Giving Summary.</inlineHelpText>
+        <label>Previous FY Giving Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>last_fis_yr_cnt__c</fullName>
+        <description>Last Fis Yr Cnt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Fis Yr Cnt</inlineHelpText>
+        <label>Last Fis Yr Cnt</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_fis_yr_pd__c</fullName>
+        <description>TA: last_fis_yr_pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Previous Fiscal Year Pledge Amount for this Giving Summary.</inlineHelpText>
+        <label>Previous FY Paid Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>last_mem_yr_add_amt__c</fullName>
+        <description>Last Mem Yr Add Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Mem Yr Add Amt</inlineHelpText>
+        <label>Previous Member Year Addgift Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>last_mem_yr_amt__c</fullName>
+        <description>Last Mem Yr Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Mem Yr Amt</inlineHelpText>
+        <label>Previous Member Year Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>last_mem_yr_pd__c</fullName>
+        <description>Last Mem Yr Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Mem Yr Pd</inlineHelpText>
+        <label>Previous Member Year Paid</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>last_mem_yr_renew_amt__c</fullName>
+        <description>Last Mem Yr Renew Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Mem Yr Renew Amt</inlineHelpText>
+        <label>Previous Member Year Renew Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_mem_yr_renew_date__c</fullName>
+        <description>Last Mem Yr Renew Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Mem Yr Renew Date</inlineHelpText>
+        <label>Previous Member Year Renew Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>last_mem_yr_renew_source__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Member Year Renew Source</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_pd__c</fullName>
+        <description>Last Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Pd</inlineHelpText>
+        <label>Last Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>lock_activity__c</fullName>
+        <description>Lock Activity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lock Activity</inlineHelpText>
+        <label>Lock Activity</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>prior_giving_level_amt__c</fullName>
+        <description>Prior Giving Level Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prior Giving Level Amt</inlineHelpText>
+        <label>Previous Giving Level Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>prospect_source__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Acquired Marketing Source, Donor Acquired From</inlineHelpText>
+        <label>Acquired Source</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>second_fis_yr_amt__c</fullName>
+        <description>Second Fis Yr Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second Fis Yr Amt</inlineHelpText>
+        <label>Second Fis Yr Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>second_fis_yr_cnt__c</fullName>
+        <description>Second Fis Yr Cnt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second Fis Yr Cnt</inlineHelpText>
+        <label>Second Fis Yr Cnt</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>second_fis_yr_pd__c</fullName>
+        <description>Second Fis Yr Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second Fis Yr Pd</inlineHelpText>
+        <label>Second Fis Yr Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>second_mem_yr_amt__c</fullName>
+        <description>Second Mem Yr Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second Mem Yr Amt</inlineHelpText>
+        <label>Second Mem Yr Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>second_mem_yr_pd__c</fullName>
+        <description>Second Mem Yr Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second Mem Yr Pd</inlineHelpText>
+        <label>Second Mem Yr Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>second_mem_yr_renew_amt__c</fullName>
+        <description>Second Mem Yr Renew Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second Mem Yr Renew Amt</inlineHelpText>
+        <label>Second Mem Yr Renew Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>second_mem_yr_renew_date__c</fullName>
+        <description>Second Mem Yr Renew Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second Mem Yr Renew Date</inlineHelpText>
+        <label>Second Mem Yr Renew Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>second_mem_yr_renew_source__c</fullName>
+        <externalId>false</externalId>
+        <label>Second Mem Yr Renew Source</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>solicitation_cycle__c</fullName>
+        <description>Solicitation Cycle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Solicitation Cycle</inlineHelpText>
+        <label>Solicitation Cycle</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>start_date__c</fullName>
+        <description>TA: start_date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The start date of the donor&apos;s membership year for this Giving Summary.</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>station_support__c</fullName>
+        <description>Station Support</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Station Support</inlineHelpText>
+        <label>Station Support</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sts__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of the Annual Membership (active, grace, lapsed, old lapsed, planned giving, deceased, inactive)</inlineHelpText>
+        <label>Status</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>third_fis_yr_amt__c</fullName>
+        <description>Third Fis Yr Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Third Fis Yr Amt</inlineHelpText>
+        <label>Third Fis Yr Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>third_fis_yr_cnt__c</fullName>
+        <description>Third Fis Yr Cnt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Third Fis Yr Cnt</inlineHelpText>
+        <label>Third Fis Yr Cnt</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>third_fis_yr_pd__c</fullName>
+        <description>Third Fis Yr Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Third Fis Yr Pd</inlineHelpText>
+        <label>Third Fis Yr Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>third_mem_yr_amt__c</fullName>
+        <description>Third Mem Yr Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Third Mem Yr Amt</inlineHelpText>
+        <label>Third Mem Yr Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>third_mem_yr_pd__c</fullName>
+        <description>Third Mem Yr Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Third Mem Yr Pd</inlineHelpText>
+        <label>Third Mem Yr Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>third_mem_yr_renew_amt__c</fullName>
+        <description>Third Mem Yr Renew Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Third Mem Yr Renew Amt</inlineHelpText>
+        <label>Third Mem Yr Renew Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>third_mem_yr_renew_date__c</fullName>
+        <description>Third Mem Yr Renew Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Third Mem Yr Renew Date</inlineHelpText>
+        <label>Third Mem Yr Renew Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>third_mem_yr_renew_source__c</fullName>
+        <externalId>false</externalId>
+        <label>Third Mem Yr Renew Source</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>total_amt__c</fullName>
+        <description>TA: total_amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total pledged in donor&apos;s lifetime for this station or Giving Summary.</inlineHelpText>
+        <label>Total Giving Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>total_cnt__c</fullName>
+        <description>Total Cnt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Cnt</inlineHelpText>
+        <label>Total Cnt</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>total_pd__c</fullName>
+        <description>TA: total_pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total paid in donor&apos;s lifetime for this station or Giving Summary.</inlineHelpText>
+        <label>Total Paid Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>total_pmts__c</fullName>
+        <description>Total Pmts</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Pmts</inlineHelpText>
+        <label>Total Pmts</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>total_renew_amt__c</fullName>
+        <description>Total Renew Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Renew Amt</inlineHelpText>
+        <label>Total Renew Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>total_renew_cnt__c</fullName>
+        <description>Total Renew Cnt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Renew Cnt</inlineHelpText>
+        <label>Total Renewal Count</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>track__c</fullName>
+        <description>TA: track</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift type and Response mechanism tied to the renewal donation for this Giving Summary.  For example: New by Pledge or Renew by Email.</inlineHelpText>
+        <label>Track</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>work_amt__c</fullName>
+        <description>Work Amt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Amt</inlineHelpText>
+        <label>Work Amt</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>work_date__c</fullName>
+        <description>Work Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Date</inlineHelpText>
+        <label>Work Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>work_pd__c</fullName>
+        <description>Work Pd</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Pd</inlineHelpText>
+        <label>Work Pd</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>work_source__c</fullName>
+        <externalId>false</externalId>
+        <label>Work</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Giving Summary</label>
+    <nameField>
+        <displayFormat>GS#-{0000000000}</displayFormat>
+        <label>Giving Summary #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Giving Summaries</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Annual_Giving</fullName>
+        <active>true</active>
+        <label>Annual Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Auction_Giving</fullName>
+        <active>true</active>
+        <label>Auction Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Capital_Campaign_Giving</fullName>
+        <active>true</active>
+        <label>Capital Campaign Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Events_Giving</fullName>
+        <active>true</active>
+        <label>Event Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Foundation_Giving</fullName>
+        <active>true</active>
+        <label>Foundation Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>In_Kind_Gifts</fullName>
+        <active>true</active>
+        <label>In-Kind Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Matching_Gifts</fullName>
+        <active>true</active>
+        <label>Matching Gift Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Planned_Giving</fullName>
+        <active>true</active>
+        <label>Planned Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Restricted_Giving</fullName>
+        <active>true</active>
+        <label>Restricted Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_Giving</fullName>
+        <active>true</active>
+        <label>Sales Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Underwriting</fullName>
+        <active>true</active>
+        <label>Underwriting</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Volunteer_Giving</fullName>
+        <active>true</active>
+        <label>Volunteer Giving</label>
+        <picklistValues>
+            <picklist>FiscalYears__c</picklist>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Select</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Giving_Level__c</picklist>
+            <values>
+                <fullName>Associate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Murrow Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Year__c</picklist>
+            <values>
+                <fullName>Current Year</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Previous - 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous - 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Member_Yr_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Survey</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solicitation_Cycle1__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiple Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>Academy of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>current_fis_yr_amt__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>current_fis_yr_pd__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>expiration_date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Gift_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Giving_Level__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Shopper__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Shopper_Count__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Most_Recent_Giving_Source__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>expiration_date__c</searchFilterFields>
+        <searchFilterFields>OWNER.LAST_NAME</searchFilterFields>
+        <searchFilterFields>Total_Member_Yr_Amount__c</searchFilterFields>
+        <searchFilterFields>total_pd__c</searchFilterFields>
+        <searchFilterFields>Station__c</searchFilterFields>
+        <searchFilterFields>Most_Recent_Payment_Date__c</searchFilterFields>
+        <searchFilterFields>current_mem_yr_renew_date__c</searchFilterFields>
+        <searchFilterFields>current_mem_yr_renew_amt__c</searchFilterFields>
+        <searchFilterFields>current_mem_yr_add_amt__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

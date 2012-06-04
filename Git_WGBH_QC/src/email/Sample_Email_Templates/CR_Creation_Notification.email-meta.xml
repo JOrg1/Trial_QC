@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CR Creation Notification</name>
+    <style>none</style>
+    <subject>{!Change_Request__c.CreatedBy} has created a new Change Request</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Needed to be signed and given to both Legal and Accounting departments before a contest item can be shipped.</description>
+    <internalUseOnly>true</internalUseOnly>
+    <keywords>Contest, Prize, release form, affidavit</keywords>
+    <name>Manager: Prize Winner Release Form</name>
+    <public>false</public>
+</Document>

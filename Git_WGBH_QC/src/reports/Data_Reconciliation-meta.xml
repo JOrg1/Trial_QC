@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Data Reconciliation</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <groups>Sys Admin</groups>
+        <roles>WGBH Sys Admin</roles>
+    </sharedTo>
+</ReportFolder>

@@ -1,0 +1,48 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<!--StartFragment-->
+
+<p class="MsoNormal" style="font-size: 12pt; "><span class="Apple-style-span" style="-webkit-border-horizontal-spacing: 5px; -webkit-border-vertical-spacing: 5px; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">Dear {!Case.Contact},</span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">Thank you for recently contacting WGBH.&nbsp; We welcome and value your feedback about our programming.</span></font><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">WGBH’s audience is as passionate about investigative news, richly
+set dramas, indispensable children’s programming, uninterrupted classical
+music, and standard-setting forays into our natural world as we are… and often
+have feedback and insight to share with us.&nbsp; <o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">As a result we receive a very large volume of correspondence.&nbsp; <o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">While we are not staffed to be able to respond to every message and
+individual concern from our viewers, your comments provide an important source
+of information.&nbsp; Please be assured
+that we have received and read your message and have shared your thoughts with
+the appropriate departments, management program directors and production
+units.&nbsp; <o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">It’s a highly competitive world out there for philanthropic
+support; our goal is to earn your trust and support every day. Thank you for
+contacting us and for your support of WGBH.<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">Sincerely,<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal"><font class="Apple-style-span" face="Verdana"><span class="Apple-style-span" style="font-family: arial; -webkit-border-horizontal-spacing: 5px; -webkit-border-vertical-spacing: 5px; "><font class="Apple-style-span" face="Verdana, Helvetica, sans-serif" style="font-size: 16px; "><span class="Apple-style-span" style="font-size: medium;">{!Case.OwnerFullName}<br>WGBH Audience &amp; Member Services</span></font><br><br><br></span></font><span class="Apple-style-span" style="font-family: Arial, sans-serif; -webkit-border-horizontal-spacing: 5px; -webkit-border-vertical-spacing: 5px; font-size: x-small; ">{!Case.CaseNumber}</span></p>
+
+<!--EndFragment-->]]></td>
+</tr>
+</table>

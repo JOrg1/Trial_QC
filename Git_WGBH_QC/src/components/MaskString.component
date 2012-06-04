@@ -1,0 +1,6 @@
+<apex:component controller="MaskString">
+    <apex:attribute name="MaskString" assignTo="{!cMaskString}" type="string" description="MaskString" />
+    <apex:attribute name="MaskChar" assignTo="{!cMaskChar}" type="string" description="MaskChar" />
+    <apex:attribute name="NoOfVisibleChar" assignTo="{!cNoOfVisibleChar}" type="integer" description="NoOfVisibleChar" />
+    {!DisplayMaskString}
+</apex:component>

@@ -1,0 +1,13 @@
+Hi,
+
+{!Campaign.Name}, {!Campaign.Id} has reached its end date.
+
+Please either::
+
+- Update the status to completed and un-check the active box
+- Update the end date to a future date
+
+If you have any questions please contact your Tammy Atwood or Brian Wainwright.
+
+Thanks,
+roundCause

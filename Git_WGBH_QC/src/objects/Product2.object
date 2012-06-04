@@ -1,0 +1,2123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Alternate_Inventory_Balance__c</fullName>
+        <description>Inventory at Alternate Location.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Inventory count at alternate location.</inlineHelpText>
+        <label>Alternate Inventory Balance</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alternate_Location__c</fullName>
+        <description>Location of additional inventory</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Location of additional inventory</inlineHelpText>
+        <label>Alternate Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Forest Digital Download</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forest Direct</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forest Direct Plus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In House</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ticket</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <description>Channel associated with premium.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Channel associated with premium</inlineHelpText>
+        <label>Channel</label>
+        <picklist>
+            <controllingField>Station__c</controllingField>
+            <picklistValues>
+                <fullName>89.7</fullName>
+                <controllingFieldValues>WGBH</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>99.5</fullName>
+                <controllingFieldValues>WGBH</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TV</fullName>
+                <controllingFieldValues>WGBH</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Club__c</fullName>
+        <externalId>false</externalId>
+        <label>Club</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Arts &amp; Drama Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Celtic &amp; Folk Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Classical Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>History Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home &amp; Travel Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jazz Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kids &amp; Family Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>News Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Science Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Arts &amp; Culture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food &amp; Wine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FMV__c</fullName>
+        <externalId>false</externalId>
+        <label>FMV</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Family</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Premium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Forest_Direct_Plus_Number_c__c</fullName>
+        <description>Forest Direct Plus Product Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Item code needed for placing order at Forest Direct Plus warehouse.</inlineHelpText>
+        <label>Forest Direct Plus Number</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ISBN__c</fullName>
+        <externalId>false</externalId>
+        <label>ISBN</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inventory_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Inventory Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inventory_Location__c</fullName>
+        <description>Location of Warehouse</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Warehouse location of items.</inlineHelpText>
+        <label>Inventory Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Forest Digital Download</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forest Direct</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forest Direct Plus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In House</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ticket</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Item_Cost__c</fullName>
+        <description>Estimated cost to the Station.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated cost to the Station.</inlineHelpText>
+        <label>Item Cost</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Other_Vendor_Data__c</fullName>
+        <description>Other Vendor to add to pick list</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter data on vendors not in Vendor field.</inlineHelpText>
+        <label>Other Vendor Data</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Premium_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Category</label>
+        <picklist>
+            <controllingField>Family</controllingField>
+            <picklistValues>
+                <fullName>Adoption Program (e.g., Adopt-a-Whale)</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bag</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Book</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cassette Recording</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CD-ROM</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Combination Gift Package</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Compact Disc Recording</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DVD</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Generic Item</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hats and Caps</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kids</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Luggage other than station generics</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Magazine</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Make Good Item</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing Effort</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Miscellaneous</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mug</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Poster</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Program Guide</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tickets</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Toy</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transcript</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transmedia Card</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>T-Shirt</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Video</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Chair</fullName>
+                <controllingFieldValues>Premium</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Qualifying_Gift_Kind__c</fullName>
+        <externalId>false</externalId>
+        <label>Qualifying Gift Kind</label>
+        <picklist>
+            <picklistValues>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sustaining Gift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Qualifying_Payment_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Qualifying Payment Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Charge Card</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Check</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electronic Funds Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Kind</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Life Insurance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mutual fund</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PayPal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Payroll Deduction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Property</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stock</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Giving</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Station__c</fullName>
+        <externalId>false</externalId>
+        <label>Station</label>
+        <picklist>
+            <picklistValues>
+                <fullName>WGBH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UPC__c</fullName>
+        <externalId>false</externalId>
+        <label>UPC</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Donation Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Premium_Benefit__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Code used to order premiums with production vendor.</inlineHelpText>
+        <label>Vendor Premium/Benefit #</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor__c</fullName>
+        <description>Name of product vendor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of product vendor (not warehouse).</inlineHelpText>
+        <label>Vendor</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Abbott Group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Allegro Corporation (Music Design)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Amazon.com</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>America’s Test Kitchen</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Arbor Day Foundation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Arkivmusic.com</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Avalon Multimedia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Back Door Productions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bob Ross Co.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bob Swerer Productions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Boston Symphony Orchestra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Compass Records</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Detroit Public Television</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital Freeway</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital Row c/o Rashford and Kruse</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Droll Yankees Inc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Eagle Rock Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Eton Corporation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exercise To Heal, LLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forest Incentives</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gaither Music</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GSI Commerce / PBS Video</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harmonia Mundi USA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Houston Enterprises, Inc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>J&amp;R Adventures</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>John Wiley &amp; Sons</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KCTS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kindred Spirits of PE.I.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maryland Public Television</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MindWorks Press / Amen Clinics, Inc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nantucket Films</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NPR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Olive Branch Creative, LLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PBS Distribution Boston</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Promotional Concepts, Inc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proper Records, LLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PY Productions Inc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renew Life Formulas, Inc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Riverbend Publishing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Santa Fe Productions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SkinScience Labs, Inc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Smart Source LLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sound Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sounds True</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The Burchard Group LLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The Little Bookroom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The Moth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The Winters Group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TOHV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Two Cats Productions, Ltd.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>University Press of New England</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Visability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Welk Music Group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WETA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wine Tasting Association</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WLIW</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WNET</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WQED Multimedia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yankee Publishing, Inc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>no_of_items__c</fullName>
+        <externalId>false</externalId>
+        <label># of Items</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllPackages</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.RECORD_TYPE</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>PRODUCT2.CREATED_DATE</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <columns>Vendor__c</columns>
+        <columns>Vendor_Premium_Benefit__c</columns>
+        <columns>Inventory_Balance__c</columns>
+        <columns>Inventory_Location__c</columns>
+        <columns>Alternate_Location__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Packages</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_WCAI_Premiums</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.RECORD_TYPE</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Premium_Category__c</columns>
+        <columns>PRODUCT2.LAST_UPDATE</columns>
+        <columns>End_Date__c</columns>
+        <columns>FMV__c</columns>
+        <columns>Inventory_Location__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.FAMILY</field>
+            <operation>equals</operation>
+            <value>Premium</value>
+        </filters>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Station__c</field>
+            <operation>equals</operation>
+            <value>WCAI</value>
+        </filters>
+        <label>All Active WCAI Premiums</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_WGBH_Premiums</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.RECORD_TYPE</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Premium_Category__c</columns>
+        <columns>PRODUCT2.LAST_UPDATE</columns>
+        <columns>End_Date__c</columns>
+        <columns>FMV__c</columns>
+        <columns>Inventory_Location__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.FAMILY</field>
+            <operation>equals</operation>
+            <value>Membership</value>
+        </filters>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Station__c</field>
+            <operation>equals</operation>
+            <value>WCAI</value>
+        </filters>
+        <label>All Active WGBH Premiums</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_WGBY_Premiums</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.RECORD_TYPE</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Premium_Category__c</columns>
+        <columns>PRODUCT2.LAST_UPDATE</columns>
+        <columns>End_Date__c</columns>
+        <columns>FMV__c</columns>
+        <columns>Inventory_Location__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.FAMILY</field>
+            <operation>equals</operation>
+            <value>Premium</value>
+        </filters>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Station__c</field>
+            <operation>equals</operation>
+            <value>WGBY</value>
+        </filters>
+        <label>All Active WGBY Premiums</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Item</fullName>
+        <active>true</active>
+        <label>Item</label>
+        <picklistValues>
+            <picklist>Alternate_Location__c</picklist>
+            <values>
+                <fullName>Forest Digital Download</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Direct Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ticket</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Channel__c</picklist>
+            <values>
+                <fullName>89%2E7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>99%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TV</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Club__c</picklist>
+            <values>
+                <fullName>Arts %26 Culture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arts %26 Drama Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Celtic %26 Folk Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Classical Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Wine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>History Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home %26 Travel Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jazz Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kids %26 Family Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>News Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science Club</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Inventory_Location__c</picklist>
+            <values>
+                <fullName>Forest Digital Download</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Direct Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ticket</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Category__c</picklist>
+            <values>
+                <fullName>Adoption Program %28e%2Eg%2E%2C Adopt-a-Whale%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bag</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Book</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CD-ROM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cassette Recording</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Combination Gift Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compact Disc Recording</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DVD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generic Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hats and Caps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kids</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Luggage other than station generics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make Good Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Effort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poster</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T-Shirt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tickets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transmedia Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBY Chair</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying_Gift_Kind__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustaining Gift</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying_Payment_Method__c</picklist>
+            <values>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charge Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronic Funds Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Kind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual fund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PayPal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payroll Deduction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Giving</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vendor__c</picklist>
+            <values>
+                <fullName>Abbott Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allegro Corporation %28Music Design%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amazon%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>America%E2%80%99s Test Kitchen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arbor Day Foundation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arkivmusic%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Avalon Multimedia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Back Door Productions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bob Ross Co%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bob Swerer Productions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boston Symphony Orchestra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compass Records</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detroit Public Television</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Digital Freeway</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Digital Row c%2Fo Rashford and Kruse</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Droll Yankees Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eagle Rock Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eton Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exercise To Heal%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Incentives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GSI Commerce %2F PBS Video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gaither Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Harmonia Mundi USA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston Enterprises%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>J%26R Adventures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Wiley %26 Sons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KCTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kindred Spirits of PE%2EI%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maryland Public Television</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MindWorks Press %2F Amen Clinics%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nantucket Films</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Olive Branch Creative%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PBS Distribution Boston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PY Productions Inc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promotional Concepts%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proper Records%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renew Life Formulas%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Riverbend Publishing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Santa Fe Productions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SkinScience Labs%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Smart Source LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sound Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sounds True</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TOHV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Burchard Group LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Little Bookroom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Moth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Winters Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Two Cats Productions%2C Ltd%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>University Press of New England</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WETA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WLIW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WNET</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WQED Multimedia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Welk Music Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wine Tasting Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yankee Publishing%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Package</fullName>
+        <active>true</active>
+        <label>Package</label>
+        <picklistValues>
+            <picklist>Alternate_Location__c</picklist>
+            <values>
+                <fullName>Forest Digital Download</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Direct Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ticket</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Channel__c</picklist>
+            <values>
+                <fullName>89%2E7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>99%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TV</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Club__c</picklist>
+            <values>
+                <fullName>Arts %26 Culture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arts %26 Drama Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Celtic %26 Folk Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Classical Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Wine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>History Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home %26 Travel Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jazz Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kids %26 Family Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>News Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science Club</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Inventory_Location__c</picklist>
+            <values>
+                <fullName>Forest Digital Download</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Direct Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ticket</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Category__c</picklist>
+            <values>
+                <fullName>Adoption Program %28e%2Eg%2E%2C Adopt-a-Whale%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bag</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Book</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CD-ROM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cassette Recording</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Combination Gift Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compact Disc Recording</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DVD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generic Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hats and Caps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kids</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Luggage other than station generics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make Good Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Effort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poster</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T-Shirt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tickets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transmedia Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBY Chair</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying_Gift_Kind__c</picklist>
+            <values>
+                <fullName>Installment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustaining Gift</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying_Payment_Method__c</picklist>
+            <values>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charge Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronic Funds Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Kind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual fund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PayPal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payroll Deduction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Giving</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Station__c</picklist>
+            <values>
+                <fullName>WCAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vendor__c</picklist>
+            <values>
+                <fullName>Abbott Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allegro Corporation %28Music Design%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amazon%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>America%E2%80%99s Test Kitchen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arbor Day Foundation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arkivmusic%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Avalon Multimedia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Back Door Productions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bob Ross Co%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bob Swerer Productions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boston Symphony Orchestra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compass Records</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detroit Public Television</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Digital Freeway</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Digital Row c%2Fo Rashford and Kruse</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Droll Yankees Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eagle Rock Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eton Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exercise To Heal%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forest Incentives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GSI Commerce %2F PBS Video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gaither Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Harmonia Mundi USA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston Enterprises%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>J%26R Adventures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Wiley %26 Sons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KCTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kindred Spirits of PE%2EI%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maryland Public Television</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MindWorks Press %2F Amen Clinics%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nantucket Films</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Olive Branch Creative%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PBS Distribution Boston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PY Productions Inc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promotional Concepts%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proper Records%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renew Life Formulas%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Riverbend Publishing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Santa Fe Productions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SkinScience Labs%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Smart Source LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sound Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sounds True</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TOHV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Burchard Group LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Little Bookroom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Moth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Winters Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Two Cats Productions%2C Ltd%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>University Press of New England</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WETA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WLIW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WNET</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WQED Multimedia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Welk Music Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wine Tasting Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yankee Publishing%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <webLinks>
+        <fullName>Mass_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)}
+
+var records = {!GETRECORDIDS(  $ObjectType.Product2 )};
+
+if (records[0] == null) {
+alert(&quot;Please select at least one record.&quot;) }
+else {
+
+var errors = [];
+var result = sforce.connection.deleteIds(records);
+if (result &amp;&amp; result.length){
+var numFailed = 0;
+var numSucceeded = 0;
+for (var i = 0; i &lt; result.length; i++){
+var res = result[i];
+if (res &amp;&amp; res.success == &apos;true&apos;){
+numSucceeded++;
+} else {
+var es = res.getArray(&quot;errors&quot;);
+if (es.length &gt; 0) {
+errors.push(es[0].message);
+}
+numFailed++;
+}
+}
+if (numFailed &gt; 0){
+alert(&quot;Failed: &quot; + numFailed + &quot;\nSucceeded: &quot; + numSucceeded + &quot; \n Due to: &quot; + errors.join(&quot;\n&quot;));
+} else {
+alert(&quot;Number of records deleted: &quot; + numSucceeded);
+}
+}
+window.location.reload();
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditProduct</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateProduct2</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,4 @@
+{!Change_Request__c.CreatedBy} has created Change Request #{!Change_Request__c.Name}, "{!Change_Request__c.Title__c}".
+
+Click here to view the CR:
+{!Change_Request__c.Link}

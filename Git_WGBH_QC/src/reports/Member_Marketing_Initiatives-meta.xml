@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Member Marketing Initiatives</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <groups>Sys Admin</groups>
+        <groups>WGBH Member Marketing Initiatives</groups>
+        <roles>Director Corporate Marketing</roles>
+        <roles>Manager Corporate Marketing</roles>
+        <roles>User Corporate Marketing</roles>
+        <roles>WGBH Sys Admin</roles>
+    </sharedTo>
+</ReportFolder>

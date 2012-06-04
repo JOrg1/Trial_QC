@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Member_Benefit__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>FK_ACC_PARENT_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.TA_Account_ID__c</field>
+    </columns>
+    <columns>
+        <field>Member_Benefit__c.Benefit_Link__c</field>
+    </columns>
+    <columns>
+        <field>Member_Benefit__c.Category__c</field>
+    </columns>
+    <columns>
+        <field>FK_ACC_URL</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>Member_Benefit__c.BenefitImage__c</field>
+    </columns>
+    <columns>
+        <field>FK_ACC_OWNER_NAME</field>
+    </columns>
+    <description>All Member Benefits by Start Date</description>
+    <format>Tabular</format>
+    <name>Member Benefit Start Dates</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Member_Benefit__c@Member_Benefit__c.Business_Member_Partner__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Member_Benefit__c.Start_Date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Member_Benefit__c.Start_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

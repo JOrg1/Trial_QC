@@ -1,0 +1,5 @@
+Dear  {!Position__r.CreatedBy}, 
+
+The Job Requisition you submitted (#{!Position__c.Name}, {!Position__c.Job_Title__c}) has been approved. If you have any questions or concerns, please contact the Human Resources Employment Team.
+
+Thank you.

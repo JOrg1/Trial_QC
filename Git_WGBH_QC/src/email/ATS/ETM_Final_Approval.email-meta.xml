@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Final approval notice for WGBH ETM</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ETM Final Approval</name>
+    <style>none</style>
+    <subject>ETM Approved</subject>
+    <type>text</type>
+</EmailTemplate>

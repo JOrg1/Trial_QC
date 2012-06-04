@@ -1,0 +1,6 @@
+Hi,
+
+{!Contact.FirstName} {!Contact.LastName} has just been marked as deceased.   http://cs3.salesforce.com/{!Contact.Id}
+
+Thanks,
+Barney

@@ -1,0 +1,31 @@
+The following Job Requisition has been approved by Human Resources and Executive Management:
+
+------------------------
+Position Details:
+
+Hiring Manager: {!Position__c.CreatedBy} 
+Requisition Number: {!Position__c.Name}
+Position Title: {!Position__c.Job_Title__c}
+Department: {!Position__c.Department_Name__c}
+New/Existing Position: {!Position__c.New_Existing_Position__c}
+Affiliation: {!Position__c.Affiliation__c}
+Classification: {!Position__c.Classification__c}
+Position Type: {!Position__c.Type__c}
+Number of Hours per Week: {!Position__c.Hours_Per_Week__c}
+{!if(ISPICKVAL(Position__c.Classification__c, "Staff"), "","Project Length: " + Position__c.Project_Length__c + " weeks")}
+Internal Candidate: {!if(Position__c.Strong_Internal_Candidate__c,"Yes", "No")}
+
+----------------------
+Budget Details:
+
+Funding Type: {!Position__c.Funding_Type__c}
+Budgeted Salary Range: {!Position__c.Min_Pay__c} - {!Position__c.Max_Pay__c}
+Accounting Unit: {!Position__c.WGBH_Accounting_Unit__c}
+{!if(Position__c.Activity_Code__c = "", "","Activity Code: " + Position__c.Activity__c)}
+
+----------------------
+Business Justification:
+
+{!if(Position__c.Business_Justification__c = "", "No justification provided", Position__c.Business_Justification__c)}
+
+Please contact Human Resources or {!Position__c.CreatedBy} if you have any questions or concerns.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>New members who are not yet in TA, or who are in TA but who have not yet migrated to Salesforce will need to be added into Salesforce as contacts in order to be able to create a case, send an email, create tasks, etc.</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>Audience and Member Services Training</keywords>
+    <name>TRAINING: Orphan Contacts</name>
+    <public>false</public>
+</Document>

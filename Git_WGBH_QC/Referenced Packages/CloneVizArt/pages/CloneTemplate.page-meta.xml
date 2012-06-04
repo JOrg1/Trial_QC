@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>20.0</apiVersion>
+    <description>Use this as example page, only copy paste the code and change the standardController property to your standard or custom object API name. You&apos;ll need to create a custom detail page button. For more details see comment in this Visualforce page.</description>
+    <label>Clone Template Page</label>
+</ApexPage>

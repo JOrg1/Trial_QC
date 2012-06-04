@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Activities__r$Name</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 AND 2 AND 3 AND 4 AND 5) AND (6 AND 7 AND 8 AND 9 AND 10)</booleanFilter>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$Station__c</column>
+            <operator>equals</operator>
+            <value>WGBH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$RecordType</column>
+            <operator>equals</operator>
+            <value>Giving_Summary__c.Annual_Giving</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$current_mem_yr_amt__c</column>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$Giving_Level__c</column>
+            <operator>equals</operator>
+            <value>Ralph Lowell Society</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$History__c</column>
+            <operator>notEqual</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$Station__c</column>
+            <operator>equals</operator>
+            <value>WGBH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$RecordType</column>
+            <operator>equals</operator>
+            <value>Giving_Summary__c.Annual_Giving</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$Giving_Level__c</column>
+            <operator>notEqual</operator>
+            <value>Ralph Lowell Society</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$History__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Activities__r$CreatedDate</column>
+            <operator>greaterThan</operator>
+            <value>11/1/2011 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>MonthInYear</dateGranularity>
+        <field>Account.Account_Activities__r$current_mem_yr_renew_date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>New to RLS by Mem RN Month</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Giving_Summaries__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.Account_Activities__r$expiration_date__c</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

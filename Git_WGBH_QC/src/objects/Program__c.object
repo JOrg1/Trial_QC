@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>These are the programs that are showing on TV or playing on the radio.</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Genre__c</fullName>
+        <externalId>false</externalId>
+        <label>Genre</label>
+        <picklist>
+            <controllingField>Interest_Topic__c</controllingField>
+            <picklistValues>
+                <fullName>Aging</fullName>
+                <controllingFieldValues>Health</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ancient &amp; Classical</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Animals</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Antiques &amp; Collectibles</fullName>
+                <controllingFieldValues>Home &amp; How-to</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Archeaology</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Arts &amp; Entertainment</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Astronomy</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biography &amp; Profiles</fullName>
+                <controllingFieldValues>Arts &amp; Entertainment</controllingFieldValues>
+                <controllingFieldValues>History</controllingFieldValues>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <controllingFieldValues>Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biology &amp; Chemistry</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Birthday Parties</fullName>
+                <controllingFieldValues>Parents</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business &amp; Economy</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Caregiving</fullName>
+                <controllingFieldValues>Health</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Child Development</fullName>
+                <controllingFieldValues>Parents</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Civilizations</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Communications &amp; Media</fullName>
+                <controllingFieldValues>Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Community</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cooking</fullName>
+                <controllingFieldValues>Home &amp; How-to</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drama</fullName>
+                <controllingFieldValues>Arts &amp; Entertainment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Earth</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <controllingFieldValues>Parents</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Energy &amp; Environment</fullName>
+                <controllingFieldValues>Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enlightenment</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environment</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Film &amp; Television</fullName>
+                <controllingFieldValues>Arts &amp; Entertainment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fine Arts</fullName>
+                <controllingFieldValues>Arts &amp; Entertainment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fitness &amp; Nutrition</fullName>
+                <controllingFieldValues>Health</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Folk Art &amp; Crafts</fullName>
+                <controllingFieldValues>Arts &amp; Entertainment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forensics &amp; Investigations</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fun &amp; Games</fullName>
+                <controllingFieldValues>Parents</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gardening</fullName>
+                <controllingFieldValues>Home &amp; How-to</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gender &amp; Sexual Identity</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Geneology</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global Affairs</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Government</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <controllingFieldValues>Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health Care &amp; Illnesses</fullName>
+                <controllingFieldValues>Health</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Healthy Kids</fullName>
+                <controllingFieldValues>Parents</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Holidays</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Improvement</fullName>
+                <controllingFieldValues>Home &amp; How-to</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Issues &amp; Advice</fullName>
+                <controllingFieldValues>Parents</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lifestyle</fullName>
+                <controllingFieldValues>Health</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literature &amp; Writing</fullName>
+                <controllingFieldValues>Arts &amp; Entertainment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media &amp; Technology</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Middle Ages</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Military &amp; Espionage</fullName>
+                <controllingFieldValues>Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Modern</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Music</fullName>
+                <controllingFieldValues>Arts &amp; Entertainment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>National Security</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Natural History</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opinion</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>People &amp; Profiles</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Performing Arts</fullName>
+                <controllingFieldValues>Arts &amp; Entertainment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Finance</fullName>
+                <controllingFieldValues>Home &amp; How-to</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physics &amp; Mathematics</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Politics</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prehistoric</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Psychology &amp; The Mind</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Race &amp; Ethnicity</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Religion &amp; Beliefs</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renaissance</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Science &amp; Technology</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Issues</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Society</fullName>
+                <controllingFieldValues>Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Space</fullName>
+                <controllingFieldValues>Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sports</fullName>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sports &amp; Recreation</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transportation &amp; Infrastructure</fullName>
+                <controllingFieldValues>Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel</fullName>
+                <controllingFieldValues>Culture &amp; Society</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>United States</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Victorian</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>War &amp; Conflict</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weather &amp; Natural Disasters</fullName>
+                <controllingFieldValues>Science &amp; Nature</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Women</fullName>
+                <controllingFieldValues>Health</controllingFieldValues>
+                <controllingFieldValues>News &amp; Public Affairs</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>World</fullName>
+                <controllingFieldValues>History</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Interest_Topic__c</fullName>
+        <externalId>false</externalId>
+        <label>Topic</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Arts &amp; Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Culture &amp; Society</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>History</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home &amp; How-to</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>News &amp; Public Affairs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parents</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Science &amp; Nature</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PBS_Program_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>PBS Program Code</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Series__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Designates whether the Show is a Series.</description>
+        <externalId>false</externalId>
+        <label>Series</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>News</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Classical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jazz</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Folk</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Comedy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gameshow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>@89.7, @GBH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Programming, events</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iPhone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Android</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iPad</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Desktop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Laptop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>directTV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sattelite</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>interest_1__c</fullName>
+        <description>Interest 1</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Interest 1</inlineHelpText>
+        <label>Interest 1</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>interest_2__c</fullName>
+        <description>Interest 2</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Interest 2</inlineHelpText>
+        <label>Interest 2</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>interest_3__c</fullName>
+        <description>Interest 3</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Interest 3</inlineHelpText>
+        <label>Interest 3</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>program_description__c</fullName>
+        <description>Program Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Program Description</inlineHelpText>
+        <label>Program Description</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>program_type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Program Genre for each program type i.e. Childrens, British Comedy</inlineHelpText>
+        <label>Program Genre</label>
+        <picklist>
+            <picklistValues>
+                <fullName>British Comedy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>British Drama</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Children&apos;s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Comedy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Documentary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drama</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Film</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>How-To</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Instructional TV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Live Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Live Studio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Motivational</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nature</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>News</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Performing Arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Affairs (local)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Affairs (national)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sports</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Talk</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lease Time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Game Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major Gifts Use Only - Major Gift Prog.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Music Porgramming</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cooking program</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Celtic Music</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Money/Financial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Diet/Nutrition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Women&apos;s Issues/Healt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Age</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>History</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rock Music</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health &amp; Fitness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>program_type_value__c</fullName>
+        <description>Program Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Program Type</inlineHelpText>
+        <label>Program Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_program_id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Legacy Program Code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Program/Show</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>program_description__c</columns>
+        <columns>PBS_Program_Code__c</columns>
+        <columns>program_type__c</columns>
+        <columns>ta_program_id__c</columns>
+        <columns>interest_1__c</columns>
+        <columns>interest_2__c</columns>
+        <columns>interest_3__c</columns>
+        <columns>program_type_value__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/1/2011 12:00 AM</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Programs_with_Missing_Detail</fullName>
+        <columns>NAME</columns>
+        <columns>program_description__c</columns>
+        <columns>program_type__c</columns>
+        <columns>program_type_value__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>OBJECT_ID</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>program_description__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Programs with Missing Detail</label>
+    </listViews>
+    <nameField>
+        <label>Program Show Name</label>
+        <type>Text</type>
+    </nameField>
+    <namedFilters>
+        <fullName>nf_01IA0000001C2hGMAS_00NQ0000000mKu9MAE</fullName>
+        <active>true</active>
+        <field>Bios__c.Program_Show__c</field>
+        <filterItems>
+            <field>Program__c.Series__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Bio_Program/Show</name>
+    </namedFilters>
+    <pluralLabel>Programs/Shows</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>interest_1__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>interest_2__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>interest_3__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PBS_Program_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ta_program_id__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>program_description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>program_type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>program_type_value__c</customTabListAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>OBJECT_ID</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

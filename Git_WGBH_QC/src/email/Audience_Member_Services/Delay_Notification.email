@@ -1,0 +1,41 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<!--StartFragment-->
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black;"><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">Dear </span></font></span><font size="3">{!Contact.Name},</font></p><p class="MsoNormal" style="font-size: 12pt; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;"><br></span></font></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">Thank you for recently contacting WGBH Audience and Member
+Services.&nbsp; While we strive to
+answer all message in a timely fashion, a recent large volume of correspondence
+has deeply impacted our ability to respond to our members and viewers as
+quickly as we would have liked.<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">On behalf of WGBH I would like to sincerely apologize for the
+delay in responding to your email.&nbsp;
+<o:p></o:p></span></font></span><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">Because of the time that has passed I recognize that you may no
+longer require assistance.<o:p></o:p></span></font></span>
+
+</p><p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">If you have still have a question and it is station or programming related, please visit our website:&nbsp; www.wgbh.org.&nbsp; If you have an urgent membership inquiry or request, please call our member hotline:&nbsp; 617-300-3300 (M-F, 9-5).<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">It’s a highly competitive world out there for philanthropic
+support; our goal is to earn your trust and support every day. Thank you for
+contacting us and for your support of WGBH.<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">Sincerely,<o:p></o:p></span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">&nbsp;</span></font></span></p>
+
+<p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;">WGBH Audience and Member Services</span></font><o:p></o:p></span></p><p class="MsoNormal" style="font-size: 12pt; "><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif"><span class="Apple-style-span" style="font-size: medium;"><br></span></font></span></p><p class="MsoNormal"><span style="color: black; "><font class="Apple-style-span" face="Arial, sans-serif" size="1">{!Case.CaseNumber}</font></span></p>
+
+<!--EndFragment-->]]></td>
+</tr>
+</table>

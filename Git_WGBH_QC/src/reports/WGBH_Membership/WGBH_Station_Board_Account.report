@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.TA_Account_ID__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.SFDC_ACCOUNT_ID__c</field>
+    </columns>
+    <columns>
+        <field>Classification__c.Account_ID__c</field>
+    </columns>
+    <description>change date as needed.</description>
+    <filter>
+        <booleanFilter>(1 AND 2 AND (3 OR 4) AND 5)</booleanFilter>
+        <criteriaItems>
+            <column>Classification__c.active__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Classification__c.Preference__c</column>
+            <operator>equals</operator>
+            <value>Station Board Type</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Classification__c.end_date__c</column>
+            <operator>equals</operator>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Classification__c.end_date__c</column>
+            <operator>greaterOrEqual</operator>
+            <value>12/5/2011</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Classification__c.Station__c</column>
+            <operator>equals</operator>
+            <value>WGBH,All Stations</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>WGBH Station Board Account</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Classification__c@Classification__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Classification__c.start_date__c</dateColumn>
+        <interval>INTERVAL_LAST60</interval>
+    </timeFrameFilter>
+</Report>

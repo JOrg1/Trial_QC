@@ -1,0 +1,3 @@
+Dear {!WGBH_ETM_Form__c.OwnerFullName},
+
+The ETM you submitted for {!WGBH_ETM_Form__c.Employee_First_Name__c} {!WGBH_ETM_Form__c.Employee_Last_Name__c} has been approved by Human Resources. Please contact your HR Representative if you have further questions or concerns.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use this letter to return a check with a discrepancy in the amounts indicated.</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>returned; payment; pledge; member; check; discrepancy</keywords>
+    <name>Pledge/Payment: Returned Payment - Check - Discrepancy</name>
+    <public>false</public>
+</Document>

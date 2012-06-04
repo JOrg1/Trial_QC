@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Alpha_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account.WGBH_Major_Gifts_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.External_Rating__c</field>
+    </columns>
+    <columns>
+        <field>Account.Preferred_Address__c</field>
+    </columns>
+    <columns>
+        <field>Account.WGBH_Major_Donor_Flag__c</field>
+    </columns>
+    <columns>
+        <field>Account.LifetimeDonationHistory_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Account.LifetimeDonationHistory_Number__c</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <description>A Report of All MG Prospects Who Are Actively Managed by the MG Team</description>
+    <filter>
+        <booleanFilter>(1 or 2) or (3 or 4) or (5 or 6) or (7 or 8) or (9 or 10)</booleanFilter>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>kaja fickes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>allison Boehret</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>Win Lenihan</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>Jessica Connolly</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>Ellen Frank</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>charlotte porter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>Ericka Webb</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>susanne salerno</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>christina ventresca</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>vanya tulenko</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Account_Manager__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MG_All_Account_Managers_Prospects</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.Account_Alpha_Name__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2011-11-10</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2010-01-01</startDate>
+    </timeFrameFilter>
+</Report>

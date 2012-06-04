@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this template for gifts that have processed, but are on backorder.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Audience_Member_Services</letterhead>
+    <name>Gift Processed, Backordered</name>
+    <style>freeForm</style>
+    <subject>Your WGBH Thank You Gift Inquiry - Backordered</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Thank you for reaching out to us regarding the delivery status of your [insert gift name here] thank you gift that was placed in [insert month here].
+
+I have checked with the warehouse and due to the popularity of your selected gift, it is currently on backorder. The expected shipment of this item is approximately three to four weeks. We deeply apologize for any inconvenience this may have caused and we appreciate your patience while we wait for a new shipment to arrive at the warehouse. 
+
+I hope that this information is helpful. Again, we apologize for any inconvenience this issue may have caused, but we truly appreciate your patience. It’s a highly competitive world out there for philanthropic support; our goal is to earn your trust and support every day. Thank you for your time and understanding, and for your support of WGBH.
+
+ 
+Sincerely,
+
+ 
+{!Case.OwnerFullName}
+WGBH Audience &amp; Member Services
+617-300-3300 (M-F, 9-5)
+
+{!Case.CaseNumber}</textOnly>
+    <type>html</type>
+</EmailTemplate>

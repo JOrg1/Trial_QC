@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Giving_Summary__c.Account__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>Giving_Summary__c.Annual_Giving</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Giving_Summary__c.Station__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Giving_Summary__c.sts__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Giving_Summary__c.expiration_date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Expire Count from 2/11</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Giving_Summary__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Giving_Summary__c.expiration_date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2011-02-01</startDate>
+    </timeFrameFilter>
+</Report>

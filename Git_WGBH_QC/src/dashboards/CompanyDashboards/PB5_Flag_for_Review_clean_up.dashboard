@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <leftSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarGrouped</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <legendPosition>Bottom</legendPosition>
+            <report>Operations_Processing/All_ACD_PB5_Flagged_for_Review</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>All ACD PB5 Flagged for Review</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Total</metricLabel>
+            <report>Operations_Processing/All_ACD_PB5_Flagged_for_Review</report>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <header>More than one match</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>lstTarget = (Contact:{Name</metricLabel>
+            <report>Operations_Processing/lstTarget_Contact_Name</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <header>Insufficient Information</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Campaign Status needs to be set to Active</metricLabel>
+            <report>Operations_Data_Hygiene/Attempt_to_de_reference_a_null_object</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>UploadRecordMatchingHouseHold.cls Syste</metricLabel>
+            <report>Operations_Processing/UploadRecordMatchingHouseHold_cls_Syste</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>UpdateContact((Contact) lstTarget[0]</metricLabel>
+            <report>Operations_Processing/UpdateContact_Contact_lstTarget_0</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>InsertContact(PB5, flag, HouseholdId) !=</metricLabel>
+            <report>Operations_Processing/InsertContact_PB5_flag_HouseholdId</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Payment method is Null</metricLabel>
+            <report>Operations_Processing/PB5_Payment_Method_is_Null</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>PB5 Charge Card First Name</metricLabel>
+            <report>Operations_Processing/PB5_Charge_Card_First_Name</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Premium Name too long</metricLabel>
+            <report>Operations_Processing/Premium_Line_Description</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <header>SFDC PLEDGE ID or PLEDGE NUMBER EXIST</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>SFDC PLEDGE ID or PLEDGE NUMBER EXIST</metricLabel>
+            <report>Operations_Processing/SFDC_PLEDGE_ID_or_PLEDGE_NUMBER_EXIST</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <header>Gift Type is null</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>NVL(opp.Gift_Type__c) == blank</metricLabel>
+            <report>Operations_Processing/NVL_opp_Gift_Type_c_blank</report>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <header>Serviced or Refused (Giving Amount = Null</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Serviced or Refused</metricLabel>
+            <report>Operations_Processing/PB5_Serviced_or_Refused</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Auto</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>opp.Giving_Amount__c == null</metricLabel>
+            <report>Operations_Processing/opp_Giving_Amount_c_null</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Transaction Type is blank</metricLabel>
+            <report>Operations_Processing/Transaction_Type_is_blank</report>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <header>Comments</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>PB5 with Comments</metricLabel>
+            <report>Operations_Processing/Comments</report>
+        </components>
+    </rightSection>
+    <runningUser>barney.haywood@wgbh.org.qc</runningUser>
+    <textColor>#000000</textColor>
+    <title>PB5 Flag for Review clean up</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this template to create a tax letter for 2012</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Audience_Member_Services</letterhead>
+    <name>Tax Letter 2012</name>
+    <style>freeForm</style>
+    <subject>Your WGBH 2012 Tax Deductible Donation</subject>
+    <textOnly>{!Case.CreatedDate} 
+
+{!Case.Account}
+{!Account.Preferred_Address__c}
+
+ 
+
+Dear {!Case.Contact}:
+
+ 
+
+Thank you for your support of WGBH.  The statement below indicates the donations
+you made to WGBH for tax year 2011.  It
+is provided to help with your record keeping and tax preparation in accordance
+with IRS guidelines.
+
+ 
+
+The total value of your donations is noted on the
+statement below.  From that amount we
+have subtracted the fair market value of any thank-you gifts received, as that
+amount is not tax-deductible.  The total
+tax-deductible portion of your contribution to WGBH is indicated at the bottom
+of the statement.
+
+ 
+
+This letter also provides me the opportunity to
+recognize your commitment to WGBH and public broadcasting.  Thank you again for your generosity; it is
+deeply appreciated.
+
+ 
+
+Sincerely,
+
+ 
+
+Daren Winckle
+
+Director of Membership
+
+ 
+
+STATEMENT
+
+ 
+
+Name: {!Case.Contact}                                  
+
+Member #{!Account.SFDC_ACCOUNT_ID__c}
+
+
+ 
+
+
+
+Date: {DATE}                                                             
+
+Amount: {AMOUNT}
+
+ 
+
+Thank You
+Gift: {GIFT}           
+Value: {VALUE}
+
+ 
+
+ 
+
+Tax-deductible portion of your contribution is: {AMOUNT}</textOnly>
+    <type>html</type>
+</EmailTemplate>

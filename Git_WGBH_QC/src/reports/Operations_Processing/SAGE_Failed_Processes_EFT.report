@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_OPP_ID</field>
+    </columns>
+    <columns>
+        <field>TRANSACTION_BATCH__c.Payment_Method__c</field>
+    </columns>
+    <columns>
+        <field>TRANSACTION_BATCH__c.Schedule_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>TRANSACTION_BATCH__c.Charge_Card_Type__c</field>
+    </columns>
+    <columns>
+        <field>TRANSACTION_BATCH__c.Response_Message__c</field>
+    </columns>
+    <columns>
+        <field>TRANSACTION_BATCH__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>TRANSACTION_BATCH__c.Status__c</column>
+            <operator>equals</operator>
+            <value>FAIL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TRANSACTION_BATCH__c.Payment_Method__c</column>
+            <operator>equals</operator>
+            <value>Electronic Funds Transfer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TRANSACTION_BATCH__c.Charge_Card_Type__c</column>
+            <operator>notContain</operator>
+            <value>Convio,Kimbia,No GUID</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>SAGE Failed Processes - EFT</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$TRANSACTION_BATCH__c@TRANSACTION_BATCH__c.Giving_Id__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>TRANSACTION_BATCH__c.Process_date__c</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

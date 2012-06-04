@@ -1,0 +1,4 @@
+{!Change_Request__c.LastModifiedBy} has updated the decision status of  Change Request #{!Change_Request__c.Name}, "{!Change_Request__c.Title__c}" to {!Change_Request__c.Decision__c}.
+
+Click here to view the CR:
+{!Change_Request__c.Link}

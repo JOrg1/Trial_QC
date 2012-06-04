@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used for general programming feedback that does not require a personalized response.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Audience_Member_Services</letterhead>
+    <name>Form Letter - Programming Feedback</name>
+    <style>freeForm</style>
+    <subject>Your WGBH Programming Feedback</subject>
+    <textOnly>Dear {!Case.Contact},
+
+Thank you for recently contacting WGBH.  We welcome and value your feedback about our programming.
+
+WGBH’s audience is as passionate about investigative news, richly
+set dramas, indispensable children’s programming, uninterrupted classical music, and standard-setting forays into our natural world as we are… and often have feedback and insight to share with us.  
+
+As a result we receive a very large volume of correspondence.  
+
+While we are not staffed to be able to respond to every message and
+individual concern from our viewers, your comments provide an important source of information.  Please be assured that we have received and read your message and have shared your thoughts with the appropriate departments, management program directors and production
+units.  
+
+ 
+
+It’s a highly competitive world out there for philanthropic
+support; our goal is to earn your trust and support every day. Thank you for contacting us and for your support of WGBH.
+
+Sincerely,
+
+{!Case.OwnerFullName}
+WGBH Audience &amp; Member Services
+
+
+{!Case.CaseNumber}</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Giving_Summary__c$Name</field>
+    </columns>
+    <columns>
+        <field>Giving_Summary__c$Account__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Giving_Summary__c$Name</column>
+            <operator>greaterOrEqual</operator>
+            <value>GS#-0001680961</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>test GSs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Giving_Summaries__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Giving_Summary__c$CreatedDate</dateColumn>
+        <endDate>2012-05-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2012-03-10</startDate>
+    </timeFrameFilter>
+</Report>

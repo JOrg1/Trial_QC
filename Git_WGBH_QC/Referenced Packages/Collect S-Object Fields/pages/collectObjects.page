@@ -1,0 +1,152 @@
+<!--Author : Gaurav Verma 
+Created Date : 07-JAN-2010
+Purpose : To retrieve all the Fields Labels, API's & Data Type of a particular SObject.
+-->
+
+<apex:page controller="collectFields.cntrlrCollectObjects" id="pg1" sidebar="false" tabStyle="Collect_Object__tab" showHeader="false">
+
+<apex:form id="frm1">
+
+<apex:actionFunction reRender="idSelList,idPnlGrid" name="actFuncName" status="idActionStatus" id="idActFunc" action="{!getFields1}"/>
+<apex:pageBlock tabStyle="Collect_Object__tab" title="Collect Objects" id="idPageBlk" >
+
+<center>
+    <div id='idDivLinkHomePage'><apex:outputLink value="/home/home.jsp">Click Here</apex:outputLink><apex:outputLabel >to return to HOME PAGE.</apex:outputLabel></div>
+        <div id='idDivDropDown'>
+    <apex:outputLabel value="Please select the SObject name:"></apex:outputLabel>&nbsp;&nbsp;&nbsp;
+    <apex:selectList value="{!selList}" multiselect="false" size="1" id="idSelList" onchange="onChange();sojectName();">
+        <apex:selectOptions value="{!DrpDownSobject}" id="idSelOptions"></apex:selectOptions>
+    </apex:selectList>&nbsp;&nbsp;&nbsp;
+    </div>
+    
+</center>
+
+<br/><br/><br/>
+
+<div id="idPnlGridDiv" style = "display:none">
+    <table align="center">
+    
+    <tr> 
+        <td align="center">
+            <apex:actionStatus startText=" (Loading please wait...)" StartStyle="color:red;font-weight: bold;" id="idActionStatus"/>
+        </td>
+    </tr>
+
+    
+    <tr> 
+        <td align="center">
+             <apex:outputLabel id="idSobjectLabelName"></apex:outputLabel>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <apex:panelGrid columns="4" border="1" id="idPnlGrid" bgcolor="#6AACD8" >
+         
+            <apex:pageBlockTable value="{!LstFieldLabels}" var="fieldLbls" id="idDataTable1">
+            <apex:column value="{!fieldLbls}" id="idCol1" headerValue="Field Labels"/>
+            </apex:pageBlockTable>
+        
+            <apex:pageBlockTable value="{!LstFieldName}" var="fieldLbls" id="idDataTable2">
+            <apex:column value="{!fieldLbls}" headerValue="API Name" />
+            </apex:pageBlockTable>
+        
+            <apex:pageBlockTable value="{!LstFieldType}" var="fieldLbls" id="idDataTable3">
+            <apex:column value="{!fieldLbls}" headerValue="Data Type"/>
+            </apex:pageBlockTable>
+            
+            <apex:pageBlockTable value="{!LstFieldLen}" var="fieldLbls" id="idDataTable4">
+            <apex:column value="{!fieldLbls}" headerValue="Length"/>
+            </apex:pageBlockTable>
+        
+        </apex:panelGrid>
+        </td>
+    </tr>
+    <tr>
+        <td align = "center">
+            <apex:commandButton onclick="printPage();" value="Print This Page" reRender="idPrintButton" id="idPrintButton"/>
+            <apex:commandButton onclick="CreateExcelSheet();" value="Create Excel Sheet" reRender="idExcelButton" id="idExcelButton"/>
+
+        </td>
+    </tr>
+    </table>
+</div>
+</apex:pageBlock>
+</apex:form>
+<script>
+function onChange()
+{
+    window.setTimeout(actFuncName,10);
+}
+
+function sojectName()
+{
+    var x=document.getElementById('{!$Component.pg1.frm1.idPageBlk.idSelList}').value;
+    document.getElementById('{!$Component.pg1.frm1.idPageBlk.idSobjectLabelName}').innerHTML= x;
+    if(x!=null && x!='')
+        document.getElementById('idPnlGridDiv').style.display = 'block';
+    else
+        document.getElementById('idPnlGridDiv').style.display = 'none';
+}
+
+function printPage()
+{
+    document.getElementById('idDivLinkHomePage').style.display = 'none';
+    document.getElementById('idDivDropDown').style.display = 'none';    
+    window.print();  
+}
+
+function CreateExcelSheet()
+{
+    var myTable1=document.getElementById('{!$Component.pg1.frm1.idPageBlk.idDataTable1}').rows;
+    var myTable2=document.getElementById('{!$Component.pg1.frm1.idPageBlk.idDataTable2}').rows;
+    var myTable3=document.getElementById('{!$Component.pg1.frm1.idPageBlk.idDataTable3}').rows;
+    var myTable4=document.getElementById('{!$Component.pg1.frm1.idPageBlk.idDataTable4}').rows;
+
+    //var x=myTable1.rows;
+    //var a=myTable2.rows;
+    //var b=myTable3.rows;
+    //var c=myTable4.rows;
+
+    var xls = new ActiveXObject("Excel.Application");
+    xls.visible = true;
+    xls.Workbooks.Add;
+    for (i = 0; i < myTable1.length; i++)
+    {
+        var y = myTable1[i].cells;
+        for (j = 0; j < y.length; j++)
+        {
+            xls.Cells(i+1,j+1).Value = y[j].innerText;
+        }
+    }
+    
+    for (i = 0; i < myTable2.length; i++)
+    {
+        var z = myTable2[i].cells;
+        for (j = 0; j < z.length; j++)
+        {
+            xls.Cells(i+1,j+2).Value = z[j].innerText;
+        }
+    }
+    
+    for (i = 0; i < myTable3.length; i++)
+    {
+        var w = myTable3[i].cells;
+        for (j = 0; j < w.length; j++)
+        {
+            xls.Cells(i+1,j+3).Value = w[j].innerText;
+        }
+    }
+    
+    for (i = 0; i < myTable4.length; i++)
+    {
+        var v = myTable4[i].cells;
+        for (j = 0; j < v.length; j++)
+        {
+            xls.Cells(i+1,j+4).Value = v[j].innerText;
+        }
+    }
+
+
+}
+</script>
+</apex:page>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$SFDC_ACCOUNT_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account$TA_Account_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account.Salutations__r$inside_salutation_1__c</field>
+    </columns>
+    <columns>
+        <field>Account.Salutations__r$salutation_line_1__c</field>
+    </columns>
+    <columns>
+        <field>Account.Salutations__r$salutation_line_2__c</field>
+    </columns>
+    <columns>
+        <field>Account.Salutations__r$salutation_line_3__c</field>
+    </columns>
+    <description>RLS flagged Account Default Salutations</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$WGBH_Major_Donor_Flag__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Salutations__r$Name</column>
+            <operator>equals</operator>
+            <value>Default</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Salutations__r$TA_Salutations_Id__c</column>
+            <operator>contains</operator>
+            <value>00</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>RLS Renewal Salutations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Salutations__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$Acquired_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

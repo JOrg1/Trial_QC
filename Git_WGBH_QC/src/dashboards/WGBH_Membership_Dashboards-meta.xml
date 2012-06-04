@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>WGBH Membership Dashboards</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <roles>Director Fundraising</roles>
+        <roles>Director Mid Level Giving</roles>
+        <roles>Director of Budget Office</roles>
+        <roles>Director of Membership</roles>
+        <roles>WGBH Sys Admin</roles>
+    </sharedTo>
+</DashboardFolder>

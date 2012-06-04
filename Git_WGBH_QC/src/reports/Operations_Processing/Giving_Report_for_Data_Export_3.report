@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_ID</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Source_Code__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CC_EFT_Alias__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Recurring_Donation_Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Parent_ID__c</field>
+    </columns>
+    <description>Gift Date &gt;= 1/1/12  AND Gift Kind = Sustaining Gifts AND Source Code = (GBHASR120101000,GBHASR120102000,GBYASR111201000,CAIASR120101000)</description>
+    <filter>
+        <criteriaItems>
+            <column>CLOSE_DATE</column>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2012</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.gift_kind__c</column>
+            <operator>equals</operator>
+            <value>Sustaining Gift</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Source_Code__c</column>
+            <operator>equals</operator>
+            <value>GBHASR120101000,GBHASR120102000,GBYASR111201000,CAIASR120101000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.payment_method__c</column>
+            <operator>equals</operator>
+            <value>Charge Card,Electronic Funds Transfer</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.payment_method__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Station__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Giving Report for Data Export #3</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Opportunity.Recurring_Donation_Opportunity__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

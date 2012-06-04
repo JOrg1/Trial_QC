@@ -1,0 +1,6 @@
+Dear {!WGBH_ETM_Form__c.OwnerFullName},
+
+The Employee transaction memo you have submitted for {!WGBH_ETM_Form__c.Employee_First_Name__c} {!WGBH_ETM_Form__c.Employee_Last_Name__c} has been rejected by Human Resources for the following reason(s):
+
+
+Please contact your Human Resources representative or more information.

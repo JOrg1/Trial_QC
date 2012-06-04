@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Enduser and training documentation for Applicant Tracking</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>hiring, ats, applicant tracking,</keywords>
+    <name>ATS Hiring Manager Portal Training Documentation</name>
+    <public>false</public>
+</Document>

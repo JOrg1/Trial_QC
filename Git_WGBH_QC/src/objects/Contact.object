@@ -1,0 +1,3541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AccountCategory_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Category Value</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountCategory__c</fullName>
+        <description>TA Account Category</description>
+        <externalId>false</externalId>
+        <label>Account Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Affiliate Groups</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Corporation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Individual/Family</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account_Household__c</fullName>
+        <externalId>false</externalId>
+        <label>Household</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Contacts</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Manager__c</fullName>
+        <description>Account Manager who are responsible for contact and household relationships for Annual Giving/Foundations/Planned Giving/Underwriting/Trustee &amp; Overseer Relations/Events/Development</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Manager who are responsible for contact and household relationships for Annual Giving/Foundations/Planned Giving/Underwriting/Trustee &amp; Overseer Relations/Events/Development</inlineHelpText>
+        <label>Account Manager</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Davi Axinn Levine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Abby Ballou</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jessica Connolly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kaja Fickes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ellen Frank</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kathleen McCarthy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jeanmarie Roberts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Susanne Salerno</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vanya Tulenko</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Win Lenihan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Account_Preferred_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( &apos;/&apos; +  Account.Preferred_Address__r.Id ,  Account.Preferred_Address__r.Name   )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Preferred Address</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Acquired_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Acquired Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Contacts (Address)</relationshipLabel>
+        <relationshipName>Contacts1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>FLOOR((TODAY()-Birthdate)/365.2425)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AlternateEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>Alternate Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Giving_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Giving Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>WGBH Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cape &amp; Islands Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBH Leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cape &amp; Islands Leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBH Ralph Lowell Society</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Murrow Society</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cape &amp; Islands Society</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Assistant_Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the email for the Assistant to the Contact.</inlineHelpText>
+        <label>Assistant Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Birth_Day__c</fullName>
+        <description>Day of the Month the Contact was born.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Day of the Month the Contact was born. Format using two digits (example 01 for the first day of the month).</inlineHelpText>
+        <label>Birth Day</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Birth_Month__c</fullName>
+        <description>Month of the Birth for the Contact</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Month of Birth for the Contact. Format using two digits (example 01 for Jan or 02 for Feb).</inlineHelpText>
+        <label>Birth Month</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Birth_Year__c</fullName>
+        <description>Year of birth of the Contact in YYYY format (1990).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Year of birth of the Contact in YYYY format (1990).</inlineHelpText>
+        <label>Birth Year</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Brief_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Brief Name</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The check box indicates that this is a child in the household.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The check box indicates that this is a child in the household.</inlineHelpText>
+        <label>Child</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Status__c</fullName>
+        <description>Current Status of the Contact.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Status of the Contact.</inlineHelpText>
+        <label>Contact Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Archive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Type__c</fullName>
+        <description>Type of Contact.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Contact.</inlineHelpText>
+        <label>Contact Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Household Member</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Child</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization Member</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Beneficiary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Agency Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discount Partner Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Kind Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Kind</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major Gift Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mbr Disc Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMI Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wine Donations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Web_Site__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Web site for the Contact.</inlineHelpText>
+        <label>Contact Web Site</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Data_Quality_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Data_Quality_Score__c =100,&quot;All Contact Details Captured&quot;, &quot;Missing: &quot;&amp;IF( LEN( Phone ) = 0, &quot;Phone, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF(LEN( Email) = 0, &quot;Email, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( LEN( MailingStreet ) = 0, &quot;Complete Address, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( LEN(Title) = 0, &quot;Job Title, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL( Salutation,&quot;&quot;), &quot;Salutation&quot;,&quot;&quot;))</formula>
+        <label>Data Quality Description</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Quality_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( LEN( Phone) = 0, 0,20) + IF( LEN( Email) = 0, 0,20) + IF( LEN(MailingStreet) = 0, 0,20) + IF( LEN(Title) = 0, 0,20) + IF( ISPICKVAL(Salutation,&quot;&quot;), 0,20)</formula>
+        <label>Data Quality Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disability__c</fullName>
+        <externalId>false</externalId>
+        <label>Disability</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Blind</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deaf</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physically Challenged</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Do_Not_Mail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Please do not mail anything to this contact</inlineHelpText>
+        <label>Do Not Mail</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Email_Address_for_Major_Gift_Use__c</fullName>
+        <description>Email address for Major Gift officer use only, not to be used by Marketing or Development Groups</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email address for Major Gift officer use only, not to be used by Marketing or Development Groups</inlineHelpText>
+        <label>Email Address for Major Gift Use</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ethnicity__c</fullName>
+        <externalId>false</externalId>
+        <label>Ethnicity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>African</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>American</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Asian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Australian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cambodian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canadian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Caribbean Islander</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Caucasian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chinese</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cuban</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Egyptian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>French Canadian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Haitain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Irish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Italian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Japanese</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jewish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Korean</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Latin American</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mexican</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mixed Heritage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Native American</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Portuguese</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Puerto Rican</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vietnamese</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Formula_HouseholdMailingAddress__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Household__r.Formula_MailingAddress__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Household Mailing Address</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Formula_HouseholdPhone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Household__r.Household_Phone__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HTML_Enabled_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>HTML Enabled</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>HomeEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>Home Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Home_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(
+  ISPICKVAL(Primary_Address_Type__c,&quot;Home&quot;),
+  if(LEN(MailingStreet)&gt;0, MailingStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
+  if(LEN(MailingCity)&gt;0, MailingCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
+  if(LEN(MailingState)&gt;0, MailingState &amp; &quot; &quot; , &quot;&quot; )&amp; 
+  if(LEN(MailingPostalCode)&gt;0, MailingPostalCode,&quot;&quot;) &amp; 
+  If(LEN( MailingCountry ) &gt;0, &quot;, &quot; &amp;MailingCountry,&quot;&quot;)
+,
+if(ISPICKVAL(Secondary_Address_Type__c,&quot;Home&quot;),
+  if(LEN(OtherStreet)&gt;0, OtherStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
+  if(LEN(OtherCity)&gt;0, OtherCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
+  if(LEN(OtherState)&gt;0, OtherState &amp; &quot; &quot; , &quot;&quot; )&amp; 
+  if(LEN(OtherPostalCode)&gt;0, OtherPostalCode,&quot;&quot;) &amp; 
+  If(LEN(OtherCountry ) &gt;0, &quot;, &quot; &amp; OtherCountry,&quot;&quot;)
+  ,&quot;&quot;
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Home Address</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Household_Account_Manager__c</fullName>
+        <description>The contact&apos;s household&apos;s account manager</description>
+        <externalId>false</externalId>
+        <formula>Account.Account_Manager__r.FirstName &amp;&quot; &quot;&amp; Account.Account_Manager__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Major Gifts Account Manager</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Household_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Household Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Household_Old__c</fullName>
+        <externalId>false</externalId>
+        <label>Household</label>
+        <referenceTo>Household__c</referenceTo>
+        <relationshipLabel>Contacts</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Rating__c</fullName>
+        <externalId>false</externalId>
+        <label>Internal Rating</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Languages__c</fullName>
+        <externalId>false</externalId>
+        <label>Languages - DEPRECATED</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Donation_Date__c</fullName>
+        <description>This field is only used with the one-to-one Organization to Contact model.</description>
+        <externalId>false</externalId>
+        <formula>if( Account.One2OneContact__c = Id ,
+Account.LastDonationDate__c,
+null
+)</formula>
+        <label>Last Transaction Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brigid Sullivan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Community Advisors Board</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Inbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Outbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executive Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Henry Becton</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jamie Parker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jeanne Hopkins</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Joe Igoe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jon Abbott</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lance Ozier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Letter Inbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Letter Outbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Margaret Drain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Most Recent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Inbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Outbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Susan Dwyer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vinay Mehra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBH Web Site</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Win Lenihan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Word of Mouth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Source_Most_Recent__c</fullName>
+        <description>A lead could have an existing lead source - this field shows the most recent source</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When a lead is created it will have a lead source but may not be qualified and may not be ready to donate.  If the lead comes back to the web site or responds to another marketing piece this field will show the most recent lead source.</inlineHelpText>
+        <label>Lead Source - Most Recent</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Level - DEPRECATED</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tertiary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Lifetime_Giving_History_Amount__c</fullName>
+        <description>This field is only used with the one-to-one Organization to Contact model.</description>
+        <externalId>false</externalId>
+        <formula>IF( Account.One2OneContact__c = Id ,
+Account.LifetimeDonationHistory_Amount__c,
+null
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lifetime Transaction Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Rating__c</fullName>
+        <description>Eloqua Marketing Rating for converted Leads</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Read Only for information imported from Eloqua and the WGBH online leads.</inlineHelpText>
+        <label>Marketing Rating</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Name_Line2__c</fullName>
+        <externalId>false</externalId>
+        <formula>FirstName  &amp; &quot; &quot; &amp;  LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Name Line2</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Online_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to designate when a Contact is an Online User; e.g.via a website and not Customer Portal or Partner Portal</inlineHelpText>
+        <label>Online User</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Organization_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>NULLVALUE(IF( Account.SYSTEM_AccountType__c==&quot;&quot;, TEXT(Account.Type),Account.SYSTEM_AccountType__c),&quot;Organization&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Organization Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(
+  ISPICKVAL(Primary_Address_Type__c,&quot;Other&quot;),
+  if(LEN(MailingStreet)&gt;0, MailingStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
+  if(LEN(MailingCity)&gt;0, MailingCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
+  if(LEN(MailingState)&gt;0, MailingState &amp; &quot; &quot; , &quot;&quot; )&amp; 
+  if(LEN(MailingPostalCode)&gt;0, MailingPostalCode,&quot;&quot;) &amp; 
+  If(LEN( MailingCountry ) &gt;0, &quot;, &quot; &amp;MailingCountry,&quot;&quot;)
+,
+if(ISPICKVAL(Secondary_Address_Type__c,&quot;Other&quot;),
+  if(LEN(OtherStreet)&gt;0, OtherStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
+  if(LEN(OtherCity)&gt;0, OtherCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
+  if(LEN(OtherState)&gt;0, OtherState &amp; &quot; &quot; , &quot;&quot; )&amp; 
+  if(LEN(OtherPostalCode)&gt;0, OtherPostalCode,&quot;&quot;) &amp; 
+  If(LEN(OtherCountry ) &gt;0, &quot;, &quot; &amp; OtherCountry,&quot;&quot;)
+  ,&quot;&quot;
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Other Address</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Password__c</fullName>
+        <externalId>false</externalId>
+        <label>Password</label>
+        <length>10</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>Political__c</fullName>
+        <externalId>false</externalId>
+        <label>Political</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Democrat</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green Party</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Independent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Republican</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unaffiliated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PreferredPhone__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Phone</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Preferred_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Contacts</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Preferred_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Email</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alternate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Default Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Assistant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Address_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Address Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Private__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Private</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prospect_Research_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Research Report</label>
+        <referenceTo>Prospect_Research_Reports__c</referenceTo>
+        <relationshipLabel>Contacts</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Religion__c</fullName>
+        <externalId>false</externalId>
+        <label>Religion</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Catholic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jewish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Muslim</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Protestant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_CONTACT_ID__c</fullName>
+        <displayFormat>C{000000000}</displayFormat>
+        <externalId>true</externalId>
+        <label>Contact ID</label>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>STS__c</fullName>
+        <description>TA Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>See Contact Status with real values that are mapped from these TA values</inlineHelpText>
+        <label>TA Status</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Salutation_Type__c</fullName>
+        <description>Annual Report List, Board Affiliation, John Abbott signature</description>
+        <externalId>false</externalId>
+        <label>Salutation Type</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secondary_Address_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Secondary Address Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SystemAccountProcessor__c</fullName>
+        <externalId>false</externalId>
+        <label>_SYSTEM: ACCOUNT PROCESSOR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>One-to-One</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SystemHouseholdProcessor__c</fullName>
+        <description>Used to set if Households should get created for all Contacts, or just those which are connected to an individual account</description>
+        <externalId>false</externalId>
+        <label>_SYSTEM: HOUSEHOLD PROCESSOR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>All Individual Contacts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>All New or Edited Contacts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Contacts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SystemIsIndividual__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>_SYSTEM: IsIndividual - DEPRECATED</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TaContactId__c</fullName>
+        <description>TA Contact Id</description>
+        <externalId>false</externalId>
+        <label>TA Contact Id</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Termination_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Termination Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Account.SYSTEMIsIndividual__c,&quot;Individual&quot;,&quot;Organization&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Shows the type of Account this Contact is connected to.</inlineHelpText>
+        <label>Type of Account</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WorkEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WorkPhone__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Phone</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Work_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(
+  ISPICKVAL(Primary_Address_Type__c,&quot;Work&quot;),
+  if(LEN(MailingStreet)&gt;0, MailingStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
+  if(LEN(MailingCity)&gt;0, MailingCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
+  if(LEN(MailingState)&gt;0, MailingState &amp; &quot; &quot; , &quot;&quot; )&amp; 
+  if(LEN(MailingPostalCode)&gt;0, MailingPostalCode,&quot;&quot;) &amp; 
+  If(LEN( MailingCountry ) &gt;0, &quot;, &quot; &amp;MailingCountry,&quot;&quot;)
+,
+if(ISPICKVAL(Secondary_Address_Type__c,&quot;Work&quot;),
+  if(LEN(OtherStreet)&gt;0, OtherStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
+  if(LEN(OtherCity)&gt;0, OtherCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
+  if(LEN(OtherState)&gt;0, OtherState &amp; &quot; &quot; , &quot;&quot; )&amp; 
+  if(LEN(OtherPostalCode)&gt;0, OtherPostalCode,&quot;&quot;) &amp; 
+  If(LEN(OtherCountry ) &gt;0, &quot;, &quot; &amp; OtherCountry,&quot;&quot;)
+  ,&quot;&quot; 
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work Address</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>affiliation__c</fullName>
+        <description>Affiliation</description>
+        <externalId>false</externalId>
+        <label>Affiliation</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>age_range__c</fullName>
+        <description>Age Range</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Age Range for the Contact.</inlineHelpText>
+        <label>Age Range</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12-17</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18-24</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25-29</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30-34</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35-39</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40-44</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>45-49</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50-54</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>55-59</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6-11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>60-64</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>65-74</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>75+</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>alt_account_id__c</fullName>
+        <description>Alt Account Id</description>
+        <externalId>false</externalId>
+        <label>Alternate Account Id</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>batch_process_count__c</fullName>
+        <description>This field is used for Apex batch processing for post processing ETL information</description>
+        <externalId>false</externalId>
+        <label>Batch Process Count</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bulk_load__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ETL migration process</description>
+        <externalId>false</externalId>
+        <label>bulk_load</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>comments__c</fullName>
+        <description>Comments</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>deceased_date__c</fullName>
+        <description>Deceased Date</description>
+        <externalId>false</externalId>
+        <label>Date of Death</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>deceased_flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Deceased Flag</description>
+        <externalId>false</externalId>
+        <label>Deceased</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>gender__c</fullName>
+        <description>Gender</description>
+        <externalId>false</externalId>
+        <label>Gender</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Both -Only for account gender</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>gender_value__c</fullName>
+        <description>Gender Value</description>
+        <externalId>false</externalId>
+        <label>Gender Value</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>maiden_name__c</fullName>
+        <description>Maiden Name</description>
+        <externalId>false</externalId>
+        <label>Maiden Name</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>middle_name__c</fullName>
+        <description>Middle Name</description>
+        <externalId>false</externalId>
+        <label>Middle Name</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>name_line__c</fullName>
+        <description>Name Line</description>
+        <externalId>false</externalId>
+        <label>Name Line</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>salutation_flag__c</fullName>
+        <description>Salutation Flag</description>
+        <externalId>false</externalId>
+        <label>Salutation Flag</label>
+        <length>1</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Contact_Source__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contact Source</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Fcbk_Image_Url__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Facebook Image Url</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Fcbk_Picture__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(sf4twitter__Fcbk_Profile_Url__c,
+IF( ( NOT( ISBLANK( sf4twitter__Fcbk_Image_Url__c  ) )), IMAGE( sf4twitter__Fcbk_Image_Url__c  ,sf4twitter__Fcbk_Profile_Url__c, 48, 48), sf4twitter__Fcbk_Profile_Url__c )
+,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Facebook Picture</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Fcbk_Profile_Url__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Facebook Profile Url</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Fcbk_User_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Facebook User Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Fcbk_Username__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Facebook Username</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Follow_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Click on link to change following status</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(
+&apos;javascript:window.location=&quot;/apex/sf4twitter__TwitterFollow?cid=&apos; + Id + &apos;&quot; + ( ( (new RegExp(&quot;[\\?&amp;]isdtp=([^&amp;#]*)&quot;)).exec(window.location.href) == null )?&quot;&quot;: &quot;&amp;isdtp=vw&quot;) &apos;, 
+IF(sf4twitter__followed__c == true,&apos;Yes&apos;, &apos;No&apos; ), 
+&apos;_self&apos;  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Click on link to change following status</inlineHelpText>
+        <label>Following On Twitter</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Influencer_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Influencer Type</label>
+        <picklist>
+            <controllingField>sf4twitter__Influencer__c</controllingField>
+            <picklistValues>
+                <fullName>Reporter</fullName>
+                <controllingFieldValues>Yes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>Yes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Influencer__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Is this Contact an Influencer (ie Reporter?)</inlineHelpText>
+        <label>Influencer</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Klout_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Klout Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Klout_Score__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( ABS( sf4twitter__Klout_Number__c )  &gt; 0, TEXT( sf4twitter__Klout_Number__c ) + &apos;  &apos; + IMAGE($Setup.sf4twitter__Twitter_Public_Configuration__c.sf4twitter__Klout_Score_logo__c,&apos;Klout&apos;,17,90), &apos;&apos; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Klout Score</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Languages__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Languages</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Level__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tertiary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Origin__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Origin</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Research_this_Contact__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;http://www.linkedin.com/pub/dir/&quot; &amp;  FirstName  &amp; &quot;/&quot; &amp;  LastName, IMAGE(&quot;/resource/linkedin&quot;, &quot;Lookup Contact on LinkedIn&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Research This Contact</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Bio__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Bio</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Creation_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Creation Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Follower_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Follower Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Following_count__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Following Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Image_Url__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Image Url</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Last_Tweet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Last Tweet</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Location__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Location</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Picture__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;http://twitter.com/&apos; + sf4twitter__Twitter_Username__c,
+IF( ( NOT( ISBLANK( sf4twitter__Twitter_Image_Url__c ) )), IMAGE( sf4twitter__Twitter_Image_Url__c ,&apos;http://twitter.com/&apos; + sf4twitter__Twitter_Username__c, 48, 48), 
+IF( NOT( ISBLANK( sf4twitter__Twitter_Username__c ) ), &apos;http://twitter.com/&apos; + sf4twitter__Twitter_Username__c, &apos;&apos; ) )
+,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Twitter Picture</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Status_count__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Status Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_User_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Twitter User Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__Twitter_Username__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Twitter Username</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf4twitter__followed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checked if the user is being followed by any account</description>
+        <externalId>false</externalId>
+        <label>Followed</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>suffix__c</fullName>
+        <description>Suffix</description>
+        <externalId>false</externalId>
+        <label>Suffix</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_fax_id__c</fullName>
+        <externalId>false</externalId>
+        <label>Ta Fax Id for update</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_homeemail_id__c</fullName>
+        <externalId>false</externalId>
+        <label>Ta HomeEmail Id for update</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_homephone_id__c</fullName>
+        <externalId>false</externalId>
+        <label>Ta HomePhone Id for update</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_mobilephone_id__c</fullName>
+        <externalId>false</externalId>
+        <label>TA Cell Phone Id for update</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_workemail_id__c</fullName>
+        <externalId>false</externalId>
+        <label>Ta WorkEmail Id for update</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_workphone_id__c</fullName>
+        <externalId>false</externalId>
+        <label>Ta WorkPhone Id for update</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllRJ</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>comments__c</field>
+            <operation>contains</operation>
+            <value>RJ</value>
+        </filters>
+        <label>All updated by RJ</label>
+    </listViews>
+    <listViews>
+        <fullName>Contacts_in_Households</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>Household_Old__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <columns>CONTACT.ADDRESS2_ZIP</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Household_Old__c</field>
+            <operation>notContain</operation>
+            <value>NULL</value>
+        </filters>
+        <label>Contacts in Households</label>
+    </listViews>
+    <listViews>
+        <fullName>Incomplete_Contacts</fullName>
+        <booleanFilter>1 or 2 or 3 or 4 or 5</booleanFilter>
+        <columns>FULL_NAME</columns>
+        <columns>Household_Old__c</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>Home_Address__c</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.FIRST_NAME</field>
+            <operation>contains</operation>
+            <value>#,&quot;,&apos;,*,&amp;,First&quot;</value>
+        </filters>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>contains</operation>
+            <value>#,&quot;,&apos;,*,&amp;,Last&quot;</value>
+        </filters>
+        <filters>
+            <field>Household_Old__c</field>
+            <operation>contains</operation>
+            <value>#,&quot;,&apos;,*,&amp;&quot;</value>
+        </filters>
+        <filters>
+            <field>CONTACT.EMAIL</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>CONTACT.PHONE1</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Incomplete Contacts</label>
+    </listViews>
+    <listViews>
+        <fullName>MyContacts</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>Household_Old__c</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.ADDRESS2_STATE</columns>
+        <columns>deceased_date__c</columns>
+        <columns>deceased_flag__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Contacts</label>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Contact_Status__c</columns>
+        <columns>TaContactId__c</columns>
+        <columns>Household_Old__c</columns>
+        <columns>CONTACT.CREATED_DATE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>HomeEmail__c</columns>
+        <columns>Preferred_Email__c</columns>
+        <columns>PreferredPhone__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>email_in_name_and_household</fullName>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <columns>FULL_NAME</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>Household_Old__c</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.FIRST_NAME</field>
+            <operation>contains</operation>
+            <value>@</value>
+        </filters>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>contains</operation>
+            <value>@</value>
+        </filters>
+        <label>email@ in name and household</label>
+    </listViews>
+    <namedFilters>
+        <fullName>nf_01IA0000001C2hFMAS_00NA0000007gb8PMAQ</fullName>
+        <active>true</active>
+        <field>Bequest__c.Contact__c</field>
+        <filterItems>
+            <field>Contact.Account.Name</field>
+            <operation>notEqual</operation>
+            <value>WGBH ATS</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Planned Giving_Contact</name>
+    </namedFilters>
+    <recordTypes>
+        <fullName>Contact_Standard</fullName>
+        <active>true</active>
+        <label>Contact Standard</label>
+        <picklistValues>
+            <picklist>AccountCategory__c</picklist>
+            <values>
+                <fullName>Affiliate Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual%2FFamily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Account_Manager__c</picklist>
+            <values>
+                <fullName>Abby Ballou</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Davi Axinn Levine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ellen Frank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jeanmarie Roberts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jessica Connolly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kaja Fickes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kathleen McCarthy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Susanne Salerno</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vanya Tulenko</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Win Lenihan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Annual_Giving_Level__c</picklist>
+            <values>
+                <fullName>Cape %26 Islands Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cape %26 Islands Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cape %26 Islands Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH Ralph Lowell Society</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBY Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBY Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBY Murrow Society</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contact_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Archive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contact_Type__c</picklist>
+            <values>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Beneficiary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Child</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Executor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Household Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Kind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MMI Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major Gift Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mbr Disc Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wine Donations</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Disability__c</picklist>
+            <values>
+                <fullName>Blind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deaf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physically Challenged</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ethnicity__c</picklist>
+            <values>
+                <fullName>African</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>American</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Australian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cambodian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canadian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caribbean Islander</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caucasian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chinese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuban</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Egyptian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>French Canadian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Haitain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Irish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japanese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jewish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Korean</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Latin American</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mexican</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed Heritage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Native American</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portuguese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Puerto Rican</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vietnamese</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brigid Sullivan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Advisors Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Executive Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Henry Becton</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jamie Parker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jeanne Hopkins</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joe Igoe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jon Abbott</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lance Ozier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Margaret Drain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Most Recent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Susan Dwyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vinay Mehra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WGBH Web Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Win Lenihan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of Mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Level__c</picklist>
+            <values>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tertiary</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Admiral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brother</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Captain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Colonel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commander</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deacon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Father</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lady</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lieutenant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lt Colonel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mayor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rabbi</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Representative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reverend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Senator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sergeant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sir</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sister</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Honorable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Political__c</picklist>
+            <values>
+                <fullName>Democrat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green Party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Republican</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unaffiliated</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PreferredPhone__c</picklist>
+            <values>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Email__c</picklist>
+            <values>
+                <fullName>Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Primary_Address_Type__c</picklist>
+            <values>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Religion__c</picklist>
+            <values>
+                <fullName>Catholic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jewish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muslim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Protestant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Secondary_Address_Type__c</picklist>
+            <values>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SystemAccountProcessor__c</picklist>
+            <values>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One-to-One</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SystemHouseholdProcessor__c</picklist>
+            <values>
+                <fullName>All Individual Contacts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>All New or Edited Contacts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Contacts</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>age_range__c</picklist>
+            <values>
+                <fullName>12-17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18-24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25-29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30-34</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35-39</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40-44</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45-49</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50-54</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>55-59</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6-11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>65-74</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>75%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>gender__c</picklist>
+            <values>
+                <fullName>Both -Only for account gender</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>Populated_Email_Field_Warning</fullName>
+        <active>false</active>
+        <description>This validation rule is only necessary for organizations that have data in the Email field before installing this package.  You don&apos;t need for this validation rule if you move all of the data from the Email field in to the NEW Work Email field.</description>
+        <errorConditionFormula>AND(
+NOT(ISCHANGED(Email)),
+LEN(PRIORVALUE(Email))&gt;0,
+ISCHANGED(Preferred_Email__c),
+NOT(OR(
+PRIORVALUE( Email) = PRIORVALUE( WorkEmail__c),
+PRIORVALUE( Email) = PRIORVALUE( HomeEmail__c),
+PRIORVALUE( Email) = PRIORVALUE( Assistant_Email__c),
+PRIORVALUE( Email) = WorkEmail__c,
+PRIORVALUE( Email) = HomeEmail__c,
+PRIORVALUE( Email) = Assistant_Email__c
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>Email</errorDisplayField>
+        <errorMessage>The Email field MUST match the field that is designated by the Preferred Email picklist. To correct this, you must copy the existing value in the Email field to a new field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Populated_Phone_Field_Warning</fullName>
+        <active>false</active>
+        <description>This validation rule is only necessary for organizations that have data in the Phone field before installing this package.  You don&apos;t need this validation rule if move all of the data from the Phone field in to the NEW Work Phone field.</description>
+        <errorConditionFormula>AND(
+NOT(ISCHANGED(Phone)),
+LEN(PRIORVALUE(Phone ))&gt;0,
+ISCHANGED( PreferredPhone__c ),
+NOT(OR( 
+PRIORVALUE( Phone) = PRIORVALUE( WorkPhone__c ), 
+PRIORVALUE( Phone) = PRIORVALUE( HomePhone), 
+PRIORVALUE( Phone) = PRIORVALUE( MobilePhone ), 
+PRIORVALUE( Phone) = PRIORVALUE( OtherPhone), 
+PRIORVALUE( Phone) = WorkPhone__c, 
+PRIORVALUE( Phone) = HomePhone, 
+PRIORVALUE( Phone) = MobilePhone, 
+PRIORVALUE( Phone) = OtherPhone 
+) 
+) 
+)</errorConditionFormula>
+        <errorDisplayField>Phone</errorDisplayField>
+        <errorMessage>The Phone field MUST match the filed that is designated by the Preferred Phone picklist. To correct this, you must copy the existing value in the Phone field to the designated preferred phone field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Preferred_Email</fullName>
+        <active>false</active>
+        <description>Requires the user to select a value in the Preferred Email picklist when email addresses are entered into the email fields.</description>
+        <errorConditionFormula>AND(
+ISPICKVAL(  Preferred_Email__c ,&quot;&quot;),
+OR(
+LEN(  HomeEmail__c  )&gt;0,
+LEN(  WorkEmail__c  )&gt;0,
+LEN(  Assistant_Email__c  )&gt;0
+)
+)</errorConditionFormula>
+        <errorDisplayField>Preferred_Email__c</errorDisplayField>
+        <errorMessage>You must select a Preferred Email</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Preferred_Phone</fullName>
+        <active>false</active>
+        <description>Requires the user to select a value in the Preferred Phone picklist when phone numbers are entered into the phone number fields.</description>
+        <errorConditionFormula>AND(
+ISPICKVAL( PreferredPhone__c ,&quot;&quot;),
+OR(
+LEN( HomePhone )&gt;0,
+LEN( MobilePhone )&gt;0,
+LEN( OtherPhone )&gt;0,
+LEN( WorkPhone__c )&gt;0
+)
+)</errorConditionFormula>
+        <errorDisplayField>PreferredPhone__c</errorDisplayField>
+        <errorMessage>You must select a Preferred Phone</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Mail_Merge</fullName>
+        <availability>online</availability>
+        <description>*** This is an example of a simple Conga Composer button. *** 
+
+Copy the URL from this button and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Conga Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>450</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/PointMerge.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Contact.Id}</url>
+        <width>625</width>
+    </webLinks>
+    <webLinks>
+        <fullName>All_Giving_Opty</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>All Giving/Opty</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/GiftSummary?id={!Contact.Id}&amp;list=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Classifications</fullName>
+        <availability>online</availability>
+        <description>Button to launch Classification report.</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Classifications</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OF0000004ARny?pv0={!Contact.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ContactActivityOverview</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Contact Activity Overview</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://secure.eloqua.com/cvp.aspx?LP=WGNH&amp;URL=FlexReports/DisplayReport2.aspx?StandardReportID=1297%26EmailAddress={!Contact.Email}%26ShowPrintOption=True</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Action_Plan</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Action Plan</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/ActionPlanCreation?refType=Contact&amp;refId={!Contact.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Action_Plans</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Contact Action Plans</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var records = {!GETRECORDIDS( $ObjectType.Contact )} ;
+var oName = &apos;Contact&apos;;
+var error = false;
+var msj = &apos;&apos;;
+if( records.length &gt; 40 ) { 
+    error = true; 
+    msj =&apos;{!$Label.ap_Errors_moreThan20records}&apos;;
+}
+if( records.length &lt; 1 ){
+   error = true;
+   msj = &apos;{!$Label.ap_Errors_selectOneRecord}&apos;; 
+}
+
+if( error ) {
+       alert(msj);    
+}
+else{
+       location.href = &apos;/apex/ActionPlanCreation?refId=&apos;+records+&apos;&amp;refType=&apos;+oName;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Letter</fullName>
+        <availability>online</availability>
+        <description>Used to create mail merge documents such as tax letter, or acknowledgment for a contact.</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>450</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Create Letter</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/PointMerge.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Contact.Id}
+&amp;ReportId=00OA0000003n85V,00OA0000003nD26,00OA0000003nD2z</url>
+        <width>625</width>
+    </webLinks>
+    <webLinks>
+        <fullName>EmailUnsubscribe</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Email Unsubscribe</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://secure.eloqua.com/cvp.aspx?LP=WGNH&amp;elqExtUserName=SFDC.Integration&amp;elqExtPwdHash=28B728C6A1ED08B348315F1E64769B0124A4B80E2FF0F16CD20E046E216CE588&amp;URL=EmailUnsubscribeByAddressAsAgent.aspx?elqEmailAddress={!Contact.Email}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Contact_MailingStreet}+{!Contact_MailingCity}+{!Contact_MailingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Contact_FirstName} {!Contact_LastName}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Interests</fullName>
+        <availability>online</availability>
+        <description>Button used launch the Interest report.</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View All Interests</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OF0000004AO7a?pv0={!Contact.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Lead_Sheet</fullName>
+        <availability>online</availability>
+        <description>Used for MMI&apos;s Individual Lead Sheet Data page mail merge.</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Lead Sheet</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://beta.appextremes.com/apps/Conga/PointMerge.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Contact.Id}
+&amp;ReportId=
+&amp;TemplateId=
+&amp;LG0=0
+&amp;LG1=MMI+Lead+Sheet
+&amp;LG4=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)}
+
+var records = {!GETRECORDIDS(   $ObjectType.Contact )};
+
+if (records[0] == null) {
+alert(&quot;Please select at least one record.&quot;) }
+else {
+
+var errors = [];
+var result = sforce.connection.deleteIds(records);
+if (result &amp;&amp; result.length){
+var numFailed = 0;
+var numSucceeded = 0;
+for (var i = 0; i &lt; result.length; i++){
+var res = result[i];
+if (res &amp;&amp; res.success == &apos;true&apos;){
+numSucceeded++;
+} else {
+var es = res.getArray(&quot;errors&quot;);
+if (es.length &gt; 0) {
+errors.push(es[0].message);
+}
+numFailed++;
+}
+}
+if (numFailed &gt; 0){
+alert(&quot;Failed: &quot; + numFailed + &quot;\nSucceeded: &quot; + numSucceeded + &quot; \n Due to: &quot; + errors.join(&quot;\n&quot;));
+} else {
+alert(&quot;Number of records deleted: &quot; + numSucceeded);
+}
+}
+window.location.reload();
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditContact</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateContact</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Online_Activity_Overview</fullName>
+        <availability>online</availability>
+        <description>Eloqua</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Online Activity Overview</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>xxxxxx</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Opt_Out_Eloqua_Emails</fullName>
+        <availability>online</availability>
+        <description>Eloqua</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Opt Out Eloqua Emails</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>xxxxxx</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SendGmail</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Gmail</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://mail.google.com/mail?view=cm&amp;tf=0&amp;to={!Contact_Email}&lt;{!Contact_LastName}, {!Contact_FirstName}&gt;&amp;tf=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Contact_MailingCountry}&amp;csz={!Contact_MailingCity}+{!Contact_MailingState}+{!Contact_MailingPostalCode}+&amp;addr={!Contact_MailingAddress}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooWeather</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Weather</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://weather.yahoo.com/search/weather2?p={!Contact_MailingPostalCode}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sf4twitter__Get_Author_Info</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get Author Info</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location = &apos;/apex/sf4twitter__TwitterUpdateTwitterInfo?records={!Contact.Id}&amp;retURL=&apos; + encodeURIComponent(window.location);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sf4twitter__Get_Author_Info_Massive</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get Author Info</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var records = {!GETRECORDIDS( $ObjectType.Contact)}; 
+if (records.length == 0) { 
+  alert(&quot;{!$Label.sf4twitter__TWITTER_SELECT_A_RECORD}&quot;) ; 
+} 
+else if(records.length &gt; 100){ 
+  alert(&quot;{!SUBSTITUTE($Label.sf4twitter__TWITTER_SELECT_LESS_RECORD, &apos;{0}&apos;, &apos;100&apos;)}&quot;); 
+} 
+else {
+	if(document.getElementsByName(&apos;fcf&apos;)[0] == null){ 
+	elementName = &apos;is:islv:inlineSchedulerListView:enhancedList:fcf&apos;; 
+	}else{ 
+		elementName =&apos;fcf&apos;; 
+	} 
+	var listViewFilters = document.getElementsByName(elementName)[0];
+
+	var filterId = listViewFilters.options[listViewFilters.selectedIndex].value;
+	var url = new String(window.location);
+	if (url.search(/fcf=[^&amp;]+/) &gt;= 0) {
+		url = url.replace(/fcf=[^&amp;]+/, &apos;fcf=&apos; + filterId);
+	} else {
+		if (url.indexOf(&apos;?&apos;) == -1) {
+			url += &apos;?&apos;
+		}
+		url += &apos;&amp;fcf=&apos; + filterId;
+	}
+        window.location = &apos;/apex/sf4twitter__TwitterUpdateTwitterInfo?records=&apos; + records + &apos;&amp;retURL=&apos; + encodeURIComponent(url);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sf4twitter__Get_Klout_Score</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get Klout Score</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if ({!IF(ISPICKVAL(Contact.sf4twitter__Origin__c,&apos;Facebook&apos;),&apos;true&apos;,&apos;false&apos;)}) { 
+alert(&apos;{!$Label.sf4twitter__FUNCTION_ONLY_FOR_TWITTER_CONVERSATION}&apos;); 
+} else{ 
+window.location = &apos;/apex/sf4twitter__SocialKlout?cList={!Contact.Id}&amp;retURL=&apos; + encodeURIComponent(window.location); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sf4twitter__Get_Klout_Score_Massive</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get Klout Score</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var records = {!GETRECORDIDS( $ObjectType.Contact )}; 
+if (records.length == 0) { 
+alert(&quot;{!$Label.sf4twitter__TWITTER_SELECT_A_RECORD}&quot;) ; 
+} 
+else if(records.length &gt; 5){ 
+alert(&quot;{!SUBSTITUTE($Label.sf4twitter__TWITTER_SELECT_LESS_RECORD, &apos;{0}&apos;, &apos;5&apos;)}&quot;); 
+} 
+else { 
+	if(document.getElementsByName(&apos;fcf&apos;)[0] == null){ 
+	elementName = &apos;is:islv:inlineSchedulerListView:enhancedList:fcf&apos;; 
+	}else{ 
+		elementName =&apos;fcf&apos;; 
+	} 
+	var listViewFilters = document.getElementsByName(elementName)[0];
+
+var filterId = listViewFilters.options[listViewFilters.selectedIndex].value; 
+var url = new String(window.location); 
+if (url.search(/fcf=[^&amp;]+/) &gt;= 0) { 
+url = url.replace(/fcf=[^&amp;]+/, &apos;fcf=&apos; + filterId); 
+} else { 
+if (url.indexOf(&apos;?&apos;) == -1) { 
+url += &apos;?&apos; 
+} 
+url += &apos;&amp;fcf=&apos; + filterId; 
+} 
+window.location = &apos;/apex/sf4twitter__SocialKlout?cList=&apos; + records + &apos;&amp;retURL=&apos; + encodeURIComponent(url); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sf4twitter__Get_Twitter_Username</fullName>
+        <availability>online</availability>
+        <description>Allow a CRM users to search twitter to find the Contact&apos;s
+twitter user name.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get Twitter Username</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>var results = (new RegExp(&quot;[\\?&amp;]isdtp=([^&amp;#]*)&quot;)).exec(window.location.href);
+if ( results == null ){
+window.location = &apos;/apex/sf4twitter__TwitterGetUsername?cid={!Contact.Id}&amp;retURL=&apos; + encodeURIComponent(window.location);
+}else{
+window.location = &apos;/apex/sf4twitter__TwitterGetUsername?cid={!Contact.Id}&amp;isdtp=&apos;+results[1]+&apos;&amp;retURL=&apos; + encodeURIComponent(window.location);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>sf4twitter__Search_Twitter_Username</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Search Twitter Username</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://twitter.com/search/users?q={!Contact.FirstName}+{!Contact.LastName}&amp;category=people&amp;source=find_on_twitter</url>
+    </webLinks>
+</CustomObject>

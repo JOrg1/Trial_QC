@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Household__c.Mailing_State__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Household__c.Mailing_PostalCode__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.paid_amount__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.New_Paid_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.station_support__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Temp File for State Zip</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity@Opportunity.Household__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_$Household__c.Mailing_State__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

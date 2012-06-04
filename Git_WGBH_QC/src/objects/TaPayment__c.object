@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Temporary Payment Object for closing Opportunities that were migrated from TA</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Recurring_Donation__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurring Donation</label>
+        <referenceTo>Recurring_Donation__c</referenceTo>
+        <relationshipLabel>Payments</relationshipLabel>
+        <relationshipName>Payments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TaTransactions_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>TA Transactions external Id</description>
+        <externalId>true</externalId>
+        <label>TA Transactions Id</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>activity_type__c</fullName>
+        <description>Activity Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Activity Type</inlineHelpText>
+        <label>Activity Type</label>
+        <length>3</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>adj_adjustment_seq__c</fullName>
+        <description>Adj Adjustment Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adj Adjustment Seq</inlineHelpText>
+        <label>Adj Adjustment Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>adj_gift_date__c</fullName>
+        <description>Adj Gift Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adj Gift Date</inlineHelpText>
+        <label>Adj Gift Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>adj_gift_seq__c</fullName>
+        <description>Adj Gift Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adj Gift Seq</inlineHelpText>
+        <label>Adj Gift Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>adjustment_code_value__c</fullName>
+        <description>Adjustment Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adjustment Code</inlineHelpText>
+        <label>Adjustment Code Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>batch_process_count__c</fullName>
+        <description>This field is used for Apex batch processing for post processing ETL information</description>
+        <externalId>false</externalId>
+        <label>Batch Process Count</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bulk_load__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>bulk load</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>campaign__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>check_name__c</fullName>
+        <description>Check Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check Name</inlineHelpText>
+        <label>Check Name</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>commitment_date__c</fullName>
+        <description>Commitment Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Commitment Date</inlineHelpText>
+        <label>Commitment Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>fiscal_month__c</fullName>
+        <description>Fiscal Month</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fiscal Month</inlineHelpText>
+        <label>Fiscal Month</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fiscal_year__c</fullName>
+        <description>Fiscal Year</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fiscal Year</inlineHelpText>
+        <label>Fiscal Year</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gift_date__c</fullName>
+        <description>Gift Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Date</inlineHelpText>
+        <label>Gift Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>gift_kind__c</fullName>
+        <description>Gift Kind</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Kind</inlineHelpText>
+        <label>Gift Kind Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gift_seq__c</fullName>
+        <description>Gift Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Seq</inlineHelpText>
+        <label>Gift Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gift_type__c</fullName>
+        <description>Gift Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Type</inlineHelpText>
+        <label>Gift Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>installment_amount__c</fullName>
+        <description>Installment Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Installment Amount</inlineHelpText>
+        <label>Installment Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_payment_date__c</fullName>
+        <description>Last Payment Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Payment Date</inlineHelpText>
+        <label>Last Payment Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>name_id__c</fullName>
+        <description>Name Id</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name Id</inlineHelpText>
+        <label>Name Id</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>paid_amount__c</fullName>
+        <description>Paid Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Paid Amount</inlineHelpText>
+        <label>Paid Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payment_amount__c</fullName>
+        <description>Payment Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment Amount</inlineHelpText>
+        <label>Payment Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payment_frequency__c</fullName>
+        <description>Payment Frequency</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment Frequency</inlineHelpText>
+        <label>Payment Frequency Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payment_method__c</fullName>
+        <description>Payment Method</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment Method</inlineHelpText>
+        <label>Payment Method Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>payments_in_schedule__c</fullName>
+        <description>Payments In Schedule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payments In Schedule</inlineHelpText>
+        <label>Payments In Schedule</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pledge_number__c</fullName>
+        <description>Pledge Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pledge Number</inlineHelpText>
+        <label>Pledge Number</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pledge_time__c</fullName>
+        <description>Pledge Time</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pledge Time</inlineHelpText>
+        <label>Pledge Time</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>processed_date__c</fullName>
+        <description>Processed Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Processed Date</inlineHelpText>
+        <label>Processed Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>recognition_date__c</fullName>
+        <description>Recognition Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Recognition Date</inlineHelpText>
+        <label>Recognition Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>schedule_start_date__c</fullName>
+        <description>Schedule Start Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Schedule Start Date</inlineHelpText>
+        <label>Schedule Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>soft_credit_type__c</fullName>
+        <description>Soft Credit Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Soft Credit Type</inlineHelpText>
+        <label>Soft Credit Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>staff__c</fullName>
+        <externalId>false</externalId>
+        <label>Staff</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sts__c</fullName>
+        <externalId>false</externalId>
+        <label>Sts</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sustaining_gift_number__c</fullName>
+        <description>Sustaining Gift Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sustaining Gift Number</inlineHelpText>
+        <label>Sustaining Gift Number</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>transaction_type_value__c</fullName>
+        <description>Transaction Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction Type</inlineHelpText>
+        <label>Transaction Type Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>TaPayment Temporary</label>
+    <nameField>
+        <label>Temp Payment Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>TaPayments</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

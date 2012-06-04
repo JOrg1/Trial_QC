@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>WGBH_PB5_UPLOAD__c.PB5_PAYMENT_AMOUNT__c:SUM</calculatedFormula>
+        <datatype>currency</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <masterLabel>Sum of Payment</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>WGBH_PB5_UPLOAD__c.PB5_PLEDGE_AMOUNT__c:SUM</calculatedFormula>
+        <datatype>currency</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>false</isActive>
+        <masterLabel>Sum of Pledges</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>WGBH_PB5_UPLOAD__c.PB5_PAYMENT_AMOUNT__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>WGBH_PB5_UPLOAD__c.PB5_PLEDGE_AMOUNT__c</field>
+    </columns>
+    <description>Identifying SG Pledges from Kimbia</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>WGBH_PB5_UPLOAD__c.PB5_UPLOAD_SOURCE__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WGBH_PB5_UPLOAD__c.PB5_STATION_SOURCE__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WGBH_PB5_UPLOAD__c.PB5_GIFT_CDATE__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Kimbia SG Pledges</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$WGBH_PB5_UPLOAD__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>WGBH_PB5_UPLOAD__c.PB5_GIFT_CDATE__c</dateColumn>
+        <endDate>2011-12-17</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2011-11-04</startDate>
+    </timeFrameFilter>
+</Report>

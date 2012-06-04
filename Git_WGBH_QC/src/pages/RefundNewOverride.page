@@ -1,0 +1,2 @@
+<apex:page standardController="Refund__c" extensions="RefundNewOverride" action="{!RedirectToStandardPage}">
+</apex:page>

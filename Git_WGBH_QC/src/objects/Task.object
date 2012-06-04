@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+                <highPriority>true</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <closed>false</closed>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on someone else</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deferred</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send Solicitation/Proposal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ask for a Pledge/Gift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Member Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ask for an Auction Item</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact about an Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMI Lead Sheet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>To Do</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Check on Premium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Create an Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMI Lead Sheet Printed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Schedule a Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>See if Check or CC Payment Posts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <recordTypes>
+        <fullName>Legacy</fullName>
+        <active>true</active>
+        <label>Legacy</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Ask for a Pledge%2FGift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ask for an Auction Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact about an Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MMI Lead Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Member Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Solicitation%2FProposal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check on Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create an Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MMI Lead Sheet Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule a Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>See if Check or CC Payment Posts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>To Do</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard</fullName>
+        <active>true</active>
+        <label>Standard</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Ask for a Pledge%2FGift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ask for an Auction Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact about an Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MMI Lead Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Member Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Solicitation%2FProposal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check on Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create an Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MMI Lead Sheet Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule a Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>See if Check or CC Payment Posts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>To Do</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <webLinks>
+        <fullName>sf4twitter__Send_Twitter_Message</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Reply</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>var id = null;
+var url = window.location.href;
+var status = &apos;{!sf4twitter__Twitter_Conversation__c.sf4twitter__Status__c}&apos;;
+
+if (status == &apos;Deleted&apos;) {
+	alert(&apos;{!$Label.sf4twitter__CONVERSATION_IS_DELETED_GENERIC}&apos;);
+}
+else {
+	// get the object id from the current url
+	var id_regex = /(\/|\?|&amp;)id=([^&amp;]*)/i;
+	var match_result = id_regex.exec(url);
+	if (match_result != null) {
+		id = match_result[2];
+	} else {
+		var std_url_regex = /salesforce\.com\/([^&amp;\/=?]*)/i;
+		var std_url_match_result = std_url_regex.exec(url);
+		if (std_url_match_result != null) {
+			id = std_url_match_result[1];
+		}
+	}
+        var launchedFromHover = false;
+        
+        if (id != null &amp;&amp; id.indexOf(&apos;emptyHtmlDoc.html&apos;) &gt;= 0) {
+
+              var recordIdContainer = document.getElementsByClassName(&apos;bRelatedList&apos;)[0];
+              id = recordIdContainer.id.split(&quot;_&quot;)[0];
+              launchedFromHover = true;
+        } 
+	// go to the message form with the obtained id
+	if (id != null) {
+		var popupHeight = 450;
+		var popupWidth = 500;
+	var popupLeft = ( screen.width - popupWidth  ) / 2;
+	var popupTop = ( screen.height - popupHeight ) / 2;
+
+		var popupSpecs =
+			&apos;width=&apos;+ popupWidth + &apos;,&apos; +
+			&apos;height=&apos; + popupHeight + &apos;,&apos; +
+			&apos;left=&apos; + popupLeft + &apos;,&apos; +
+			&apos;top=&apos; + popupTop+ &apos;,&apos; +
+			&apos;toolbar=no,&apos; +
+			&apos;titlebar=no,&apos; +
+			&apos;location=no,&apos; +
+			&apos;directories=no,&apos; +
+			&apos;status=no,&apos; +
+			&apos;menubar=no,&apos; +
+			&apos;scrollbars=yes,&apos; +
+			&apos;copyhistory=yes,&apos; +
+			&apos;resizable=yes&apos;;
+                        if (launchedFromHover) {
+		window.open(
+			&apos;/apex/sf4twitter__TwitterMessage?id=&apos; + id + &apos;&amp;retURL=&apos;+encodeURIComponent(top.location),
+			                &apos;_blank&apos;,
+		                  popupSpecs);
+                        } else {
+                                 window.open(
+			                &apos;/apex/sf4twitter__TwitterMessage?id=&apos; + id + &apos;&amp;retURL=&apos;+encodeURIComponent(window.location),
+			&apos;_blank&apos;,
+		   popupSpecs);
+	}
+		
+	}
+}</url>
+    </webLinks>
+</CustomObject>

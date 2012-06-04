@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_ID</field>
+    </columns>
+    <columns>
+        <field>Opportunity.payment_frequency__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.gift_kind__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CC_EFT_Alias__c</field>
+    </columns>
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <description>All Giving where GK = OP and Payment Frequency &lt;&gt; NULL</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.gift_kind__c</column>
+            <operator>equals</operator>
+            <value>One Payment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.payment_frequency__c</column>
+            <operator>notEqual</operator>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STAGE_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Giving where GK = OP w Pmt Freq</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

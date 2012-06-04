@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>Position__c.Department_Name__c</field>
+    </columns>
+    <columns>
+        <field>FK_$candidate__c.State_lkp__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Job_Application__c.Picklist__c</column>
+            <operator>equals</operator>
+            <value>New,Review Resume,Phone Screen,Schedule Interviews,Extend an Offer</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name># of Job Applications per Open Position</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Position__c$Job_Application__c@Job_Application__c.Candidate__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Position__c.Open_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

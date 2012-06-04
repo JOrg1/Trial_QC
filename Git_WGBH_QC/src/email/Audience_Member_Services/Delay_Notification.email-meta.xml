@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Form letter used when there is delay in responding to an email of two weeks or more</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Audience_Member_Services</letterhead>
+    <name>Form Letter - Delay Notification</name>
+    <style>freeForm</style>
+    <subject>WGBH Audience and Member Services</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Thank you for recently contacting WGBH Audience and Member Services.  While we strive to answer all message in a timely fashion, a recent large volume of correspondence has deeply impacted our ability to respond to our members and viewers as quickly as we would have liked.
+
+On behalf of WGBH I would like to sincerely apologize for the delay in responding to your email.  Because of the time that has passed I recognize that you may no longer require assistance.
+
+If you have still have a question and it is station or programming related, please visit our website:  www.wgbh.org.  If you have an urgent membership inquiry or request, please call our member hotline:  617-300-3300 (M-F, 9-5).
+
+It’s a highly competitive world out there for philanthropic support; our goal is to earn your trust and support every day. Thank you for contacting us and for your support of WGBH.
+
+ 
+
+Sincerely,
+
+ 
+
+WGBH Audience and Member Services
+
+{!Case.CaseNumber}</textOnly>
+    <type>html</type>
+</EmailTemplate>

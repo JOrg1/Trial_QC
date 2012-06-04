@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$SFDC_ACCOUNT_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account$TA_Account_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r.Classifications__r$Preference__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r.Classifications__r$Preference_Value__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r.Classifications__r$start_date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r.Classifications__r$end_date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r.Classifications__r$active__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Contacts__r.Classifications__r$Classification_Type__c</column>
+            <operator>equals</operator>
+            <value>Station Boards and Committees</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts__r.Classifications__r$Station__c</column>
+            <operator>equals</operator>
+            <value>WGBH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts__r.Classifications__r$Preference__c</column>
+            <operator>equals</operator>
+            <value>Station Board Type,Station Committee Type</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts__r.Classifications__r$Preference_Value__c</column>
+            <operator>equals</operator>
+            <value>Board of Overseers,Board of Trustees,Non-Active Institutional Trustee,Overseers Advisory Board,Ralph Lowell Society Committee,Trustee Emeritus</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>RLS Renewal Board</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_and_Contacts_with_Classifications__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

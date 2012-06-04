@@ -1,0 +1,8 @@
+<apex:page standardController="Campaign" extensions="CampaignNewOverride" action="{!RedirectToNewCampaign}" title="New Campaign">
+ 
+
+ <apex:pageMessages ></apex:pageMessages>
+ 
+ <apex:outputLink value="/setup/user/recordtype_setup.jsp?retURL=%2Fui%2Fsetup%2FSetup%3Fsetupid%3DPersonalInfo&setupid=RecordTypeSelection">Click to adjust record type preferences</apex:outputLink>
+ 
+</apex:page>

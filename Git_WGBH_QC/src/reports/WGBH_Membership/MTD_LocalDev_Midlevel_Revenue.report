@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.gift_date__c</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE2</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.payment_amount__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.Station__c</column>
+            <operator>equals</operator>
+            <value>WGBH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Financial_segment_Level1__c</column>
+            <operator>equals</operator>
+            <value>Local Development</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Giving_Segment__c</column>
+            <operator>equals</operator>
+            <value>Mid Level</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Channel_Technique__c</column>
+            <operator>equals</operator>
+            <value>Direct Contact,Event Type,Mail,Mobile,Event,Postcard</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.payment_amount__c</column>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.gift_kind__c</column>
+            <operator>notEqual</operator>
+            <value>Sustaining Gift</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.Channel_Technique__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.Solicitation_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MTD LocalDev Midlevel Revenue</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityCampaign</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ConfirmMessage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Clone Confirm Message</shortDescription>
+        <value>Please click CONFIRM to clone current record, or click BACK to go back to the original record.</value>
+    </labels>
+</CustomLabels>

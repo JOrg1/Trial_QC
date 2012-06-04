@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Prospect Research Report Request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Prospect Research Report Request</name>
+    <style>none</style>
+    <subject>Prospect Research Report Request</subject>
+    <type>text</type>
+</EmailTemplate>

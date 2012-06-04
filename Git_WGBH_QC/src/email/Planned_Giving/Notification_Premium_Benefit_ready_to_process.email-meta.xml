@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send an email to the operations group a week before resume date to set the status back to ready to process</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notification - Premium/Benefit ready to process</name>
+    <style>none</style>
+    <subject>Notification - Premium/Benefit ready to process</subject>
+    <type>text</type>
+</EmailTemplate>

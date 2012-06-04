@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Use this template to notify a member that their premium has been backordered</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Audience_Member_Services</letterhead>
+    <name>Premium Backorder Template</name>
+    <style>freeForm</style>
+    <subject>Your WGBH Thank You Gift</subject>
+    <textOnly>Dear {!Contact.Salutation} {!Contact.LastName}, 
+
+xxxxxxxxxx
+
+Gift Name:
+Date Ordered:
+Expected Ship Date:
+Shipping Address: {!Contact.MailingAddress}
+
+xxxxxx
+
+Sincerely,
+
+{!Case.OwnerFullName}
+WGBH Audience &amp; Member Services
+617-300-3300 (M-F, 9-5)
+
+{!Case.AccountId}
+{!Case.CaseNumber}</textOnly>
+    <type>html</type>
+</EmailTemplate>

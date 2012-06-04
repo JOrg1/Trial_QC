@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this template for gifts that have processed and have shipped from Forest.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Audience_Member_Services</letterhead>
+    <name>Gift Processed, Shipped</name>
+    <style>freeForm</style>
+    <subject>Your WGBH Thank You Gift Inquiry</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Thank you for reaching out to us regarding the delivery status of your [insert gift name here] thank you gift that was placed in [insert month here]. Please know that since December we have been working on upgrading our systems; unfortunately, due to this process, we have fallen behind in the delivery of these items. We deeply apologize for any inconvenience this may have caused and we appreciate your patience while we work to get everything in order.
+
+I checked with the warehouse and I have wonderful news to share with you! Your thank you gift shipped on [insert date here] by [method of shipment] and should arrive in approximately [insert expected delivery date here] days.
+
+We apologize for any inconvenience this issue may have caused, but we truly appreciate your patience. It’s a highly competitive world out there for philanthropic support; our goal is to earn your trust and support every day. Thank you for your time and understanding, and for your support of WGBH.
+
+Sincerely,
+
+
+{!Case.OwnerFullName}
+WGBH Audience &amp; Member Services
+617-300-3300 (M-F, 9-5)
+
+{!Case.CaseNumber}</textOnly>
+    <type>html</type>
+</EmailTemplate>

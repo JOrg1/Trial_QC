@@ -1,0 +1,235 @@
+!SESSION 2012-05-31 11:15:31.320 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:16:47.501
+!MESSAGE  WARN [2012-05-31 11:16:47,501] (IntroEditorInput.java:loadDocument:130) - org.xml.sax.SAXParseException: The entity name must immediately follow the '&' in the entity reference.
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:18:47.102
+!MESSAGE  WARN [2012-05-31 11:18:47,102] (IntroEditorInput.java:loadDocument:130) - org.xml.sax.SAXParseException: Element type "allpres.length" must be followed by either attribute specifications, ">" or "/>".
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:26:23.642
+!MESSAGE  WARN [2012-05-31 11:26:23,642] (Utils.java:loadDocument:790) - Unable to load document: D:\Jyoti\RoundCauseProjects\Git_WGBH_QC\.metadata\.plugins\com.salesforce.ide.core\packageCache.xml (The system cannot find the file specified)
+
+
+!ENTRY com.salesforce.ide.core 4 0 2012-05-31 11:34:32.048
+!MESSAGE ERROR [2012-05-31 11:34:32,048] (MetadataOperationsRetryAspect.java:metadataOperationsRetry:24) - ForceRemoteException occurred while attempting to perform a metadata operation
+
+
+!ENTRY com.salesforce.ide.core 4 0 2012-05-31 11:36:15.460
+!MESSAGE ERROR [2012-05-31 11:36:15,460] (MetadataOperationsRetryAspect.java:metadataOperationsRetry:24) - ForceRemoteException occurred while attempting to perform a metadata operation
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:21.513
+!MESSAGE  WARN [2012-05-31 11:36:21,513] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'BusinessProcess': Unable to get bean for id 'BusinessProcess'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:21.513
+!MESSAGE  WARN [2012-05-31 11:36:21,513] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'CustomField': Unable to get bean for id 'CustomField'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:21.560
+!MESSAGE  WARN [2012-05-31 11:36:21,560] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'CustomLabel': Unable to get bean for id 'CustomLabel'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:24.259
+!MESSAGE  WARN [2012-05-31 11:36:24,259] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'ListView': Unable to get bean for id 'ListView'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:24.259
+!MESSAGE  WARN [2012-05-31 11:36:24,259] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'NamedFilter': Unable to get bean for id 'NamedFilter'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:24.274
+!MESSAGE  WARN [2012-05-31 11:36:24,274] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'RecordType': Unable to get bean for id 'RecordType'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:25.787
+!MESSAGE  WARN [2012-05-31 11:36:25,772] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'SharingReason': Unable to get bean for id 'SharingReason'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:25.803
+!MESSAGE  WARN [2012-05-31 11:36:25,803] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'ValidationRule': Unable to get bean for id 'ValidationRule'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:25.803
+!MESSAGE  WARN [2012-05-31 11:36:25,803] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WebLink': Unable to get bean for id 'WebLink'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:25.819
+!MESSAGE  WARN [2012-05-31 11:36:25,819] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowAlert': Unable to get bean for id 'WorkflowAlert'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:25.834
+!MESSAGE  WARN [2012-05-31 11:36:25,834] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowFieldUpdate': Unable to get bean for id 'WorkflowFieldUpdate'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:25.834
+!MESSAGE  WARN [2012-05-31 11:36:25,834] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowOutboundMessage': Unable to get bean for id 'WorkflowOutboundMessage'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:25.850
+!MESSAGE  WARN [2012-05-31 11:36:25,850] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowRule': Unable to get bean for id 'WorkflowRule'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 11:36:25.850
+!MESSAGE  WARN [2012-05-31 11:36:25,850] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowTask': Unable to get bean for id 'WorkflowTask'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 12:46:34.433
+!MESSAGE  WARN [2012-05-31 12:46:34,433] (ConnectionFactory.java:clearCache:212) - Clearing the following cached connections
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 12:46:34.449
+!MESSAGE  WARN [2012-05-31 12:46:34,449] (DescribeObjectRegistry.java:clearCache:654) - No cached describes
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-05-31 12:46:34.449
+!MESSAGE  WARN [2012-05-31 12:46:34,449] (MetadataFactory.java:clearCache:134) - Clearing the following cached metadata stubs
+
+!SESSION 2012-06-01 11:28:15.980 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-01 11:36:31.472
+!MESSAGE  WARN [2012-06-01 11:36:31,454] (Utils.java:loadDocument:790) - Unable to load document: D:\Jyoti\RoundCauseProjects\Git_WGBH_QC\.metadata\.plugins\com.salesforce.ide.core\packageCache.xml (The system cannot find the file specified)
+
+!SESSION 2012-06-04 11:26:00.017 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:28:52.218
+!MESSAGE  WARN [2012-06-04 11:28:52,206] (Utils.java:loadDocument:790) - Unable to load document: D:\Jyoti\RoundCauseProjects\GitHubProj\Git_WGBH_QC\.metadata\.plugins\com.salesforce.ide.core\packageCache.xml (The system cannot find the file specified)
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:43.774
+!MESSAGE  WARN [2012-06-04 11:33:43,772] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'BusinessProcess': Unable to get bean for id 'BusinessProcess'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:43.788
+!MESSAGE  WARN [2012-06-04 11:33:43,787] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'CustomField': Unable to get bean for id 'CustomField'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:43.825
+!MESSAGE  WARN [2012-06-04 11:33:43,824] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'CustomLabel': Unable to get bean for id 'CustomLabel'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:46.097
+!MESSAGE  WARN [2012-06-04 11:33:46,096] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'ListView': Unable to get bean for id 'ListView'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:46.105
+!MESSAGE  WARN [2012-06-04 11:33:46,104] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'NamedFilter': Unable to get bean for id 'NamedFilter'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:46.123
+!MESSAGE  WARN [2012-06-04 11:33:46,122] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'RecordType': Unable to get bean for id 'RecordType'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:48.633
+!MESSAGE  WARN [2012-06-04 11:33:48,632] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'SharingReason': Unable to get bean for id 'SharingReason'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:48.651
+!MESSAGE  WARN [2012-06-04 11:33:48,650] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'ValidationRule': Unable to get bean for id 'ValidationRule'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:48.659
+!MESSAGE  WARN [2012-06-04 11:33:48,658] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WebLink': Unable to get bean for id 'WebLink'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:48.673
+!MESSAGE  WARN [2012-06-04 11:33:48,672] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowAlert': Unable to get bean for id 'WorkflowAlert'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:48.680
+!MESSAGE  WARN [2012-06-04 11:33:48,679] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowFieldUpdate': Unable to get bean for id 'WorkflowFieldUpdate'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:48.688
+!MESSAGE  WARN [2012-06-04 11:33:48,687] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowOutboundMessage': Unable to get bean for id 'WorkflowOutboundMessage'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:48.696
+!MESSAGE  WARN [2012-06-04 11:33:48,695] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowRule': Unable to get bean for id 'WorkflowRule'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 11:33:48.704
+!MESSAGE  WARN [2012-06-04 11:33:48,703] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowTask': Unable to get bean for id 'WorkflowTask'
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.808
+!MESSAGE  WARN [2012-06-04 12:39:46,806] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.812
+!MESSAGE  WARN [2012-06-04 12:39:46,811] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.815
+!MESSAGE  WARN [2012-06-04 12:39:46,814] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.818
+!MESSAGE  WARN [2012-06-04 12:39:46,817] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.820
+!MESSAGE  WARN [2012-06-04 12:39:46,820] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.823
+!MESSAGE  WARN [2012-06-04 12:39:46,822] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.825
+!MESSAGE  WARN [2012-06-04 12:39:46,824] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.828
+!MESSAGE  WARN [2012-06-04 12:39:46,827] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.830
+!MESSAGE  WARN [2012-06-04 12:39:46,829] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:39:46.833
+!MESSAGE  WARN [2012-06-04 12:39:46,832] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:40:00.536
+!MESSAGE  WARN [2012-06-04 12:40:00,535] (ComponentResource.java:updateBodyChecksum:620) - Resource and file bytes are null - setting checksum value to -1 'StaticResource'
+
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2012-06-04 12:45:19.379
+!MESSAGE Attempt to redefine project facet action "jpt.jpa.install" in plugin org.eclipse.jpt.jpa.core.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2012-06-04 12:45:19.382
+!MESSAGE Attempt to redefine project facet action "jpt.jpa.uninstall" in plugin org.eclipse.jpt.jpa.core.
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:48:11.944
+!MESSAGE  WARN [2012-06-04 12:48:11,943] (ConnectionFactory.java:clearCache:212) - Clearing the following cached connections
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:48:11.948
+!MESSAGE  WARN [2012-06-04 12:48:11,947] (DescribeObjectRegistry.java:clearCache:657) - Clearing cached describes
+
+
+!ENTRY com.salesforce.ide.core 2 0 2012-06-04 12:48:11.952
+!MESSAGE  WARN [2012-06-04 12:48:11,952] (MetadataFactory.java:clearCache:134) - Clearing the following cached metadata stubs
+

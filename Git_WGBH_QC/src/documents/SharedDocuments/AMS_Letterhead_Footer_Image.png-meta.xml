@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used for November AMS Letterhead footer</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>AMS Letterhead Footer Image</name>
+    <public>true</public>
+</Document>

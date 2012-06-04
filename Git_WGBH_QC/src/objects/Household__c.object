@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>AccountCategoryValue__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Category Value</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountCategory__c</fullName>
+        <description>TA Account Category</description>
+        <externalId>false</externalId>
+        <label>Account Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Corporation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account_Manager__c</fullName>
+        <description>Acccount Manager and/or Business Member Partner users who deal with an organization</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Add the users from WGBH who deal with this organization or have an ongoing relationship</inlineHelpText>
+        <label>Account Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>Households</relationshipLabel>
+        <relationshipName>Households</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Addressee__c</fullName>
+        <defaultValue>&quot;USA&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Addressee</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Always_Anonymous__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Always Anonymous</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Anonymous_Gift_Account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Anonymous Gift Account</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Brief_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Brief Name</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Formula_MailingAddress__c</fullName>
+        <externalId>false</externalId>
+        <formula>MailingStreet__c &amp; BR() &amp;
+MailingCity__c &amp; &quot;, &quot; &amp; MailingState__c &amp; &quot;  &quot; &amp;  MailingPostalCode__c 
+&amp; if (LEN(MailingCountry__c)&gt;0,BR()&amp;MailingCountry__c,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mailing Address</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Giving_Level__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Annual Giving Level on the household</inlineHelpText>
+        <label>Annual Giving Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>WGBH Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cape &amp; Islands Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBH Leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cape &amp; Islands Leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBH Ralph Lowell Society</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Murrow Society</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cape &amp; Islands Major Donor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBH Mid Level</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Mid Level</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cape &amp; Islands Mid Level</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>HouseholdEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>HouseholdEmail</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HouseholdPhone__c</fullName>
+        <externalId>false</externalId>
+        <label>Household Phone</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Household_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Household ID</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MailingCity__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing City</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MailingCountry__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing Country</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MailingPostalCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing Zip/Postal Code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MailingState__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing State/Province</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MailingStreet__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing Street</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_PostalCode__c</fullName>
+        <externalId>false</externalId>
+        <formula>Preferred_Address__r.Postal_Code__c</formula>
+        <label>Mailing PostalCode</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Preferred_Address__r.State__c</formula>
+        <label>Mailing State</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Preferred_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Addresses</relationshipLabel>
+        <relationshipName>Addresses_HH</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Staff__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Person responsible for the overall relationship of this household or organization</inlineHelpText>
+        <label>Account Manager/Staff</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TA_Account_ID_Display__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Ta_Account_Id__c)</formula>
+        <label>TA Account ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ta_Account_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Ta_Account_Id</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Termination_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Termination Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Warning__c</fullName>
+        <description>Warning, description regarding information on the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Warning, description regarding information on the account, if you wish to remove an old warning, copy and paste it into a note on on the household.</inlineHelpText>
+        <label>Warning</label>
+        <length>3000</length>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>WorkPhone__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Phone</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>X2nd_Account_Manager__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If there is a back up or support Account Manager please add them for reporting and visibility purposes.</inlineHelpText>
+        <label>2nd Account Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Households1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>affiliation__c</fullName>
+        <description>Affiliation</description>
+        <externalId>false</externalId>
+        <label>Affiliation</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>alt_account_id__c</fullName>
+        <description>Alt Account Id</description>
+        <externalId>false</externalId>
+        <label>Alt Account Id</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bulk_load__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ETL migration process</description>
+        <externalId>false</externalId>
+        <label>bulk_load</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>do_not_mail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Do not mail</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>lock_affiliation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Lock Affiliation</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>name_line__c</fullName>
+        <description>Name Line</description>
+        <externalId>false</externalId>
+        <label>Name Line</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_homephone_id__c</fullName>
+        <externalId>false</externalId>
+        <label>Ta HomePhone Id for update</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ta_workphone_id__c</fullName>
+        <externalId>false</externalId>
+        <label>Ta WorkPhone Id for update</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Household</label>
+    <listViews>
+        <fullName>Allison_Boehreta</fullName>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>TA_Account_ID_Display__c</columns>
+        <columns>Account_Manager__c</columns>
+        <columns>Staff__c</columns>
+        <columns>HouseholdPhone__c</columns>
+        <columns>HouseholdEmail__c</columns>
+        <columns>Warning__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>X2nd_Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Allison Boehreta</value>
+        </filters>
+        <filters>
+            <field>Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Allison Boehreta</value>
+        </filters>
+        <filters>
+            <field>Staff__c</field>
+            <operation>contains</operation>
+            <value>BOEHRETA</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>contains</operation>
+            <value>Aboe</value>
+        </filters>
+        <label>Allison Boehreta Households</label>
+        <sharedTo>
+            <groups>Major Gifts</groups>
+            <groups>Sys Admin</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Charlotte_Porter_Households</fullName>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>X2nd_Account_Manager__c</columns>
+        <columns>Account_Manager__c</columns>
+        <columns>Staff__c</columns>
+        <columns>HouseholdEmail__c</columns>
+        <columns>HouseholdPhone__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <columns>TA_Account_ID_Display__c</columns>
+        <columns>Warning__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>X2nd_Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Porter</value>
+        </filters>
+        <filters>
+            <field>Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Porter</value>
+        </filters>
+        <filters>
+            <field>Staff__c</field>
+            <operation>contains</operation>
+            <value>Porter</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>contains</operation>
+            <value>CPor</value>
+        </filters>
+        <label>Charlotte Porter Households</label>
+        <sharedTo>
+            <groups>Major Gifts</groups>
+            <groups>Sys Admin</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Ellen_Frank_Households</fullName>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>X2nd_Account_Manager__c</columns>
+        <columns>Account_Manager__c</columns>
+        <columns>Staff__c</columns>
+        <columns>HouseholdEmail__c</columns>
+        <columns>HouseholdPhone__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <columns>TA_Account_ID_Display__c</columns>
+        <columns>Warning__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>X2nd_Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Ellen Frank</value>
+        </filters>
+        <filters>
+            <field>Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Ellen Frank</value>
+        </filters>
+        <filters>
+            <field>Staff__c</field>
+            <operation>contains</operation>
+            <value>Ellen Frank</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>contains</operation>
+            <value>Efra</value>
+        </filters>
+        <label>Ellen Frank Households</label>
+        <sharedTo>
+            <groups>Major Gifts</groups>
+            <groups>Sys Admin</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Ericka_Webb_Households</fullName>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>X2nd_Account_Manager__c</columns>
+        <columns>Account_Manager__c</columns>
+        <columns>Staff__c</columns>
+        <columns>HouseholdEmail__c</columns>
+        <columns>HouseholdPhone__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <columns>TA_Account_ID_Display__c</columns>
+        <columns>Warning__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>X2nd_Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Webb</value>
+        </filters>
+        <filters>
+            <field>Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Webb</value>
+        </filters>
+        <filters>
+            <field>Staff__c</field>
+            <operation>contains</operation>
+            <value>Webb</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>contains</operation>
+            <value>EWeb</value>
+        </filters>
+        <label>Ericka Webb Households</label>
+        <sharedTo>
+            <groups>Major Gifts</groups>
+            <groups>Sys Admin</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Jessica_Connolly_View</fullName>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>X2nd_Account_Manager__c</columns>
+        <columns>Account_Manager__c</columns>
+        <columns>Staff__c</columns>
+        <columns>HouseholdEmail__c</columns>
+        <columns>HouseholdPhone__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <columns>TA_Account_ID_Display__c</columns>
+        <columns>Warning__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>X2nd_Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Connolly</value>
+        </filters>
+        <filters>
+            <field>Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>Connolly</value>
+        </filters>
+        <filters>
+            <field>Staff__c</field>
+            <operation>contains</operation>
+            <value>CONNOLLYJ</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>contains</operation>
+            <value>JCon</value>
+        </filters>
+        <label>Jessica Connolly View</label>
+        <sharedTo>
+            <groups>Major Gifts</groups>
+            <groups>Sys Admin</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Kaja_Fickes_Households</fullName>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>TA_Account_ID_Display__c</columns>
+        <columns>Warning__c</columns>
+        <columns>HouseholdEmail__c</columns>
+        <columns>HouseholdPhone__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <columns>Staff__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Staff__c</field>
+            <operation>contains</operation>
+            <value>SCHUPPERTK,FICKESK</value>
+        </filters>
+        <filters>
+            <field>X2nd_Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>SCHUPPERTK,FICKES</value>
+        </filters>
+        <filters>
+            <field>Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>SCHUPPERTK,FICKES</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>equals</operation>
+            <value>KFICK</value>
+        </filters>
+        <label>Kaja Fickes Households</label>
+        <sharedTo>
+            <groups>Major Gifts</groups>
+            <groups>Sys Admin</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Kathleen_McCarthy_Households</fullName>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>X2nd_Account_Manager__c</columns>
+        <columns>Account_Manager__c</columns>
+        <columns>Staff__c</columns>
+        <columns>HouseholdEmail__c</columns>
+        <columns>HouseholdPhone__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <columns>TA_Account_ID_Display__c</columns>
+        <columns>Warning__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>X2nd_Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>McCarthy</value>
+        </filters>
+        <filters>
+            <field>Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>McCarthy</value>
+        </filters>
+        <filters>
+            <field>Staff__c</field>
+            <operation>contains</operation>
+            <value>McCarthy</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>contains</operation>
+            <value>Mcca</value>
+        </filters>
+        <label>Kathleen McCarthy Households</label>
+        <sharedTo>
+            <groups>Major Gifts</groups>
+            <groups>Sys Admin</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Win_Lenihan_Households</fullName>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Staff__c</columns>
+        <columns>Giving_Level__c</columns>
+        <columns>HouseholdEmail__c</columns>
+        <columns>HouseholdPhone__c</columns>
+        <columns>Preferred_Address__c</columns>
+        <columns>Warning__c</columns>
+        <columns>TA_Account_ID_Display__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Staff__c</field>
+            <operation>contains</operation>
+            <value>LENIHANW</value>
+        </filters>
+        <filters>
+            <field>X2nd_Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>LENIHANW</value>
+        </filters>
+        <filters>
+            <field>Account_Manager__c</field>
+            <operation>contains</operation>
+            <value>LENIHANW</value>
+        </filters>
+        <label>Win Lenihan Households</label>
+        <sharedTo>
+            <groups>Major Gifts</groups>
+            <groups>Sys Admin</groups>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Household Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Households</pluralLabel>
+    <searchLayouts>
+        <searchFilterFields>NAME</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>New_Household_Member</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>New Household Member</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR($Action.Contact.NewContact, null, [  Contact.AssistantName = &quot;bob&quot;])}</url>
+    </webLinks>
+</CustomObject>

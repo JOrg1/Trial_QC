@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Alpha_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account.Preferred_Address__c</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>Account.External_Rating__c</field>
+    </columns>
+    <columns>
+        <field>Account.WGBH_Major_Donor_Flag__c</field>
+    </columns>
+    <columns>
+        <field>Account.LifetimeDonationHistory_Number__c</field>
+    </columns>
+    <columns>
+        <field>Account.LifetimeDonationHistory_Amount__c</field>
+    </columns>
+    <description>All Prospects Managed By Ellen Frank</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Account_Manager__c</column>
+            <operator>equals</operator>
+            <value>Ellen Frank</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Ellen_Frank_Portfolio</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2020-01-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2010-01-01</startDate>
+    </timeFrameFilter>
+</Report>

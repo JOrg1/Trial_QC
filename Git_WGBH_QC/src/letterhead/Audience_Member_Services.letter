@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#FFFFFF</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#FFFFFF</color>
+        <height>5</height>
+    </bottomLine>
+    <description>Used for sending HTML email to WGBH Audience and Members</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Right</horizontalAlignment>
+        <verticalAlignment>Middle</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>SharedDocuments/wgbh_letterhead_jpg.jpg</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#FFFFFF</color>
+        <height>5</height>
+    </middleLine>
+    <name>Audience &amp; Member Services</name>
+    <topLine>
+        <color>#FFFFFF</color>
+        <height>5</height>
+    </topLine>
+</Letterhead>

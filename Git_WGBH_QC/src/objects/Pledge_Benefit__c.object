@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This includes the benefit details of the pledge</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Benefit_Sts__c</fullName>
+        <externalId>false</externalId>
+        <label>Benefit Status</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bulk_Load__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bulk Load</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pledge_Number_Display__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( pledge_number__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pledge Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring_Pledge__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurring Pledge</label>
+        <referenceTo>Recurring_Donation__c</referenceTo>
+        <relationshipLabel>Pledge Benefits</relationshipLabel>
+        <relationshipName>Pledge_Benefits</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TaTransaction_Benefits_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>TA Transaction_Benefits external Id</description>
+        <externalId>true</externalId>
+        <label>TA Transaction_Benefits Id</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>TaTransactions_Id_Short__c</fullName>
+        <externalId>false</externalId>
+        <label>TaTransactions_Id_Short</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaTransactions_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>TaTransactions_Id</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>adjustment_seq__c</fullName>
+        <description>Adjustment Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adjustment Seq</inlineHelpText>
+        <label>Adjustment Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>batch_process_count__c</fullName>
+        <description>This field is used for Apex batch processing for post processing ETL information</description>
+        <externalId>false</externalId>
+        <label>Batch Process Count</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>benefit__c</fullName>
+        <description>Benefit</description>
+        <externalId>false</externalId>
+        <label>Benefit</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>benefit_category__c</fullName>
+        <externalId>false</externalId>
+        <label>Benefit Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Premium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sweepstakes/Contest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Underwriting Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invitation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Newsletter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tour</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Program Guide</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Member Card</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Benefits</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Premium Offers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trust Donation Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Event Attendance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inventory Items</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kids&apos; Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FM Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Britcom Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WGBY Kids Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBY Underwriting Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>benefit_category_seq__c</fullName>
+        <description>Benefit Category Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Benefit Category Seq</inlineHelpText>
+        <label>Benefit Category Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>benefit_category_value__c</fullName>
+        <description>Benefit Category</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Benefit Category</inlineHelpText>
+        <label>Benefit Category Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>benefit_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Benefit Description</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>benefit_long_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Benefit Long Description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>benefit_package__c</fullName>
+        <description>Benefit Package</description>
+        <externalId>false</externalId>
+        <label>Benefit Package</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>benefit_seq__c</fullName>
+        <description>Benefit Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Benefit Seq</inlineHelpText>
+        <label>Benefit Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>date_delivered__c</fullName>
+        <description>Date Delivered</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date Delivered</inlineHelpText>
+        <label>Date Delivered</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>end_date_benefit__c</fullName>
+        <description>End Date Benefit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>End Date Benefit</inlineHelpText>
+        <label>End Date Benefit</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>gift_date__c</fullName>
+        <description>Gift Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Date</inlineHelpText>
+        <label>Gift Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>gift_seq__c</fullName>
+        <description>Gift Seq</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gift Seq</inlineHelpText>
+        <label>Gift Seq</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_date_benefit_sent__c</fullName>
+        <description>Last Date Benefit Sent</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Date Benefit Sent</inlineHelpText>
+        <label>Last Date Benefit Sent</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>mail_class__c</fullName>
+        <externalId>false</externalId>
+        <label>Mail Class</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1st Class Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2nd Class Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3rd Class Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4th Class Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1st Class Post Cards</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UPS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Overnight</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USPS Next Day Air</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UPS Next Day Air</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>mail_class_value__c</fullName>
+        <description>Mail Class</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Mail Class</inlineHelpText>
+        <label>Mail Class Value</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ok_to_deliver__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Ok To Deliver = Y</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check box, should default to checked when the payment processes</inlineHelpText>
+        <label>Ok To Deliver</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Pledge Benefits</relationshipLabel>
+        <relationshipName>Pledge_Benefits</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>pledge_number__c</fullName>
+        <description>Pledge Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pledge Number</inlineHelpText>
+        <label>Pledge Number</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>start_date_benefit__c</fullName>
+        <description>Start Date Benefit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Start Date Benefit</inlineHelpText>
+        <label>Start Date Benefit</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>suspend_delivery__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Suspend Delivery</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Suspend Delivery if this box is checked.</inlineHelpText>
+        <label>Suspend Delivery</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Pledge Benefit</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>benefit__c</columns>
+        <columns>gift_date__c</columns>
+        <columns>start_date_benefit__c</columns>
+        <columns>end_date_benefit__c</columns>
+        <columns>benefit_description__c</columns>
+        <columns>benefit_package__c</columns>
+        <columns>date_delivered__c</columns>
+        <columns>suspend_delivery__c</columns>
+        <columns>mail_class__c</columns>
+        <columns>pledge_number__c</columns>
+        <columns>last_date_benefit_sent__c</columns>
+        <columns>TaTransactions_Id__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Pledge Benefit Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Pledge Benefits</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <leftSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <componentType>Table</componentType>
+            <displayUnits>Integer</displayUnits>
+            <header>Total Revenue - Year to Date</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>Major_Gifts/RLS_Current_FY_Rev_Campaign</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>RLS Revenue by Product</title>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnGrouped</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <legendPosition>Bottom</legendPosition>
+            <report>Major_Gifts/RLS_Current_FY_Rev_by_Product_Cmpgn</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Current &amp; Previous Year Total Revenue</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <legendPosition>Bottom</legendPosition>
+            <report>Major_Gifts/RLS_Current_FY_by_Months</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>RLS Revenue by Month</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <footer>Includes any RLS Donors with giving, but no last fiscal year annual donation and this fiscal year to date.</footer>
+            <header>SYBUNT</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>Major_Gifts/RLS_SYBUNT_Counts</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Count of SYBUNT Donors by Renew Month</title>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Includes any RLS Donors with giving, but no last fiscal year annual donation and this fiscal year to date.</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Sum of Last Renewal Amount of SYBUNT Donors</metricLabel>
+            <report>Major_Gifts/RLS_SYBUNT_Sum_of_Renew_Amounts</report>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <header>Total Revenue - Month to Date</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>Major_Gifts/RLS_MTD_Prod_by_Campaign</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>RLS Revenue by Product</title>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <legendPosition>Bottom</legendPosition>
+            <report>Major_Gifts/RLS_Current_Mon_Rev_by_Product_Cmpgn</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <header>RLS Donor Counts</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Number Active &amp; Grace Annual Donors</metricLabel>
+            <report>Major_Gifts/RLS_Active_Grace_Counts</report>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Line</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <legendPosition>Bottom</legendPosition>
+            <report>Major_Gifts/New_to_RLS_Mem_RN_month</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Upgrade RLS - Donors by Month</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Includes any RLS Donors with last fiscal year donation and no donation in this fiscal year to date.</footer>
+            <header>LYBUNT</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>Major_Gifts/RLS_LYBUNT_Count</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Count of LYBUNT Donors by Renew Month</title>
+        </components>
+        <components>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Includes any RLS Donors with last fiscal year donation and no donation in this fiscal year to date.</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Sum of Last Renewal Amount of LYBUNT Donors</metricLabel>
+            <report>Major_Gifts/RLS_LYBUNT_Sum_of_Renew_Amounts</report>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Summary of Pledges by Gift Type</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Major_Gifts/RLS_Current_FM_by_Gift_Type_Counts</report>
+            <showPercentage>true</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Fiscal Month Gifts by Type</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <legendPosition>Bottom</legendPosition>
+            <report>Major_Gifts/RLS_Current_FY_by_Gift_Type_Counts</report>
+            <showPercentage>true</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Fiscal Year Gifts by Type</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <legendPosition>Bottom</legendPosition>
+            <report>Major_Gifts/RLS_Current_FY_by_Gift_Type</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Current Fiscal Year Revenue by Gift Type</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </rightSection>
+    <runningUser>suzanne_veiga@wgbh.org.qc</runningUser>
+    <textColor>#000000</textColor>
+    <title>RLS Dashboard</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

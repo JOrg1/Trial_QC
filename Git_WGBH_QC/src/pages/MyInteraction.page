@@ -1,0 +1,37 @@
+<apex:page standardController="Interactions__c" recordSetVar="opp" extensions="myInteractionController" >
+<apex:form >
+<apex:pageBlock title="Interaction Infromation" mode="edit">
+<!-- The pageBlockButtons tag defines the buttons that appear at the top
+and bottom of the pageBlock. Like a facet, it can appear anywhere in
+a pageBlock, but always defines the button areas.-->
+<!-- The Next button contained in this pageBlockButtons area
+calls the step2 controller method, which returns a pageReference to
+the next step of the wizard. -->
+<apex:pageBlockButtons >
+<apex:commandButton action="{!save}" value="Save"/>
+<apex:commandButton action="{!cancel}" value="Cancel"/>
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection title="Interaction Information">
+<!-- Within a pageBlockSection, inputFields always display with their
+corresponding output label. -->
+
+<apex:inputField id="subject" value="{!interaction.Subject__c}"/>
+
+<apex:inputField id="author" value="{!interaction.Author__c}"/>
+
+<apex:inputField id="datetime" value="{!interaction.Date_Time__c}"/>
+
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Interaction Detail">
+
+<apex:inputField id="General" value="{!interaction.General__c}"/>
+
+<apex:inputField id="Significant" value="{!interaction.Significant__c}"/>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

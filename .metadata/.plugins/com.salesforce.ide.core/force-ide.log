@@ -1,0 +1,52 @@
+ WARN [2012-05-31 11:16:47,501] (IntroEditorInput.java:loadDocument:130) - org.xml.sax.SAXParseException: The entity name must immediately follow the '&' in the entity reference.
+ WARN [2012-05-31 11:18:47,102] (IntroEditorInput.java:loadDocument:130) - org.xml.sax.SAXParseException: Element type "allpres.length" must be followed by either attribute specifications, ">" or "/>".
+ WARN [2012-05-31 11:26:23,642] (Utils.java:loadDocument:790) - Unable to load document: D:\Jyoti\RoundCauseProjects\Git_WGBH_QC\.metadata\.plugins\com.salesforce.ide.core\packageCache.xml (The system cannot find the file specified)
+ERROR [2012-05-31 11:34:32,048] (MetadataOperationsRetryAspect.java:metadataOperationsRetry:24) - ForceRemoteException occurred while attempting to perform a metadata operation
+ERROR [2012-05-31 11:36:15,460] (MetadataOperationsRetryAspect.java:metadataOperationsRetry:24) - ForceRemoteException occurred while attempting to perform a metadata operation
+ WARN [2012-05-31 11:36:21,513] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'BusinessProcess': Unable to get bean for id 'BusinessProcess'
+ WARN [2012-05-31 11:36:21,513] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'CustomField': Unable to get bean for id 'CustomField'
+ WARN [2012-05-31 11:36:21,560] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'CustomLabel': Unable to get bean for id 'CustomLabel'
+ WARN [2012-05-31 11:36:24,259] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'ListView': Unable to get bean for id 'ListView'
+ WARN [2012-05-31 11:36:24,259] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'NamedFilter': Unable to get bean for id 'NamedFilter'
+ WARN [2012-05-31 11:36:24,274] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'RecordType': Unable to get bean for id 'RecordType'
+ WARN [2012-05-31 11:36:25,772] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'SharingReason': Unable to get bean for id 'SharingReason'
+ WARN [2012-05-31 11:36:25,803] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'ValidationRule': Unable to get bean for id 'ValidationRule'
+ WARN [2012-05-31 11:36:25,803] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WebLink': Unable to get bean for id 'WebLink'
+ WARN [2012-05-31 11:36:25,819] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowAlert': Unable to get bean for id 'WorkflowAlert'
+ WARN [2012-05-31 11:36:25,834] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowFieldUpdate': Unable to get bean for id 'WorkflowFieldUpdate'
+ WARN [2012-05-31 11:36:25,834] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowOutboundMessage': Unable to get bean for id 'WorkflowOutboundMessage'
+ WARN [2012-05-31 11:36:25,850] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowRule': Unable to get bean for id 'WorkflowRule'
+ WARN [2012-05-31 11:36:25,850] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowTask': Unable to get bean for id 'WorkflowTask'
+ WARN [2012-05-31 12:46:34,433] (ConnectionFactory.java:clearCache:212) - Clearing the following cached connections
+ WARN [2012-05-31 12:46:34,449] (DescribeObjectRegistry.java:clearCache:654) - No cached describes
+ WARN [2012-05-31 12:46:34,449] (MetadataFactory.java:clearCache:134) - Clearing the following cached metadata stubs
+ WARN [2012-06-01 11:36:31,454] (Utils.java:loadDocument:790) - Unable to load document: D:\Jyoti\RoundCauseProjects\Git_WGBH_QC\.metadata\.plugins\com.salesforce.ide.core\packageCache.xml (The system cannot find the file specified)
+ WARN [2012-06-04 11:28:52,206] (Utils.java:loadDocument:790) - Unable to load document: D:\Jyoti\RoundCauseProjects\GitHubProj\Git_WGBH_QC\.metadata\.plugins\com.salesforce.ide.core\packageCache.xml (The system cannot find the file specified)
+ WARN [2012-06-04 11:33:43,772] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'BusinessProcess': Unable to get bean for id 'BusinessProcess'
+ WARN [2012-06-04 11:33:43,787] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'CustomField': Unable to get bean for id 'CustomField'
+ WARN [2012-06-04 11:33:43,824] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'CustomLabel': Unable to get bean for id 'CustomLabel'
+ WARN [2012-06-04 11:33:46,096] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'ListView': Unable to get bean for id 'ListView'
+ WARN [2012-06-04 11:33:46,104] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'NamedFilter': Unable to get bean for id 'NamedFilter'
+ WARN [2012-06-04 11:33:46,122] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'RecordType': Unable to get bean for id 'RecordType'
+ WARN [2012-06-04 11:33:48,632] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'SharingReason': Unable to get bean for id 'SharingReason'
+ WARN [2012-06-04 11:33:48,650] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'ValidationRule': Unable to get bean for id 'ValidationRule'
+ WARN [2012-06-04 11:33:48,658] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WebLink': Unable to get bean for id 'WebLink'
+ WARN [2012-06-04 11:33:48,672] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowAlert': Unable to get bean for id 'WorkflowAlert'
+ WARN [2012-06-04 11:33:48,679] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowFieldUpdate': Unable to get bean for id 'WorkflowFieldUpdate'
+ WARN [2012-06-04 11:33:48,687] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowOutboundMessage': Unable to get bean for id 'WorkflowOutboundMessage'
+ WARN [2012-06-04 11:33:48,695] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowRule': Unable to get bean for id 'WorkflowRule'
+ WARN [2012-06-04 11:33:48,703] (ComponentFactory.java:getComponentBean:1142) - Unable to get component for id 'WorkflowTask': Unable to get bean for id 'WorkflowTask'
+ WARN [2012-06-04 12:39:46,806] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,811] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,814] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,817] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,820] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,822] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,824] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,827] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,829] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:39:46,832] (ProjectController.java:handleRetrieveResults:696) - Failed to retrieve: 'package.xml': 
+ WARN [2012-06-04 12:40:00,535] (ComponentResource.java:updateBodyChecksum:620) - Resource and file bytes are null - setting checksum value to -1 'StaticResource'
+ WARN [2012-06-04 12:48:11,943] (ConnectionFactory.java:clearCache:212) - Clearing the following cached connections
+ WARN [2012-06-04 12:48:11,947] (DescribeObjectRegistry.java:clearCache:657) - Clearing cached describes
+ WARN [2012-06-04 12:48:11,952] (MetadataFactory.java:clearCache:134) - Clearing the following cached metadata stubs

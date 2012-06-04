@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>WGBH_PB5_UPLOAD__c.Flag_for_Review__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>WGBH_PB5_UPLOAD__c.Flag_Review_Reason__c</column>
+            <operator>equals</operator>
+            <value>FLAGGED FOR TESTING</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>PB5_Flag for testing</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$WGBH_PB5_UPLOAD__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

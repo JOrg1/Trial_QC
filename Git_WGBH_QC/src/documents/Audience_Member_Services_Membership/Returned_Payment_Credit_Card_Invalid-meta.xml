@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use this letter to return a pledge form due to an invalid credit card number or expiration date.</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>returned; payment; invalid; member; credit; charge; number; expiration</keywords>
+    <name>Pledge/Payment: Returned Payment - Credit Card - Invalid</name>
+    <public>false</public>
+</Document>

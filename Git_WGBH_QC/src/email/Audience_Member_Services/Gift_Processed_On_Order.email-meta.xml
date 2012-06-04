@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this template for gifts that have processed, but not yet shipped.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Audience_Member_Services</letterhead>
+    <name>Gift Processed, On Order</name>
+    <style>freeForm</style>
+    <subject>Your WGBH Thank You Gift Inquiry</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Thank you for reaching out to us regarding the delivery status of your [insert gift name here] thank you gift that was placed in [insert month here]. Please know that since December we have been working on upgrading our systems; unfortunately, due to this process, we have fallen behind in the delivery of these items. We deeply apologize for any inconvenience this may have caused and we appreciate your patience while we work to get everything in order.
+
+I checked with the warehouse and can confirm that your item is on order. Your item is expected to ship in approximately two to three weeks; however, if you don’t receive your gift by then, please don’t hesitate to reach out to us again by phone or by e-mail.
+
+I hope that this information is helpful. It’s a highly competitive world out there for philanthropic support; our goal is to earn your trust and support every day. Thank you for your support of WGBH.
+
+Sincerely,
+
+
+{!Case.OwnerFullName}
+WGBH Audience &amp; Member Services
+617-300-3300 (M-F, 9-5)
+
+{!Case.CaseNumber}</textOnly>
+    <type>html</type>
+</EmailTemplate>

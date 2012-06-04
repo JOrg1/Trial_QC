@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Classification_Code__c$Name</field>
+    </columns>
+    <columns>
+        <field>Classification_Code__c$Id</field>
+    </columns>
+    <columns>
+        <field>Classification_Code__c$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Classification_Code__c$CreatedDate</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Classification_Code__c$classification_code__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Classification Code-Value</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Classification_Code_Value__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Classification_Code__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

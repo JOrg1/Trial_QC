@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case.Case_Sub_Topic__c</field>
+    </columns>
+    <columns>
+        <field>CLOSED_DATE</field>
+    </columns>
+    <description>Total number of cases by owner, origin and type</description>
+    <filter>
+        <criteriaItems>
+            <column>STATUS</column>
+            <operator>equals</operator>
+            <value>Closed Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <operator>contains</operator>
+            <value>clark,levy,milford,abramson,pimentel,arlene,marianne,eve,gilson,kelsey,kramer</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>TYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ORIGIN</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Case Totals</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSED_DATEONLY</dateColumn>
+        <endDate>2011-10-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2011-05-05</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Classification_Code__c.Classifications__r$Household__c</field>
+    </columns>
+    <columns>
+        <field>Classification_Code__c$Name</field>
+    </columns>
+    <columns>
+        <field>Classification_Code__c.Classifications__r$Name</field>
+    </columns>
+    <columns>
+        <field>Classification_Code__c$classification_category__c</field>
+    </columns>
+    <columns>
+        <field>Classification_Code__c$code_description__c</field>
+    </columns>
+    <columns>
+        <field>Classification_Code__c$classification_value__c</field>
+    </columns>
+    <description>Eric 1st pass</description>
+    <filter>
+        <criteriaItems>
+            <column>Classification_Code__c$classification_code__c</column>
+            <operator>equals</operator>
+            <value>BOARD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Classification_Code__c.Classifications__r$Household__c</column>
+            <operator>notEqual</operator>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Classification Board</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Classification_Test__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Classification_Code__c.Classifications__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

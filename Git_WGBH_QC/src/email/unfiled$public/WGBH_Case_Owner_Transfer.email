@@ -1,0 +1,10 @@
+Hello,
+The following case has been transferred to you by {!User.FirstName} {!User.LastName} :
+  
+Case:  {!Case.CaseNumber}:  {!Case.Subject} 
+Owner:  {!Case.OwnerFullName}  
+Account:  {!Account.Name} 
+
+Click here to access the case:  {!Case.Link}
+
+Be sure to review Case Comments as there may be action(s) for you to take.

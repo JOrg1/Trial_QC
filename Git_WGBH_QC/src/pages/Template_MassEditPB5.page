@@ -1,0 +1,41 @@
+<apex:page standardController="WGBH_PB5_UPLOAD__c" recordSetVar="unused" sidebar="false">
+
+<!-- for this page to work with a specific custom object, change standController="entityname" to custom object api name  
+    For example, if custom object name is Warehouse__c, change first part of the first line to standardController="warehouse__c" -->
+
+    
+<apex:includeScript value="{!$Resource.UtilJS}" />
+<apex:form >
+<apex:pageBlock >
+<apex:pageMessages />
+<apex:pageBlock >
+Note: All modifications made on the page will be lost if Return button is clicked without clicking the Save button first. 
+</apex:pageBlock>
+<apex:pageBlockButtons >
+<apex:commandButton value="Save" action="{!save}"/>
+<apex:commandButton value="Return" action="{!cancel}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockTable value="{!selected}" var="a" id="table">
+<apex:column headerValue="Name">
+<apex:inputField value="{!a.name}"/>
+</apex:column>
+<apex:column headerValue="Flag Review Exception">
+<apex:inputField value="{!a.Flag_Review_Exception__c}"/>
+</apex:column>
+
+<apex:column headerValue="PB5 Is New">
+<apex:inputField value="{!a.PB5_IS_NEW__c}"/>
+</apex:column>
+
+<apex:column headerValue="Flag for Review">
+<apex:inputField value="{!a.Flag_for_Review__c}"/>
+</apex:column>
+
+<apex:column headerValue="Reason">
+<apex:inputField value="{!a.Flag_Review_Reason__c}"/>
+</apex:column>
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

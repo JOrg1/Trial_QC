@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Household__c$Name</field>
+    </columns>
+    <columns>
+        <field>Household__c.Contacts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Household__c$Preferred_Address__c</field>
+    </columns>
+    <columns>
+        <field>Household__c.Contacts__r.Salutations__r$inside_salutation_1__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Household__c.Contacts__r$Id</column>
+            <operator>equals</operator>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>AMS Letter-ReportData3-Salutation</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Household_Contacts_Addresses__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Household__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

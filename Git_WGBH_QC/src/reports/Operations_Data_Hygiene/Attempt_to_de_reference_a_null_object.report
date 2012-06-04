@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>WGBH_PB5_UPLOAD__c.PB5_PAYMENT_AMOUNT__c</field>
+    </columns>
+    <columns>
+        <field>WGBH_PB5_UPLOAD__c.PB5_PLEDGE_AMOUNT__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>WGBH_PB5_UPLOAD__c.Flag_Review_Exception__c</column>
+            <operator>contains</operator>
+            <value>Attempt to de-reference a null object</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>WGBH_PB5_UPLOAD__c.PB5_GIFT_CDATE__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Attempt to de-reference a null object</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$WGBH_PB5_UPLOAD__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>WGBH_PB5_UPLOAD__c.Payment_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

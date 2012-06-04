@@ -1,0 +1,20 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<font class="Apple-style-span" size="3" style="font-size: 12pt; ">Dear {!Contact.FirstName} {!Contact.LastName},</font><br><br><font class="Apple-style-span" size="3" style="font-size: 12pt; ">Thank you for your interest in our programming.&nbsp; As an audience 
+supported station 
+we love to hear from listeners and viewers.&nbsp; Please know that your comments have 
+been shared with WGBH 
+producers, 
+programmers, and managers.</font><br><br><br><font class="Apple-style-span" size="3" style="font-size: 12pt; ">I
+ hope that this information is helpful.&nbsp; It’s a 
+highly competitive world out there for philanthropic support; our
+ goal is to earn your trust and support every day. We hope that you will
+help us continue to provide investigative news, richly set dramas, indispensable children’s 
+programming, uninterrupted classical music, and standard-setting forays 
+into our natural world by supporting your favorite WGBH programs.&nbsp; Thank you for your 
+comments and please contact us with any questions, concerns, or 
+feedback.</font><br><br><font class="Apple-style-span" size="3" style="font-size: 12pt; ">Sincerely,</font><br><br><font class="Apple-style-span" size="3" style="font-size: 12pt; ">{!Case.OwnerFullName}</font><br><font class="Apple-style-span" size="3" style="font-size: 12pt; ">WGBH 
+Audience &amp; Member Services</font><br><font class="Apple-style-span" size="3" style="font-size: 12pt; ">617-300-3300 (M-F, 9-5)</font><br><br><font class="Apple-style-span" size="1">{!Case.CaseNumber}</font>]]></td>
+</tr>
+</table>

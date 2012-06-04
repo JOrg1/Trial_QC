@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use this letter to return a check with no amount indicated in the numerical field</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>returned; payment; pledge; member; check; amount; blank</keywords>
+    <name>Pledge/Payment: Returned Payment - Check - No Amount</name>
+    <public>false</public>
+</Document>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collect S-Object Fields</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <namespacePrefix>collectFields</namespacePrefix>
+    <types>
+        <members>Test_cntrlrCollectObjects</members>
+        <members>cntrlrCollectObjects</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>collectObjects</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Collect_Object</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>VF_Page</members>
+        <name>Scontrol</name>
+    </types>
+    <version>20.0</version>
+</Package>

@@ -1,0 +1,48 @@
+<apex:page standardController="Opportunity" recordSetVar="unused" sidebar="false">
+<apex:includeScript value="{!$Resource.UtilJS}" />
+<apex:form >
+<apex:pageBlock >
+<apex:pageMessages />
+<apex:pageBlock >
+Note: All modifications made on the page will be lost if Return button is clicked without clicking the Save button first. 
+</apex:pageBlock>
+<apex:pageBlockButtons >
+<apex:commandButton value="Save" action="{!save}"/>
+<apex:commandButton value="Return" action="{!cancel}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockTable value="{!selected}" var="opp" id="table">
+<apex:column headerValue="Name">
+<apex:inputField value="{!opp.name}"/>
+</apex:column>
+<apex:column headerValue="Pledge Number">
+<apex:inputField value="{!opp.pledge_number__c}"/>
+</apex:column>
+<apex:column headerValue="Giving Amount">
+<apex:inputField value="{!opp.Giving_Amount__c}"/>
+</apex:column>
+<apex:column headerValue="Payment Amount">
+<apex:inputField value="{!opp.payment_amount__c}"/>
+</apex:column>
+<apex:column headerValue="Stage">
+<apex:inputField value="{!opp.stageName}"/>
+</apex:column>
+<apex:column headerValue="Gift Date and Time">
+<apex:inputField value="{!opp.Gift_Date_Time__c}"/>
+</apex:column>
+<apex:column headerValue="Gift Date">
+<apex:inputField value="{!opp.gift_date__c}"/>
+</apex:column>
+<apex:column headerValue="Schedule Start Date">
+<apex:inputField value="{!opp.schedule_start_date__c}"/>
+</apex:column>
+<apex:column headerValue="Revenue Date">
+<apex:inputField value="{!opp.Revenue_Date__c}"/>
+</apex:column>
+
+<apex:column headerValue="Payment Date">
+<apex:inputField value="{!opp.Payment_Date__c}"/>
+</apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

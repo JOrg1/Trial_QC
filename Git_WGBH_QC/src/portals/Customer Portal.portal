@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Portal xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <admin>brian_wainwright@wgbh.org.qc</admin>
+    <defaultLanguage>en_US</defaultLanguage>
+    <description>Customer Portal</description>
+    <emailSenderAddress>brian_wainwright@wgbh.org</emailSenderAddress>
+    <emailSenderName>brian_wainwright@wgbh.org</emailSenderName>
+    <enableSelfCloseCase>false</enableSelfCloseCase>
+    <forgotPassTemplate>unfiled$public/ChangePwdEmail</forgotPassTemplate>
+    <isSelfRegistrationActivated>true</isSelfRegistrationActivated>
+    <logoDocument>SharedDocuments/WGBH_Blue_Logo_Jan_2011.gif</logoDocument>
+    <logoutUrl>https://wgbh.secure.force.com/apex/openpositions</logoutUrl>
+    <newPassTemplate>unfiled$public/ChangePwdEmail</newPassTemplate>
+    <newUserTemplate>unfiled$public/NewUserEmail</newUserTemplate>
+    <selfRegUserDefaultProfile>applicant</selfRegUserDefaultProfile>
+    <selfRegUserTemplate>unfiled$public/SelfRegUserEmail</selfRegUserTemplate>
+    <showActionConfirmation>false</showActionConfirmation>
+    <type>CustomerSuccess</type>
+</Portal>

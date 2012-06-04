@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Classification__c.Preference__c</field>
+    </columns>
+    <columns>
+        <field>Classification__c.Preference_Value__c</field>
+    </columns>
+    <columns>
+        <field>Classification__c.active__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Classification__c.Preference_Value__c</column>
+            <operator>equals</operator>
+            <value>Great Blue Hill Society</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>All Great Blue Hills Members</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Classification__c@Classification__c.Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Classification__c.end_date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

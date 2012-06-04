@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Contact.Preferred_Address__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Contact.Household_Account_Manager__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.External_Rating__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Contact.Internal_Rating__c</field>
+    </columns>
+    <description>A summary list of WGBH Board of Trustees</description>
+    <filter>
+        <criteriaItems>
+            <column>Classification__c.Preference_Value__c</column>
+            <operator>equals</operator>
+            <value>Board of Trustees</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Board of Trustees List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Classification__c@Classification__c.Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Classification__c.end_date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Salutation__c$Name</field>
+    </columns>
+    <columns>
+        <field>Salutation__c$Id</field>
+    </columns>
+    <columns>
+        <field>Salutation__c$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Salutation__c$CreatedDate</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Salutation__c$Salutation_Code_Detail__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Salutations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Saluations__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <sortColumn>Salutation__c$CreatedDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Salutation__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

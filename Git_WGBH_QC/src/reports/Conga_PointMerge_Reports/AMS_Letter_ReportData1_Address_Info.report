@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ADDRESS2_LINE1</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_LINE2</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_LINE3</field>
+    </columns>
+    <description>Used to pull data for mail merge to get pieces of address for letter</description>
+    <filter>
+        <criteriaItems>
+            <column>CONTACT_ID</column>
+            <operator>equals</operator>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>AMS Letter-ReportData1-Address Info</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList@Contact.Preferred_Address__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>LAST_ACTIVITY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

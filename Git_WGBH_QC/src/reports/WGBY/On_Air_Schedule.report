@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.ProgramBreak_StartDateTime__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.ProgramBreak_EndDateTime__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Campaign.Source_Code__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Sub_Channel__c</field>
+    </columns>
+    <description>Change start date to include only the premiums to report to ACD.</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.Station__c</column>
+            <operator>equals</operator>
+            <value>WGBY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Start_Time_Date__c</column>
+            <operator>greaterThan</operator>
+            <value>9/1/2011 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Giving_Segment__c</column>
+            <operator>equals</operator>
+            <value>On-Air Pledge</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>On Air Pledge Campaign Schedule</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList@Campaign.TV_Radio_Show_Program__c</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

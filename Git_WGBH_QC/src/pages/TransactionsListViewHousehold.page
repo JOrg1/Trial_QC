@@ -1,0 +1,3 @@
+<apex:page standardController="Household__c">
+    <c:TransactionsListView sObjectType="Household__c" recordId="{!Household__c.Id}"/>
+</apex:page>

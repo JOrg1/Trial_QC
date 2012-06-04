@@ -1,0 +1,58 @@
+<apex:component controller="TransactionsListViewController">
+    <apex:attribute name="sObjectType" assignTo="{!sObjectType}" description="The name of the parent object" type="String" required="true" />
+    <apex:attribute name="recordId" assignTo="{!recordId}" description="The record Id of the parent object" type="String" required="true" />
+    <apex:pageBlock >
+        <!--center>
+            <apex:commandButton value="New Proposal/Pledge" onclick="javascript:window.open('{!URLFOR($Action.Opportunity.New)}');"/>
+            <apex:commandButton value="New Recurring Gift" onclick="javascript:window.open('{!URLFOR($Action.Recurring_Donation__c.New)}');"/>
+        </center -->
+	    <apex:pageBlockTable value="{!transactions}" var="t" rendered="{!IF($Profile.Name == 'WGBH Major Gifts', true, false)}">
+		    <apex:column headerValue="Gift Date"><apex:outputLink value="/{!t.Id}" target="_blank">{!t.giftDate}</apex:outputLink></apex:column>
+		    <apex:column value="{!t.activity}" headerValue="Activity"/>
+		    <apex:column value="{!t.giftType}" headerValue="Gift Type"/>
+		    <apex:column value="{!t.campaignType}" headerValue="Campaign"/>
+            <apex:column headerValue="Pledge Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.pledgeAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="Paid Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.paidAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="Balance"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.balance}" /></apex:outputText></apex:column>
+		    <apex:column headerValue="Recurring"><apex:image url="{!t.recurring}"/></apex:column>
+		    <apex:column value="{!t.lastPaymentDate}" headerValue="Last Payment Date"/>
+		    <apex:column headerValue="Installment Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.installmentAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="# of Payments"><apex:outputText value="{0, number, integer}"><apex:param value="{!t.paymentsInSchedule}" /></apex:outputText></apex:column>
+		    <apex:column value="{!t.stageName}" headerValue="Stage"/>
+		    <apex:column value="{!t.paymentMethod}" headerValue="Payment Method"/>
+		    <apex:column headerValue="Benefit"><apex:image url="{!t.benefitExists}"/></apex:column>
+		</apex:pageblockTable>
+		<apex:pageBlockTable value="{!transactions}" var="t" rendered="{!IF($Profile.Name == 'System Administrator', true, false)}">
+            <apex:column headerValue="Gift Date"><apex:outputLink value="/{!t.Id}" target="_blank">{!t.giftDate}</apex:outputLink></apex:column>
+            <apex:column value="{!t.activity}" headerValue="Activity"/>
+            <apex:column value="{!t.giftType}" headerValue="Gift Type"/>
+            <apex:column headerValue="Pledge Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.pledgeAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="Paid Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.paidAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="Balance"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.balance}" /></apex:outputText></apex:column>
+            <apex:column headerValue="Recurring"><apex:image url="{!t.recurring}"/></apex:column>
+            <apex:column value="{!t.paymentMethod}" headerValue="Payment Method"/>
+            <apex:column value="{!t.giftKind}" headerValue="Gift Kind"/>
+            <apex:column headerValue="Installment Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.installmentAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="# of Payments"><apex:outputText value="{0, number, integer}"><apex:param value="{!t.paymentsInSchedule}" /></apex:outputText></apex:column>
+            <apex:column value="{!t.scheduleStartDate}" headerValue="Start Date"/>
+            <apex:column headerValue="Benefit"><apex:image url="{!t.benefitExists}"/></apex:column>
+            <apex:column value="{!t.source}" headerValue="Source"/>
+            <apex:column value="{!t.pledgeNumber}" headerValue="Pledge Number"/>
+        </apex:pageblockTable>
+        <apex:pageBlockTable value="{!transactions}" var="t" rendered="{!IF(($Profile.Name == 'WGBH Major Gifts') || ($Profile.Name == 'System Administrator'), false, true)}">
+            <apex:column headerValue="Gift Date"><apex:outputLink value="/{!t.Id}" target="_blank">{!t.giftDate}</apex:outputLink></apex:column>
+            <apex:column headerValue="Pledge Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.pledgeAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="Paid Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.paidAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="Balance"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.balance}" /></apex:outputText></apex:column>
+            <apex:column headerValue="Recurring"><apex:image url="{!t.recurring}"/></apex:column>
+            <apex:column value="{!t.giftKind}" headerValue="Gift Kind"/>
+            <apex:column value="{!t.lastPaymentDate}" headerValue="Last Payment Date"/>
+            <apex:column headerValue="Installment Amt"><apex:outputText value="{0, number, currency}"><apex:param value="{!t.installmentAmount}" /></apex:outputText></apex:column>
+            <apex:column headerValue="# of Payments"><apex:outputText value="{0, number, integer}"><apex:param value="{!t.paymentsInSchedule}" /></apex:outputText></apex:column>
+            <apex:column value="{!t.paymentMethod}" headerValue="Payment Method"/>
+            <apex:column headerValue="Benefit"><apex:image url="{!t.benefitExists}"/></apex:column>
+            <apex:column value="{!t.activity}" headerValue="Activity"/>
+            <apex:column value="{!t.giftType}" headerValue="Gift Type"/>
+        </apex:pageblockTable>
+    </apex:pageBlock>
+</apex:component>

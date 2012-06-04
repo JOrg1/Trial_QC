@@ -1,0 +1,140 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<style><!--
+ /* Font Definitions */
+@font-face
+	{font-family:Geneva;
+	panose-1:2 11 5 3 3 4 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:7 0 0 0 147 0;}
+@font-face
+	{font-family:"New York";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:77;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"New York","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"New York","serif";
+	mso-ascii-font-family:"New York";
+	mso-hansi-font-family:"New York";}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.6in .7in .8in 1.8in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+
+
+
+
+
+<p class="MsoNormal"><a name="OLE_LINK15"></a><font style="font-family: Verdana,Helvetica,Sans-Serif;" size="3"><a name="OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;"></span></span></a></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style=""><span style=""><span style="font-size: 11pt;">{!Case.CreatedDate} <br></span></span></span></font></p><p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;"><br></span></span></span></font></p>{!Case.Account}<br><font style="font-family: Verdana,Helvetica,Sans-Serif;" size="3"><font size="3"><span style="font-family: Verdana,Helvetica,Sans-Serif;">{!Account.Preferred_Address__c}</span></font><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt; color: black;"></span></span><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;"></span></span></font>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt; color: black;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">Dear </span></span></span><span style="mso-bookmark:
+OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt; color: black;">{!Case.Contact}</span></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt; color: black;"></span></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">:</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">Thank you for your support of WGBH.<span style="mso-spacerun:yes">&nbsp; </span>The statement below indicates the donations
+you made to WGBH for tax year 2011.<span style="mso-spacerun:yes">&nbsp; </span>It
+is provided to help with your record keeping and tax preparation in accordance
+with IRS guidelines.</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">The total value of your donations is noted on the
+statement below.<span style="mso-spacerun:yes">&nbsp; </span>From that amount we
+have subtracted the fair market value of any thank-you gifts received, as that
+amount is not tax-deductible.<span style="mso-spacerun:yes">&nbsp; </span>The total
+tax-deductible portion of your contribution to WGBH is indicated at the bottom
+of the statement.</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">This letter also provides me the opportunity to
+recognize your commitment to WGBH and public broadcasting.<span style="mso-spacerun:yes">&nbsp; </span>Thank you again for your generosity; it is
+deeply appreciated.</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">Sincerely,</span></span></span><span style="mso-bookmark:
+OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;"></span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">Daren Winckle</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">Director of Membership</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">STATEMENT</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">Name: </span></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt; color: black;">{!Case.Contact}</span></span></span><span style=""><span style=""><span style="font-size: 11pt; color: black;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></span></span></span></span></font></p><p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt; color: black;"><span style="mso-tab-count:5"></span>
+</span></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">Member #<a name="OLE_LINK17"></a><a name="OLE_LINK16"><span style="mso-bookmark:OLE_LINK17">{!Account.SFDC_ACCOUNT_ID__c}<br></span></a></span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="mso-bookmark:OLE_LINK16"><span style="mso-bookmark:OLE_LINK17"><span style="font-size: 11pt;">&nbsp;</span></span></span></span></span></font></p>
+
+
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><a name="OLE_LINK13"></a><a name="OLE_LINK12"></a><a name="OLE_LINK8"></a><a name="OLE_LINK6"></a><a name="OLE_LINK3"></a><a name="OLE_LINK5"><span style="mso-bookmark:OLE_LINK3"><span style="mso-bookmark:
+OLE_LINK6"><span style="mso-bookmark:OLE_LINK8"><span style="mso-bookmark:OLE_LINK12"><span style="mso-bookmark:OLE_LINK13"><span style="font-size: 11pt;">Date</span></span></span></span></span></span></a><a name="OLE_LINK2"><span style="mso-bookmark:OLE_LINK13"><span style="mso-bookmark:
+OLE_LINK12"><span style="mso-bookmark:OLE_LINK8"><span style="mso-bookmark:
+OLE_LINK6"><span style="mso-bookmark:OLE_LINK3"><span style="mso-bookmark:OLE_LINK5"><span style="font-size: 11pt;">:&nbsp;</span></span></span></span></span></span></span></a></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="font-size: 11pt;"><span style="">{DATE} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></span></span></span></span></span></span></span></span></span></font></p><p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="mso-bookmark:OLE_LINK13"><span style="mso-bookmark:OLE_LINK12"><span style="mso-bookmark:OLE_LINK8"><span style="mso-bookmark:OLE_LINK6"><span style="mso-bookmark:OLE_LINK3"><span style="font-size: 11pt;"><span style="mso-tab-count:7"></span>
+Amount: {AMOUNT}</span></span></span></span></span></span></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="mso-bookmark:OLE_LINK13"><span style="font-size: 11pt;"></span></span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="mso-bookmark:OLE_LINK13"><span style="font-size: 11pt;"><span style="mso-spacerun:yes">&nbsp;</span></span></span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="mso-bookmark:OLE_LINK13"><span style="font-size: 11pt;">Thank You
+Gift:</span></span></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="mso-bookmark:OLE_LINK13"><span style="font-size: 11pt; color: black;"> <span style="">{GIFT} &nbsp;&nbsp;&nbsp;</span></span><b><span style="font-size: 11pt; color: black;"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> </span></b></span></span></span><span style=""><span style=""><span style=""><span style="font-size: 11pt;"><br></span></span></span></span></font></p><p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="mso-bookmark:OLE_LINK13"><span style="font-size: 11pt;">Value: </span></span></span></span><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">{VALUE}</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p style="font-family: Verdana,Helvetica,Sans-Serif;" class="MsoNormal"><font size="3"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size: 11pt;">&nbsp;</span></span></span></font></p>
+
+<p class="MsoNormal"><span style="mso-bookmark:OLE_LINK14"><span style="mso-bookmark:OLE_LINK15"><span style="font-size:11.0pt;mso-bidi-font-size:
+10.0pt;font-family:Geneva"><font style="font-family: Verdana,Helvetica,Sans-Serif;" size="3">Tax-deductible portion of your contribution is: {AMOUNT}</font><br></span></span></span></p>]]></td>
+</tr>
+</table>

@@ -1,0 +1,316 @@
+<apex:page standardController="Opportunity" extensions="GivingEditEFT">
+ <apex:sectionHeader subtitle="Edit {!$ObjectType.Opportunity.label}" title="{!$ObjectType.Opportunity.label} Edit" />
+
+    <style type="text/css">
+       .customPopup{
+            background-color: white;
+            border-style: solid;
+            border-width: 2px;
+            left: 50%;
+            padding:10px;
+            position: fixed;
+            z-index: 9999;
+            /* These are the 3 css properties you will need to tweak so the pop 
+            up displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can also add 
+            the height property for a fixed size pop up.*/
+            width: 250px;
+            margin-left: -125px;
+            top:100px;
+        }
+    </style>
+ <apex:outputPanel id="popup">
+    <apex:outputPanel styleClass="customPopup" layout="block" rendered="{!displaySageHtml}">
+        <form action="https://www.sageexchange.com/VirtualPaymentTerminal/frmPayment.aspx" method="POST" target="_blank">
+        <!-- Outputtext will print the values that will be sent to Sage while creating GUID. -->
+        <apex:outputText escape="false" value="{!strDisplayInformation}" />
+        <apex:outputText id="createGUID" escape="false" value="{0}" >
+            <apex:param value="{!strOutPut}"/>
+        </apex:outputText> 
+        <input type="submit" value="Process Payment"/>
+        </form>
+       <!-- <apex:commandButton value="Hide Pop up" action="{!hideSageHtml}" rerender="popup"/> -->
+    </apex:outputPanel>
+</apex:outputPanel> 
+ <apex:form >
+     <apex:pagemessages id="msg"></apex:pagemessages>
+     <apex:pageBlock >
+          <apex:pageblockbuttons >
+                <apex:commandButton value="Save" action="{!GivingSave}" tabindex="0" onclick="return confirmAmount();"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}" tabindex="1" />
+          </apex:pageblockbuttons>
+          <apex:pageblocksection columns="2" collapsible="false" showHeader="false" title="Edit Giving">
+               <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Account"/>
+                    <apex:OutputField id="Account" value="{!objPledges.AccountId}" />
+                </apex:pageblocksectionItem>
+                <!--
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Contact"/>
+                    <apex:OutputField id="Contact" value="{!objPledges.Oppty_Related_Contact__c}"></apex:OutputField>             
+                </apex:pageblocksectionItem>
+                -->
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Gift Kind"/>
+                    <apex:OutputField id="GiftKind" value="{!objPledges.gift_kind__c}"></apex:OutputField>             
+                </apex:pageblocksectionItem>
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Stage"/>
+                    <apex:outputpanel >
+                        <apex:actionSupport event="onchange" 
+                        action="{!checkPaymentMethod}" status="counterStatus"/>  
+                        <apex:inputfield id="Stage" value="{!objPledges.StageName}"  style="width:150px"/>                        
+                    </apex:outputpanel>         
+                </apex:pageblocksectionItem>
+                
+                
+                
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel for="PaymentMethod" value="Payment Method"/>
+                    <apex:outputpanel >
+                        <apex:actionSupport event="onchange" 
+                        action="{!ChoosePaymentMode}" status="counterStatus"/>  
+                        <apex:inputfield id="PaymentMethod" value="{!objPledges.payment_method__c}"  style="width:150px"/>                        
+                    </apex:outputpanel>                     
+                </apex:pageblockSectionItem>   
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Payment Amount"/>
+                    <apex:outputpanel >
+                        <apex:actionSupport event="onchange" 
+                        action="{!checkPaymentMethod}" status="counterStatus"/>  
+                        <apex:inputfield id="PaymentAmount" value="{!objPledges.payment_amount__c}"  style="width:150px"/>                        
+                    </apex:outputpanel>                
+                </apex:pageblocksectionItem>
+                
+                <!--
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Charge Card Type"/>
+                    <apex:inputField id="ChargeCardType" value="{!objPledges.Charge_Card_Type__c}"></apex:inputField>             
+                </apex:pageblocksectionItem>
+                -->
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Payment Method Description"/>
+                    <apex:inputField id="Paymentmethoddesc" value="{!objPledges.Payment_Method_Description__c}"></apex:inputField>             
+                </apex:pageblocksectionItem>
+                                
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Payment Date"/>
+                    <apex:inputField id="Paymentdate" value="{!objPledges.Payment_Date__c}"></apex:inputField>             
+                </apex:pageblocksectionItem>
+                
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Installment Date"/>
+                    <apex:inputField id="Installmentdate" value="{!objPledges.schedule_start_date__c}"></apex:inputField>             
+                </apex:pageblocksectionItem>
+                
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Giving Amount"/>
+                    <apex:OutputField id="Givingamount" value="{!objPledges.Giving_Amount__c}"></apex:OutputField>             
+                </apex:pageblocksectionItem>
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Station"/>
+                    <apex:OutputField id="Station" value="{!objPledges.Station__c}"></apex:OutputField>             
+                </apex:pageblocksectionItem>
+                <apex:pageblocksectionItem >   
+                    <apex:outputLabel value="Installment Amount"/>
+                    <apex:OutputField id="Installmentamount" value="{!objPledges.installment_amount__c}"></apex:OutputField>             
+                </apex:pageblocksectionItem>
+          </apex:pageblocksection>
+          
+            <apex:pageblocksection id="pbChargeCard" columns="1" rendered="{!if(objPledges.payment_method__c=='Charge Card' ,true,false)}" title="Existing Charge Card on File" showheader="true" collapsible="false">                   
+                <apex:inputhidden id="hdnCCAliasId" value="{!objPledges.CC_EFT_Alias__c}" />
+                <apex:pageblockTable value="{!ExistingChargeCard}" var="item" id="tblChargeCard">
+                    <apex:column >
+                        <apex:selectradio onchange="selectRadio(id,'{!item.id}');" id="rdSelect" />
+                    </apex:column>
+                    <apex:column headerValue="Last 4 Digit">
+                    <apex:outputtext rendered="{!item.id<>NULL}">{!item.Last_Four_Digits__c}
+                    </apex:outputtext> 
+                    <apex:outputtext value="New Card" title="Please enter Charge Card Type and Card Holder's Name." rendered="{!if(((item.id==NULL)  && (displaySageHtml == false) && (bDisplayNewCard == false)),true, false)}"/>
+                     <apex:outputtext rendered="{!if(((item.id==NULL)  && (bDisplayNewCard == true)),true, false)}">
+                        <apex:commandLink value="New Card" action="{!soapPost3}" rerender="tblChargeCard, popup, msg" rendered="{!if(((item.id==NULL)  && (displaySageHtml == false) && (bDisplayNewCard == true)),true, false)}">
+                            <apex:param name="houseHoldId" value="{!objHousehold.Id}"/>
+                        </apex:CommandLink>
+                        <apex:commandLink value="Get Guid" action="{!getVaultResponseInformation}" reRender="tblChargeCard, popup"  rendered="{!if(((item.id==NULL)  && (displaySageHtml == true)), true, false)}"/>
+                     </apex:outputtext>                        
+                    </apex:column>
+                    <apex:column headerValue="Station" value="{!item.Merchant_Account__r.Station__c}" /> 
+                    <apex:column headerValue="Card Holder Name" > 
+                        <apex:outputtext value="{!item.Card_Holder_Name__c}" rendered="{!item.id!=NULL}"/>
+                        <apex:inputtext value="{!strCardHolderName}" rendered="{!item.id==NULL}" >
+                            <apex:actionSupport event="onchange" 
+                            action="{!setDisplayStatus}" 
+                            rerender="tblChargeCard" />
+                        </apex:inputtext>
+                    </apex:column>
+                    <apex:column headerValue="Card Type" value="{!item.Card_Type__c}"/>
+                    <apex:column headerValue="Expiration Date" value="{!item.Expire_Date__c}"/>
+                    <apex:column headerValue="Street 1" > 
+                        <!--KCRW-25
+                        <apex:inputtext value="{!strBillingStreet1}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!strBillingStreet1}" rendered="{!if((item.id == NULL),true,false)}" />
+                        -->
+                        <apex:inputtext value="{!item.Street1__c}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!item.Street1__c}" rendered="{!if((item.id == NULL),true,false)}" />
+                    </apex:column>
+                        <!-- && (bEditBillingAddress == true) && (objPledges.CC_EFT_Alias__c == item.id), true, false)}" /> -->
+                    <apex:column headerValue="Street 2" > 
+                        <!--KCRW-25
+                        <apex:inputtext value="{!strBillingStreet2}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!strBillingStreet2}" rendered="{!if((item.id == NULL),true,false)}" />
+                        -->
+                        <apex:inputtext value="{!item.Street2__c}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!item.Street2__c}" rendered="{!if((item.id == NULL),true,false)}" />
+                    </apex:column>
+                    <apex:column headerValue="City" > 
+                        <!--KCRW-25
+                        <apex:inputtext value="{!strBillingCity}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!strBillingCity}" rendered="{!if((item.id == NULL),true,false)}" />
+                        --> 
+                        <apex:inputtext value="{!item.City__c}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!item.City__c}" rendered="{!if((item.id == NULL),true,false)}" />
+                    </apex:column>
+                    <apex:column headerValue="State" > 
+                        <!--KCRW-25
+                        <apex:inputtext value="{!strBillingState}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!strBillingState}" rendered="{!if((item.id == NULL),true,false)}" />
+                        -->
+                        <apex:inputtext value="{!item.State__c}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!item.State__c}" rendered="{!if((item.id == NULL),true,false)}" />
+                    </apex:column>
+                    <apex:column headerValue="Zip Code" > 
+                        <!--KCRW-25
+                        <apex:inputtext value="{!strBillingZipCode}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!strBillingZipCode}" rendered="{!if((item.id == NULL),true,false)}" />
+                        -->
+                        <apex:inputtext value="{!item.Zipcode__c}" rendered="{!if((item.id != NULL), true, false)}"/>
+                        <apex:outputtext value="{!item.Zipcode__c}" rendered="{!if((item.id == NULL),true,false)}" />
+                    </apex:column>                    
+                </apex:pageblockTable>
+            </apex:pageblocksection>   
+
+            <!-- Ketan Benegal - EFT Processing - Code Start -->
+            <apex:pageblocksection id="pbEFT" columns="1" rendered="{!if(objPledges.payment_method__c=='Electronic Funds Transfer',true,false)}" title="Existing EFT on File" showheader="true" collapsible="false">                   
+                
+                    <apex:commandButton rendered="false" value="Refresh" reRender="tblEFT" action="{!getEFTResponseInformation}">
+                    </apex:commandButton>
+                            <apex:inputhidden id="hdnCCAliasEFTId" value="{!objPledges.CC_EFT_Alias__c}" />
+                    <apex:pageblockTable value="{!lstExistingEFT}" var="item" id="tblEFT">
+                        <apex:column >
+                            <apex:selectradio onchange="selectRadioEFT(id,'{!item.id}');" id="rdSelect" />
+                        </apex:column>
+                        <apex:column headerValue="New Account Guid">
+                            <apex:outputtext rendered="{!if(item.id<>NULL && item.GUID__c <> NULL,true,false)}">{!item.GUID__c}
+                            </apex:outputtext>
+                            <apex:outputtext rendered="{!if(item.id<>NULL && item.GUID__c == NULL && newEFTId == item.id,true,false)}">
+                                <apex:commandLink value="Get Guid" action="{!createNewEFTGuid}" rendered="{!item.id != NULL}">
+                                </apex:CommandLink>
+                            </apex:outputtext>                            
+                            <apex:outputtext rendered="{!item.id==NULL}">
+                             <!-- if item null then provide link to create GUID for new EFT information -->
+                                <apex:commandLink value="Create New Account" action="{!CreateNewBankAccount}" rendered="{!item.id==NULL}">
+                                    <!--<apex:param name="houseHoldId" value="{!objHousehold.Id}"/>
+                                     <apex:param name="Id" value="{!objPledges.Id}"/> -->
+                                </apex:CommandLink>
+                             </apex:outputtext>
+                        </apex:column>
+                        <apex:column headerValue="Account Holder Name" > 
+                            <apex:outputtext value="{!item.Bank_Account_Owner_Name__c}" rendered="{!item.id!=NULL}"/>
+                            <apex:inputtext value="{!strCardHolderName}" rendered="{!item.id==NULL}" />
+                        </apex:column>
+                         <!-- if item null then provide inputtext for entering Bank Acc no. to create GUID for new EFT information -->
+                        <apex:column headerValue="Bank Account" >
+                            <!--apex:Outputtext value="{!item.Bank_account_number__c}" rendered="{!item.id != NULL}"/-->
+                            <apex:OutputPanel rendered="{!item.id != NULL}"><c:MaskString MaskString="{!item.Bank_account_number__c}" MaskChar="X" NoOfVisibleChar="4"></c:MaskString></apex:OutputPanel>
+                            <apex:inputtext onfocus="return setAutocompleOff(this.id)" id="txtBankAccount" value="{!strBankAccNo}" rendered="{!item.id==NULL}"/>
+                        </apex:column>
+                         <!-- if item null then provide inputtext for entering Routing no. to create GUID for new EFT information -->
+                        <apex:column headerValue="Routing No." >
+                            <!--apex:Outputtext value="{!item.Routing_number__c}" rendered="{!item.id != NULL}"/-->
+                            <apex:OutputPanel rendered="{!item.id != NULL}"><c:MaskString MaskString="{!item.Routing_number__c}" MaskChar="X" NoOfVisibleChar="4"></c:MaskString></apex:OutputPanel>
+                            <apex:inputtext onfocus="return setAutocompleOff(this.id)" id="txtRoutingNo" value="{!strRoutingNo}" rendered="{!item.id==NULL}"/>
+                        </apex:column>
+                        <!--<apex:column headerValue="Account Type" rendered="{!item.id==NULL}">
+                            <apex:inputtext value="{!strAccType}" rendered="{!item.id==NULL}"/>
+                        </apex:column>-->
+                        <apex:column headerValue="Account Type">
+                            <apex:Outputtext value="{!item.Bank_Account_Type__c}" rendered="{!item.id != NULL}"/>                            
+                            <apex:selectList multiselect="false" value="{!strAccType}" size="1" rendered="{!item.id==NULL}">
+                                <apex:selectoption itemvalue="" itemlabel="None"></apex:selectoption>
+                                <apex:selectoption itemvalue="Checking" itemlabel="Checking"></apex:selectoption>
+                                <apex:selectoption itemvalue="Saving" itemlabel="Saving"></apex:selectoption>
+                            </apex:selectList>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Name of Bank" > 
+                            <apex:outputtext value="{!item.Bank_Name__c}" rendered="{!item.id!=NULL}"/>
+                            <apex:inputtext value="{!strBankName}" rendered="{!item.id==NULL}" />
+                        </apex:column>
+
+                    </apex:pageblockTable>
+            </apex:pageblocksection>   
+            <!-- Ketan Benegal - EFT Processing - Code End -->                  
+     </apex:pageBlock>
+
+ </apex:form>
+ <script>
+        function confirmAmount(){
+            var blnFulfillMsg = "{!blnFulfillMsg}";
+            var MessageFullfilledStage = "{!MessageFullfilledStage}";
+            //alert(blnFulfillMsg);
+            if(blnFulfillMsg == "true"){
+                return confirm(MessageFullfilledStage);
+            }
+            else{
+                return true;
+            }
+            /*
+            var GivingAmount = "{!objPledges.Giving_Amount__c}";
+            var PaidAmount = document.getElementById(searchControl('text','PaymentAmount')).value;
+            
+            var tGivingAmount = Math.round(parseFloat(GivingAmount)*100)/100;
+            var tPaidAmount = Math.round(parseFloat(PaidAmount)*100)/100;
+            //alert(tGivingAmount);
+            //alert(tPaidAmount);
+            if(tPaidAmount != null){
+                if(tPaidAmount > tGivingAmount){
+                    return confirm("You have entered a Payment Amount that is different to the Giving or Installment Amount.  Are you sure?");
+                }
+            }
+            return true;
+            */
+        }
+    function setAutocompleOff(txtid) {
+        try{
+            document.getElementById(txtid).setAttribute( "autocomplete","off" );
+        }catch(e){}
+        return true;
+    }
+     function selectRadio(id, ccid){
+         var hdnCCAliasId = document.getElementById(searchControl('hidden','hdnCCAliasId'));
+         hdnCCAliasId.value = ccid;
+     }
+     function selectRadioEFT(id, ccid){
+         var hdnCCAliasEFTId = document.getElementById(searchControl('hidden','hdnCCAliasEFTId'));
+         hdnCCAliasEFTId.value = ccid;
+         //alert(hdnCCAliasEFTId.value);
+     }
+    function searchControl(type, name){
+        var selectedCount = 0;
+        var element;
+        var controlname; 
+        for(var j = 0; j < document.forms.length; j++){
+            for (var i = 0; i < document.forms[j].elements.length; i++)
+            {
+                element = document.forms[j].elements[i];
+                if(element.type.toUpperCase() == type.toUpperCase()){
+                    var tempid = document.forms[j].elements[i].id;
+                    controlname = tempid.substring(tempid.lastIndexOf(":")+1,tempid.length);
+                    if(controlname.toUpperCase() == name.toUpperCase())
+                        return tempid;
+                }                
+            }
+        }            
+    }    
+ </script>
+</apex:page>

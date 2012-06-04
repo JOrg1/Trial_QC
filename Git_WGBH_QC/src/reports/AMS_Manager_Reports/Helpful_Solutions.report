@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ISSUE</field>
+    </columns>
+    <columns>
+        <field>SOLUTION_NUMBER</field>
+    </columns>
+    <columns>
+        <field>CSS_ACCESS_COUNT</field>
+    </columns>
+    <columns>
+        <field>CSS_ANSWER_COUNT</field>
+    </columns>
+    <columns>
+        <field>CSS_POSITIVE_COUNT</field>
+    </columns>
+    <description>Which Solutions have the most activity</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>TIMES_USED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Helpful Solutions</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>SolutionList</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>CSS_POSITIVE_COUNT</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

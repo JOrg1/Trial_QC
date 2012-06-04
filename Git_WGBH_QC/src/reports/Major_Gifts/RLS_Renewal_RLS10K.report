@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.SFDC_ACCOUNT_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account.TA_Account_ID__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>RLS Renewal RLS10K</name>
+    <params>
+        <name>scopeid</name>
+        <value>701F0000000cmQS</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignContact</reportType>
+    <scope>one</scope>
+    <showDetails>true</showDetails>
+</Report>

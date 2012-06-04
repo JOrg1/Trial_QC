@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Force%2Ecom Sites Usage Reporting</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <namespacePrefix>sites_reporting</namespacePrefix>
+    <types>
+        <members>CompanyDashboards</members>
+        <members>CompanyDashboards/SiteUsageDashboard</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>Site_Usage_Reports</members>
+        <members>Site_Usage_Reports/Current_Period_Page_Views</members>
+        <members>Site_Usage_Reports/Daily_Total_Bandwidth_Usage</members>
+        <members>Site_Usage_Reports/Daily_Total_Page_Views</members>
+        <members>Site_Usage_Reports/Site_Daily_Origin_Bandwidth_Usage</members>
+        <members>Site_Usage_Reports/Site_Daily_Request_Time_Usage</members>
+        <members>Site_Usage_Reports/Top_Bandwidth_Consuming_Sites</members>
+        <members>Site_Usage_Reports/Top_Resource_Consuming_Sites</members>
+        <members>Site_Usage_Reports/Top_Sites_by_Page_Views</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>Site_Usage_Reports</members>
+        <name>ReportType</name>
+    </types>
+    <version>20.0</version>
+</Package>

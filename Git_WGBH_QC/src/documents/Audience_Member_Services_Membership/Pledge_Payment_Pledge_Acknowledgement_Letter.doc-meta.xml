@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use this letter if a donor requests an acknowledgment of a pledge/premium.</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>member; acknowledgment; pledge; premium; payment</keywords>
+    <name>Acknowledgment: Pledge Acknowledgement Letter</name>
+    <public>false</public>
+</Document>

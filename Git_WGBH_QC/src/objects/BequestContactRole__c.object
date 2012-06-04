@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Relationship to Attorneys, Executors, ...</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Auto_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Role__c) + &apos; - &apos; + Contact__r.FirstName + &apos; &apos; + Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Auto Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Beneficiary_Order__c</fullName>
+        <description>The order of beneficiary&apos;s. 1st, 2nd, ...</description>
+        <externalId>false</externalId>
+        <label>Beneficiary Order</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Planned Giving Contact Roles</relationshipLabel>
+        <relationshipName>Planned_Giving_Contact_Roles1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trustee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CoTrustee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Beneficiary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Life Insurance Owner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>bequest__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned Giving</label>
+        <referenceTo>Bequest__c</referenceTo>
+        <relationshipLabel>Planned Giving Contact Roles</relationshipLabel>
+        <relationshipName>Planned_Giving_Contact_Roles</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Planned Giving Contact Role</label>
+    <nameField>
+        <label>Planned Giving Contact Role Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Planned Giving Contact Roles</pluralLabel>
+    <searchLayouts>
+        <listViewButtons>New_Planned_Giving_Contact_Role</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>New_Planned_Giving_Contact_Role</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>New Planned Giving Contact Role</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR( $Action.BequestContactRole__c.New, null, [CF00NT0000001EWuk= Bequest__c.Name, CF00NT0000001EWuk_lkid= Bequest__c.Id, retURL=&apos;/&apos;+Bequest__c.Id, Name=&apos;This field will auto-update.&apos;])}</url>
+    </webLinks>
+</CustomObject>
